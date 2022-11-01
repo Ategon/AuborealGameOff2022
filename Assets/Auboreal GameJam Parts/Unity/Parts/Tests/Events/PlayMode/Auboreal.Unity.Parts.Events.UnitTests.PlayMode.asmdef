@@ -1,0 +1,23 @@
+{
+    "name": "Auboreal.Unity.Parts.Events.UnitTests.PlayMode",
+    "rootNamespace": "Auboreal.Unity.Parts.Events.UnitTests",
+    "references": [
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner",
+        "Auboreal.Core",
+        "Auboreal.Unity.Parts"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Auboreal.Unity.Parts",
+    "rootNamespace": "Auboreal.Unity",
+    "references": [
+        "GUID:bbfaaa291249ba04789adeb4a375d80b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
