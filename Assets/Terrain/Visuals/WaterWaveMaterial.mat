@@ -49,6 +49,7 @@ Material:
     m_Colors:
     - _Panning: {r: 0.5, g: 0.5, b: 0, a: 0}
     - _Tiling: {r: 1, g: 1, b: 0, a: 0}
+    - _WaterSpeed: {r: 0.1, g: 0.15, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &2874318765190614273
 MonoBehaviour:
