@@ -50,3 +50,6 @@ TagManager:
   - name: Entities
     uniqueID: 1123485675
     locked: 0
+  - name: Fireflies
+    uniqueID: 3984699069
+    locked: 0
