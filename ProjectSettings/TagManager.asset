@@ -14,7 +14,7 @@ TagManager:
   - Player
   - Ground
   - Reflection
-  - 
+  - Minimap
   - 
   - 
   - 
@@ -52,4 +52,7 @@ TagManager:
     locked: 0
   - name: Fireflies
     uniqueID: 3984699069
+    locked: 0
+  - name: Minimap
+    uniqueID: 3283157705
     locked: 0
