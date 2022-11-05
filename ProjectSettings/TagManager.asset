@@ -11,10 +11,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Ground
+  - Reflection
+  - Minimap
   - 
   - 
   - 
@@ -40,4 +40,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Water
+    uniqueID: 4198424153
+    locked: 0
+  - name: Ground
+    uniqueID: 1371929691
+    locked: 0
+  - name: Entities
+    uniqueID: 1123485675
+    locked: 0
+  - name: Fireflies
+    uniqueID: 3984699069
+    locked: 0
+  - name: Minimap
+    uniqueID: 3283157705
     locked: 0
