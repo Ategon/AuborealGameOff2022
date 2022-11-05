@@ -3,9 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
-public class Route 
+namespace Assets.Navigation
 {
-    public Island destination;
-    public int thirstCost;
+    [Serializable]
+    public class Route
+    {
+        public Island destination;
+        public int thirstCost;
+    }
 }

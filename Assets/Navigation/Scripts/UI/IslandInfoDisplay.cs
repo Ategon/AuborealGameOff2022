@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using Assets.EventSystem;
 using Assets.Navigation;
 using TMPro;
 using UnityEngine;
+
 
 public class IslandInfoDisplay : MonoBehaviour
 {

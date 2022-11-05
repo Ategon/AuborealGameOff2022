@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DockPoint : MonoBehaviour
+namespace Assets.Navigation
 {
-    [SerializeField] private Island island;
-
-    public void DockBoat(Boat boat)
+    public class DockPoint : MonoBehaviour
     {
-        island.DockBoat(boat);
+        [SerializeField] private Island island;
+
+        public void DockBoat(Boat boat)
+        {
+            island.DockBoat(boat);
+        }
     }
 }
