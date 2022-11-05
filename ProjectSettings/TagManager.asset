@@ -35,8 +35,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Main Camera
+  - Minimap Camera
   m_SortingLayers:
   - name: Default
     uniqueID: 0
