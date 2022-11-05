@@ -7182,7 +7182,7 @@ GameObject:
   - component: {fileID: 956625482}
   - component: {fileID: 956625484}
   - component: {fileID: 956625483}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26921,7 +26921,7 @@ GameObject:
   - component: {fileID: 1497633197}
   - component: {fileID: 1497633199}
   - component: {fileID: 1497633198}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44211,7 +44211,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 2147484160
+    m_Bits: 2147484288
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 943f769784f2724409078a55f05b5926, type: 2}
   m_TargetDisplay: 0
