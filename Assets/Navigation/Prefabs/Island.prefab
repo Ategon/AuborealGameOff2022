@@ -260,10 +260,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b207987056bb086489ff192b754555d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  islandName: 
   dockPoint: {fileID: 8890400564181962415}
   islandClickedEvent: {fileID: 11400000, guid: a2d31f459f56f284584f8ae5cea2d4ab, type: 2}
   islandMouseEnter: {fileID: 11400000, guid: 6c87d6ea08cbab14b8c0c0f251d87837, type: 2}
   islandMouseExit: {fileID: 11400000, guid: 0d7ac54742c73874fb70a2ddd93a7189, type: 2}
+  thirstController: {fileID: 11400000, guid: bf10bf0bed56e3946b6c3e6278b44038, type: 2}
   routeTrailPrefab: {fileID: 1447846968458909057, guid: c700abbdc0b708f409d8007bf8c1a505, type: 3}
   routes:
   - destination: {fileID: 0}
