@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     [field: SerializeField]
     public float PlayerSpeed { get; private set; }
 
+    public Vector2 PlayerDirection { get { return _playerDirection; } }
+
     private Inputs _inputs;
     private Vector2 _playerDirection;
     private Rigidbody2D _playerRidigbody;
