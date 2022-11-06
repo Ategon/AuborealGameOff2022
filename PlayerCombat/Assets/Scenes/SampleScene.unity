@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feb97dcc2d5b58d45a8734fcf0b07b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startDezedTime: 0
+  startDazedTime: 0
   speed: 5
 --- !u!1 &180808974
 GameObject:
@@ -382,6 +382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 2
+  stunned: 0
   attackPos: {fileID: 1361072663}
   attackRangeX: 2
   attackRangeY: 1.5
@@ -609,7 +610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feb97dcc2d5b58d45a8734fcf0b07b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startDezedTime: 0
+  startDazedTime: 0
   speed: 5
 --- !u!1 &978887261
 GameObject:
@@ -733,6 +734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackObj: {fileID: 180808976}
+  startDazedTime: 0.6
 --- !u!58 &978887266
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -916,5 +918,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feb97dcc2d5b58d45a8734fcf0b07b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startDezedTime: 0
+  startDazedTime: 0
   speed: 5

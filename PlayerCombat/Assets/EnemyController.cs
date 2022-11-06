@@ -5,8 +5,9 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     float dazedTime;
-    public float startDezedTime;
+    public float startDazedTime;
     public float speed = 5;
+    int combo = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,7 @@ public class EnemyController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        dazedTime = startDazedTime;
         Debug.Log("DamageTaken");
     }
 }

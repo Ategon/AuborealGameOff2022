@@ -6,6 +6,9 @@ public class PlayerAttack : MonoBehaviour
 {
     public float fireRate = 15f;
     float nttf;
+    int combo = 0;
+
+    public bool stunned;
 
     public Transform attackPos;
     public float attackRangeX;
@@ -21,9 +24,24 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && Time.time>= nttf)
+        if (Input.GetMouseButtonDown(0) && Time.time>= nttf && !stunned)
         {
-            Debug.Log("Attacked");
+            if (Time.time <= nttf + 0.25f)
+            {
+                if (combo >= 4)
+                {
+                    combo = 1;
+                }
+                else
+                {
+                    combo += 1;
+                }
+            }
+            else
+            {
+                combo = 1;
+            }
+            print(combo);
             nttf = Time.time + 1f / fireRate;
             Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position,new Vector2(attackRangeX,attackRangeY),0, whatisEnemies);
             for(int i = 0; i < enemiesToDamage.Length; i++)
