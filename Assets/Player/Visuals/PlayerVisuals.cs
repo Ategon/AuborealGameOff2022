@@ -49,7 +49,7 @@ public class PlayerVisuals : MonoBehaviour
     {
         facingRight = !facingRight;
         if (flippingCoroutine != null) StopCoroutine(flippingCoroutine);
-        flippingCoroutine = StartCoroutine(GoToScale(facingRight ? -1 : 1, 0.25f));
+        flippingCoroutine = StartCoroutine(GoToScale(facingRight ? -1 : 1, 0.1f));
     }
 
     private IEnumerator GoToScale(float targetScale, float duration)
