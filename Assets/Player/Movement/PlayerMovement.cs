@@ -9,10 +9,12 @@ public class PlayerMovement : MonoBehaviour
     public float PlayerSpeed { get; private set; }
 
     public Vector2 PlayerDirection { get { return _playerDirection; } }
+    public Vector2 Aim { get { return _aim; } }
 
     private Inputs _inputs;
     private Vector2 _playerDirection;
     private Rigidbody2D _playerRidigbody;
+    private Vector2 _aim;
 
     private void Awake()
         => Init();
@@ -35,17 +37,24 @@ public class PlayerMovement : MonoBehaviour
         {
             _inputs.Enable();
             _inputs.Player.Move.performed += OnMovement;
+            _inputs.Player.Aim.performed += OnAim;
         }
         else
         {
             _inputs.Disable();
             _inputs.Player.Move.performed -= OnMovement;
+            _inputs.Player.Aim.performed -= OnAim;
         }
     }
 
     private void OnMovement(InputAction.CallbackContext movementCxt)
     {
         _playerDirection = movementCxt.ReadValue<Vector2>();
+    }
+
+    private void OnAim(InputAction.CallbackContext movementCxt)
+    {
+        _aim = movementCxt.ReadValue<Vector2>();
     }
 
     private void FixedUpdate()

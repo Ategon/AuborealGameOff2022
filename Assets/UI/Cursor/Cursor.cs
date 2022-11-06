@@ -10,6 +10,7 @@ public class Cursor : MonoBehaviour
     private float size = 0;
     public Camera mainCamera;
     [SerializeField] private GameObject child;
+    private PlayerMovement pm;
 
     public Vector2 Aim = new Vector2();
 
@@ -17,12 +18,15 @@ public class Cursor : MonoBehaviour
     void Start()
     {
         image = child.GetComponent<Image>();
+        pm = GameObject.Find("Player").GetComponent<PlayerMovement>();
     }
 
     void Update()
     {
+        Aim = mainCamera.ScreenToWorldPoint(pm.Aim);
+
         child.SetActive(true);
-        // UnityEngine.Cursor.visible = false;
+        UnityEngine.Cursor.visible = false;
 
         float screenWidthDiff = Screen.width / Screen.width;
         float screenHeightDiff = Screen.height / Screen.height;
