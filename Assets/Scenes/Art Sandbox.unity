@@ -131,6 +131,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2044500074}
     m_Modifications:
+    - target: {fileID: 1249680748815479207, guid: 548f07579437d7e4daef72b438ebfdfe, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249680748815479207, guid: 548f07579437d7e4daef72b438ebfdfe, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 7363979180254963097, guid: 548f07579437d7e4daef72b438ebfdfe, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -49931,7 +49939,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.2, y: -0.35}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1755269282

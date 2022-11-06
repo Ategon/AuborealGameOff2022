@@ -46,6 +46,6 @@ public class Cursor : MonoBehaviour
             size = 0.5f;
         }
 
-        child.transform.localScale = new Vector3(1 + size, 1 + size, 1);
+        child.transform.localScale = new Vector3(0.5f + size, 0.5f + size, 1);
     }
 }
