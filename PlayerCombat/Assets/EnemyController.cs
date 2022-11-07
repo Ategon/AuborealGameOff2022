@@ -6,6 +6,7 @@ public class EnemyController : MonoBehaviour
 {
     float dazedTime;
     public float startDazedTime;
+    public float startParriedTime;
     public float speed = 5;
     int combo = 0;
     // Start is called before the first frame update
@@ -32,5 +33,10 @@ public class EnemyController : MonoBehaviour
     {
         dazedTime = startDazedTime;
         Debug.Log("DamageTaken");
+    }
+    public void GetParried()
+    {
+        dazedTime = startParriedTime;
+        Debug.Log("Parried");
     }
 }

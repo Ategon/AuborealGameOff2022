@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D AttackObj;
 
+    public bool blocking = false;
+
     float dazedTime;
     public float startDazedTime;
 
@@ -48,9 +50,34 @@ public class PlayerController : MonoBehaviour
         float moveY = Input.GetAxisRaw("Vertical");
         MoveDir = new Vector2(moveX, moveY).normalized;
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Debug.Log("Parried");
+            Collider2D[] ParryHitbox = Physics2D.OverlapCircleAll(AttackObj.position, 1, 0, AttackObj.GetComponent<PlayerAttack>().whatisEnemies);
+            for (int i = 0; i < ParryHitbox.Length; i++)
+            {
+                ParryHitbox[i].GetComponent<EnemyController>().GetParried();
+            }
+        }
+        if (Input.GetKey(KeyCode.F))
+        {
+            blocking = true;
+            MovementSpeed = 2.5f;
+        }
+        else
+        {
+            blocking = false;
+            MovementSpeed = 5f;
+        }
     }
     void Move()
     {
         rb.velocity = new Vector2(MoveDir.x * MovementSpeed, MoveDir.y * MovementSpeed);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(AttackObj.position, 1);
     }
 }
