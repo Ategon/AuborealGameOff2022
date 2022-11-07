@@ -15,9 +15,45 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "ShootProjectile",
+                    "type": "Button",
+                    "id": "60c8c4c1-4e69-477e-bec5-d1e96fd124e1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MousePosition",
+                    "type": "PassThrough",
+                    "id": "3f173f2d-00af-460a-9815-c79a112cd039",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Attack",
+                    "type": "Button",
+                    "id": "9de1cde0-b7b6-4fe1-a91a-bc31f98621c0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Dash",
+                    "type": "Button",
+                    "id": "c764f103-6b52-406b-8c54-37f19c74971a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Interact",
                     "type": "Button",
-                    "id": "ec6a4d3d-88ee-488f-923c-4093e925082c",
+                    "id": "a51d8fb6-90c8-4d5c-ac7f-ac0b95e888cb",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -82,7 +118,51 @@
                 },
                 {
                     "name": "",
-                    "id": "e164b89d-f626-44b3-93b5-19bad618be4a",
+                    "id": "8b8b9745-9046-44eb-905c-0463a19a7189",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "ShootProjectile",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f0479ed4-4f5b-4c29-9593-6b46e5862303",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "MousePosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4ca70c16-4b57-44c4-af57-97c55f9777a5",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ccbd1601-d026-4c30-83e2-b273a2b0bead",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8923bfae-bdcd-45be-b619-7c1ba853a1a3",
                     "path": "<Keyboard>/z",
                     "interactions": "",
                     "processors": "",
