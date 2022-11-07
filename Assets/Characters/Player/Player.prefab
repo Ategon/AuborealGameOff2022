@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 4120948176655017815}
   - component: {fileID: 7143959024067221658}
   - component: {fileID: 7143959024067221662}
+  - component: {fileID: 1585665600511274920}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -205,7 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a3e77657c564144e80d1133916672bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <PlayerSpeed>k__BackingField: 2
+  <PlayerSpeed>k__BackingField: 1.5
 --- !u!70 &4120948176655017815
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -261,6 +262,22 @@ MonoBehaviour:
   hitboxIndicatorPrefab: {fileID: 7842766238382575663, guid: 26745dd7c1fea5d4fb0446a8b9b89e35, type: 3}
   attackPointOffset: 0.3
   cooldown: 0.2
+--- !u!114 &1585665600511274920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5187959634886955620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e977ba6e78aeb84a89e288b76d2c005, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <DashData>k__BackingField:
+    Force: 3
+    ActiveTime: 0.3
+    CooldownTime: 0.5
 --- !u!1 &6491090493566711643
 GameObject:
   m_ObjectHideFlags: 0
