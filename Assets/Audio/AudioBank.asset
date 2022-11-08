@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 802408f5f46c1e544be078f7fedd8069, type: 3}
+  m_Name: AudioBank
+  m_EditorClassIdentifier: 
+  <ERPlayerMeleeAttack>k__BackingField:
+    Guid:
+      Data1: 418996891
+      Data2: 1313716454
+      Data3: 618970258
+      Data4: -1911928426
+    Path: event:/TempSwordSwing
+  <ERLevels>k__BackingField:
+  - Guid:
+      Data1: -1392812034
+      Data2: 1326813727
+      Data3: 137955729
+      Data4: -99602352
+    Path: event:/Temp
+  - Guid:
+      Data1: -1392812034
+      Data2: 1326813727
+      Data3: 137955729
+      Data4: -99602352
+    Path: event:/Temp
+  - Guid:
+      Data1: -1392812034
+      Data2: 1326813727
+      Data3: 137955729
+      Data4: -99602352
+    Path: event:/Temp

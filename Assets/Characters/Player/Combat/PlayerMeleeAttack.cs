@@ -1,6 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+using Assets.Audio.Events;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,6 +12,7 @@ public class PlayerMeleeAttack : MeleeAttack
     private new Camera camera;
     [SerializeField] private float cooldown;
     private float timeUntilNextAttack;
+    [SerializeField] private PlayerMeleeAttackEvent playerMeleeAttackEvent;
     private void Awake()
     {
         inputs = new Inputs();
@@ -51,6 +50,7 @@ public class PlayerMeleeAttack : MeleeAttack
     {
         if (timeUntilNextAttack <= 0)
         {
+            playerMeleeAttackEvent.Raise(this, null);
             Attack();
         }
     }
