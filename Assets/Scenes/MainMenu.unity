@@ -123,6 +123,65 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &104997132
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5365369662647949400, guid: 9a06f547ef0ebea43a6014aafdf33dd1, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5365369662647949400, guid: 9a06f547ef0ebea43a6014aafdf33dd1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 354.0528
+      objectReference: {fileID: 0}
+    - target: {fileID: 5365369662647949400, guid: 9a06f547ef0ebea43a6014aafdf33dd1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 235.888
+      objectReference: {fileID: 0}
+    - target: {fileID: 5365369662647949400, guid: 9a06f547ef0ebea43a6014aafdf33dd1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6622306
+      objectReference: {fileID: 0}
+    - target: {fileID: 5365369662647949400, guid: 9a06f547ef0ebea43a6014aafdf33dd1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5365369662647949400, guid: 9a06f547ef0ebea43a6014aafdf33dd1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5365369662647949400, guid: 9a06f547ef0ebea43a6014aafdf33dd1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5365369662647949400, guid: 9a06f547ef0ebea43a6014aafdf33dd1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5365369662647949400, guid: 9a06f547ef0ebea43a6014aafdf33dd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5365369662647949400, guid: 9a06f547ef0ebea43a6014aafdf33dd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5365369662647949400, guid: 9a06f547ef0ebea43a6014aafdf33dd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5696168090705983656, guid: 9a06f547ef0ebea43a6014aafdf33dd1, type: 3}
+      propertyPath: m_Name
+      value: AudioController
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9a06f547ef0ebea43a6014aafdf33dd1, type: 3}
 --- !u!1 &241810548
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,7 +464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a45813ab50cabcf4e872a0535c26419b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadedScene: {fileID: 102900000, guid: 88850428b557f524e85a37de4fbd2c9a, type: 3}
+  loadedScene: {fileID: 102900000, guid: 17f1710e71d07674087b6587b9d6866b, type: 3}
 --- !u!1 &338858749
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,6 +612,7 @@ GameObject:
   - component: {fileID: 415624210}
   - component: {fileID: 415624209}
   - component: {fileID: 415624208}
+  - component: {fileID: 415624211}
   m_Layer: 5
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -624,7 +684,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 415624209}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 415624211}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &415624209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -663,6 +735,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 415624206}
   m_CullTransparentMesh: 1
+--- !u!114 &415624211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415624206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a45813ab50cabcf4e872a0535c26419b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadedScene: {fileID: 102900000, guid: 7b73a3894f410e74d9aeb1138f62b298, type: 3}
 --- !u!1 &549104436
 GameObject:
   m_ObjectHideFlags: 0

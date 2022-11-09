@@ -5196,6 +5196,7 @@ MonoBehaviour:
   hitboxIndicatorPrefab: {fileID: 7842766238382575663, guid: 26745dd7c1fea5d4fb0446a8b9b89e35, type: 3}
   attackPointOffset: 0.3
   cooldown: 0.2
+  playerMeleeAttackEvent: {fileID: 11400000, guid: bca9bce8d4ae74e42a010da58c627a9d, type: 2}
 --- !u!114 &1585665600511274920
 MonoBehaviour:
   m_ObjectHideFlags: 0
