@@ -28,7 +28,6 @@ namespace UI.Pause
 
         public void UpdatePauseMenu(bool show)
         {
-            Debug.Log("Hello");
             _lastPauseState = show;
             Time.timeScale = show ? 0f : 1f;
             _pauseContainer.SetActive(show);
