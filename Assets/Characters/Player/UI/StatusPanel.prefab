@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 472895907825236607}
   - component: {fileID: 472895907825236592}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: Treasure
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 472895908246883410}
   - component: {fileID: 472895908246883408}
   m_Layer: 5
-  m_Name: StatusPanel2
+  m_Name: StatusPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -349,7 +349,7 @@ GameObject:
   - component: {fileID: 472895908445745728}
   - component: {fileID: 472895908445745729}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: Wood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -865,6 +865,7 @@ GameObject:
   - component: {fileID: 8908421098367915753}
   - component: {fileID: 4051165690050307540}
   - component: {fileID: 6516302292940499987}
+  - component: {fileID: 5503876060546412420}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -932,3 +933,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5503876060546412420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7260711630279428128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb066b1fb44b0254eadae87592a53314, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  woodChangedEvent: {fileID: 11400000, guid: d85ea15d08cbd6f47956efa56c4fb824, type: 2}
+  treasureChangedEvent: {fileID: 11400000, guid: 01f8528580d955a468d79a94d2cf6829, type: 2}
+  inventoryController: {fileID: 11400000, guid: acf58a9829ecd3142b7d3b2126479049, type: 2}
+  woodCountText: {fileID: 472895908174431446}
+  treasureCountText: {fileID: 472895909098282377}
