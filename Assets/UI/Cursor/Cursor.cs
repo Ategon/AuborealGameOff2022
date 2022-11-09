@@ -19,7 +19,7 @@ public class Cursor : MonoBehaviour
     void Start()
     {
         image = child.GetComponent<Image>();
-        pm = GameObject.Find("Player").GetComponent<PlayerMovement>();
+        pm = FindObjectOfType<PlayerMovement>();
     }
 
     void Update()
