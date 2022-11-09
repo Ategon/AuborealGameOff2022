@@ -30,7 +30,9 @@ public abstract class Interactable : MonoBehaviour
         isPlayerInRange = true;
         if (interactionPopup != null)
         {
-            interactionPopup.Show(verb, key);
+            var bindingIndex = interact.GetBindingIndex();
+            var displayString = interact.GetBindingDisplayString(bindingIndex, out string deviceLayoutName, out string controlPath);
+            interactionPopup.Show(verb, displayString);
         }
     }
     public void PlayerExitRange()
