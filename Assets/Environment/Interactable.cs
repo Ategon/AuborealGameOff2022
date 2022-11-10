@@ -8,7 +8,6 @@ public abstract class Interactable : MonoBehaviour
     private bool isPlayerInRange;
     private Inputs inputs;
     private InputAction interact;
-    private static string key = "Z";
 
     private void Awake()
     {

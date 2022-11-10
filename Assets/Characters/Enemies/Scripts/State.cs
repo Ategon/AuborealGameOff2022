@@ -89,7 +89,6 @@ public class Idle: State
     public override void Enter()
     {
         //stateValues.anim.SetTrigger("isIdle");
-        Debug.Log("isIdle");
         base.Enter();
     }
 
@@ -110,7 +109,6 @@ public class Idle: State
     public override void Exit()
     {
         //stateValues.anim.ResetTrigger("isIdle");
-        Debug.Log("isIdleReset");
         base.Exit();
     }
 }
@@ -121,7 +119,7 @@ public class Patrol: State
         : base(_stateValues)
     {
         name = STATE.PATROL;
-        stateValues.agent.speed = 2;
+        stateValues.agent.speed = stateValues.stateMathValues.patrolSpeed;
         stateValues.agent.isStopped = false;
     }
 
@@ -139,7 +137,6 @@ public class Patrol: State
             }
         }
         //stateValues.anim.SetTrigger("isWalking");
-        Debug.Log("isWalking");
         base.Enter();
     }
 
@@ -167,7 +164,6 @@ public class Patrol: State
     public override void Exit()
     {
         //stateValues.anim.ResetTrigger("isWalking");
-        Debug.Log("isWalkingReset");
         base.Exit();
     }
 }
@@ -178,14 +174,13 @@ public class Pursue: State
         : base(_stateValues)
     {
         name = STATE.PURSUE;
-        stateValues.agent.speed = 5;
+        stateValues.agent.speed = stateValues.stateMathValues.pursueSpeed;
         stateValues.agent.isStopped = false;
     }
 
     public override void Enter()
     {
         //stateValues.anim.SetTrigger("isRunning");
-        Debug.Log("isRunning");
         base.Enter();
     }
 
@@ -221,7 +216,6 @@ public class Pursue: State
     public override void Exit()
     {
         //stateValues.anim.ResetTrigger("isRunning");
-        Debug.Log("isRunningReset");
         base.Exit();
     }
 }
@@ -237,7 +231,6 @@ public class Attack : State
     public override void Enter()
     {
         //stateValues.anim.SetTrigger("isShooting");
-        Debug.Log("isShooting");
         stateValues.agent.isStopped=true;
         base.Enter();
     }
@@ -255,7 +248,6 @@ public class Attack : State
     public override void Exit()
     {
         //stateValues.anim.ResetTrigger("isShooting");
-        Debug.Log("isShootingReset");
         base.Exit();
     }
 }
@@ -272,7 +264,6 @@ public class meleeAttack : State
     public override void Enter()
     {
         //stateValues.anim.SetTrigger("isShooting");
-        Debug.Log("isMeleeAttacking");
         attackCooldown = stateValues.stateMathValues.attackCooldown;
         stateValues.agent.isStopped = true;
         base.Enter();
@@ -287,7 +278,7 @@ public class meleeAttack : State
         }
         if (attackCooldown<=0)
         {
-            Debug.Log("Damage");
+            stateValues.meleeAttack.Attack(stateValues.player.position);
             attackCooldown = stateValues.stateMathValues.attackCooldown;
         }
         else
@@ -299,7 +290,6 @@ public class meleeAttack : State
     public override void Exit()
     {
         //stateValues.anim.ResetTrigger("isShooting");
-        Debug.Log("isMeleeAttackingReset");
         base.Exit();
     }
 }
@@ -317,7 +307,6 @@ public class rangedAttack : State
     public override void Enter()
     {
         //stateValues.anim.SetTrigger("isShooting");
-        Debug.Log("isRangedAttacking");
         attackCooldown = stateValues.stateMathValues.attackCooldown;
         stateValues.agent.isStopped = true;
         base.Enter();
@@ -338,7 +327,6 @@ public class rangedAttack : State
                     Debug.Log("Damage");
             }
             playerWhenAttack = stateValues.player;
-            Debug.Log("RangedAttack");
 
             attackCooldown = stateValues.stateMathValues.attackCooldown;
         }
@@ -351,7 +339,6 @@ public class rangedAttack : State
     public override void Exit()
     {
         //stateValues.anim.ResetTrigger("isShooting");
-        Debug.Log("isRangedAttackingReset");
         base.Exit();
     }
 }
