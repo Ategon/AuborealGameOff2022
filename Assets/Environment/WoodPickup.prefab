@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 1123485675
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f0d56fbc82092d34f94c64c19d5517a2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 15b4a9098a19c984c85cecef7c83795a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c70764463197eb142b37d8cfd3ab4a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactable: {fileID: 2213371611490297672}
+  interactable: {fileID: 1207895468838028469}
 --- !u!70 &2213371610363329296
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -143,8 +143,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.02279865, y: -0.089121684}
-  m_Size: {x: 1.2031142, y: 0.62279755}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.8, y: 0.8}
   m_Direction: 1
 --- !u!1 &2213371610936894295
 GameObject:
@@ -428,9 +428,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2213371611490297673}
   - component: {fileID: 2213371611490297674}
-  - component: {fileID: 2213371611490297672}
+  - component: {fileID: 1207895468838028469}
   m_Layer: 0
-  m_Name: Spring
+  m_Name: WoodPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -444,7 +444,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2213371611490297675}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.158, y: -0.59, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -453,7 +453,7 @@ Transform:
   - {fileID: 2213371610936894294}
   - {fileID: 2213371611206123401}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &2213371611490297674
 CapsuleCollider2D:
@@ -468,10 +468,10 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00000010197124, y: -0.14460336}
-  m_Size: {x: 0.5312895, y: 0.18224628}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.17568566, y: 0.16446808}
   m_Direction: 1
---- !u!114 &2213371611490297672
+--- !u!114 &1207895468838028469
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -480,12 +480,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2213371611490297675}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bca24fc04590e93458e86e6764d10528, type: 3}
+  m_Script: {fileID: 11500000, guid: 366926959a24a7448ad9a45d1b40de16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   interactionPopup: {fileID: 2213371610936894293}
-  verb: Drink
+  verb: Pick Up
   depletesWhenUsed: 1
-  depletedPrefab: {fileID: 2213371611490297675, guid: bebe42095190dd04284185fb91530c1b, type: 3}
-  thirstController: {fileID: 11400000, guid: bf10bf0bed56e3946b6c3e6278b44038, type: 2}
-  thirstValue: 5
+  depletedPrefab: {fileID: 0}
+  inventoryController: {fileID: 11400000, guid: acf58a9829ecd3142b7d3b2126479049, type: 2}
+  woodAmount: 1

@@ -3,8 +3,12 @@ using UnityEngine.InputSystem;
 
 public abstract class Interactable : MonoBehaviour
 {
+    [Header("Info Display")]
     [SerializeField] private InteractionPopup interactionPopup;
     [SerializeField] private string verb;
+    [Header("Depletion")]
+    [SerializeField] private bool depletesWhenUsed;
+    [SerializeField] private GameObject depletedPrefab;
     private bool isPlayerInRange;
     private Inputs inputs;
     private InputAction interact;
@@ -48,7 +52,14 @@ public abstract class Interactable : MonoBehaviour
         if (isPlayerInRange)
         {
             Interact();
+            if (depletesWhenUsed) { Deplete(); }
         }
     }
     protected abstract void Interact();
+
+    private void Deplete()
+    {
+        if (depletedPrefab) { Instantiate(depletedPrefab, transform.position, Quaternion.identity); }
+        Destroy(gameObject);
+    }
 }
