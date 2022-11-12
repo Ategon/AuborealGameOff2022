@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Characters.Enemies;
 using UnityEngine;
 using UnityEngine.Timeline;
 
@@ -30,6 +31,11 @@ public class MeleeAttack : MonoBehaviour
             if (attackable != null)
             {
                 attackable.ReceiveDamage(gameObject.layer, new Damage(attackDamage, attackKnockback, (collider.transform.position - hitboxCenter.transform.position).normalized));
+            }
+
+            if (collider.TryGetComponent(out KnockBackable knockBackable))
+            {
+                knockBackable.Knock(hitboxCenter.position);
             }
         }
     }

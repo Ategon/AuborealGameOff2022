@@ -1,8 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using System.Linq;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -23,22 +21,33 @@ public class EnemyAI : MonoBehaviour
     public bool isRangedAttacking;
 
 
-
     State currentState;
+
     // Start is called before the first frame update
     void Start()
     {
-        stateMathValues = new StateMathematicalValues(visDist, attackDist, patrolDist, attackCooldown, patrolSpeed, pursueSpeed, checkpoints, isMeleeAttacking, isRangedAttacking); ;
+        stateMathValues = new StateMathematicalValues(visDist, attackDist, patrolDist, attackCooldown, patrolSpeed,
+            pursueSpeed, checkpoints, isMeleeAttacking, isRangedAttacking);
+        ;
         agent = this.GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         anim = this.GetComponent<Animator>();
-        StateValues stateValues = new StateValues(this.gameObject, agent, anim, player, meleeAttack, stateMathValues); ;
+        StateValues stateValues = new StateValues(this.gameObject, agent, anim, player, meleeAttack, stateMathValues);
+        ;
         currentState = new Idle(stateValues);
     }
+
     // Update is called once per frame
     void Update()
     {
         currentState = currentState.Process();
+    }
+
+    private void OnDrawGizmos()
+    {
+        // vision debug visual
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, visDist);
     }
 }

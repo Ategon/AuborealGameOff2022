@@ -6586,10 +6586,11 @@ GameObject:
   - component: {fileID: 234263623}
   - component: {fileID: 234263622}
   - component: {fileID: 234263624}
-  - component: {fileID: 234263625}
   - component: {fileID: 234263626}
+  - component: {fileID: 234263625}
   - component: {fileID: 234263627}
   - component: {fileID: 234263628}
+  - component: {fileID: 234263629}
   m_Layer: 0
   m_Name: TigerShark
   m_TagString: Untagged
@@ -6633,7 +6634,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 234263621}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.207, y: 0.703, z: 0}
+  m_LocalPosition: {x: 2.098, y: 0.909, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6710,8 +6711,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 962cb268a0fc91447a35eede805f92a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5
-  startingHealth: 5
+  maxHealth: 50
+  startingHealth: 50
 --- !u!114 &234263628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6729,6 +6730,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   health: {fileID: 234263627}
+--- !u!114 &234263629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234263621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41ac4e63ff8cf514db6ed7f411fccb80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <KnockTime>k__BackingField: 0.5
+  <KnockThurst>k__BackingField: 2
 --- !u!1 &253049843
 GameObject:
   m_ObjectHideFlags: 0
@@ -6860,7 +6875,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.18
+  orthographic size: 1.8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -6884,7 +6899,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 254728196}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.23, y: 0.33, z: -10}
+  m_LocalPosition: {x: -0.498, y: 0.22, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33056,7 +33071,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147290398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.23, y: 0.33, z: -10}
+  m_LocalPosition: {x: -0.498, y: 0.22, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -111075,11 +111090,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5187959634886955621, guid: 7fbedc53abc97a24aaaac545d672a96b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.23
+      value: -0.498
       objectReference: {fileID: 0}
     - target: {fileID: 5187959634886955621, guid: 7fbedc53abc97a24aaaac545d672a96b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.33
+      value: 0.22
       objectReference: {fileID: 0}
     - target: {fileID: 5187959634886955621, guid: 7fbedc53abc97a24aaaac545d672a96b, type: 3}
       propertyPath: m_LocalPosition.z
