@@ -9,13 +9,15 @@ namespace Assets.Navigation
     {
         [SerializeField] private float speed;
         [SerializeField] private new Rigidbody2D rigidbody;
-        [SerializeField] private Island startingIsland;
+        [SerializeField] private PlayerLocationController playerLocationController;
         private bool isTraveling;
         private DockPoint destination;
 
         private void Awake()
         {
-            startingIsland.DockBoat(this);
+            Island dockedIsland = playerLocationController.GetIsland();
+            dockedIsland.InitializeBoat(this);
+            transform.position = dockedIsland.dockPoint.transform.position;
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -25,7 +27,7 @@ namespace Assets.Navigation
                 DockPoint dockPoint = collision.GetComponent<DockPoint>();
                 if (dockPoint == destination)
                 {
-                    dockPoint.DockBoat(this);
+                    dockPoint.DockBoat();
                     Dock();
                 }
             }
