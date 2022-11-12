@@ -6681,7 +6681,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.18
+  orthographic size: 1.8125
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -7428,6 +7428,22 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2831680629627784303, guid: 740f16b3b322d54469a63b854d9e307d, type: 3}
+      propertyPath: meleeAmount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831680629627784303, guid: 740f16b3b322d54469a63b854d9e307d, type: 3}
+      propertyPath: meleeAttack
+      value: 
+      objectReference: {fileID: 2092749775}
+    - target: {fileID: 2831680629627784303, guid: 740f16b3b322d54469a63b854d9e307d, type: 3}
+      propertyPath: meleeController
+      value: 
+      objectReference: {fileID: 11400000, guid: 05c24594491c0654597676f103126b4a, type: 2}
+    - target: {fileID: 2831680629627784303, guid: 740f16b3b322d54469a63b854d9e307d, type: 3}
+      propertyPath: meleeDamageAmount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 9206349533953085226, guid: 740f16b3b322d54469a63b854d9e307d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -32680,6 +32696,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2615480950618456759, guid: 17c5b102e3fb79c46b1c299de4d74c66, type: 3}
+      propertyPath: PlayerShoot
+      value: 
+      objectReference: {fileID: 2092749776}
+    - target: {fileID: 2615480950618456759, guid: 17c5b102e3fb79c46b1c299de4d74c66, type: 3}
+      propertyPath: projectileDamage
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 9206349533953085226, guid: 17c5b102e3fb79c46b1c299de4d74c66, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -109470,6 +109494,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5187959634886955621, guid: 7fbedc53abc97a24aaaac545d672a96b, type: 3}
   m_PrefabInstance: {fileID: 2424527418190724039}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2092749775 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7143959024067221662, guid: 7fbedc53abc97a24aaaac545d672a96b, type: 3}
+  m_PrefabInstance: {fileID: 2424527418190724039}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fdbdf94fab045f4a930cd2227525823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2092749776 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7143959024067221658, guid: 7fbedc53abc97a24aaaac545d672a96b, type: 3}
+  m_PrefabInstance: {fileID: 2424527418190724039}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea4f6ad5e5946c34aa1b2071387b793d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2102214136
 PrefabInstance:
   m_ObjectHideFlags: 0
