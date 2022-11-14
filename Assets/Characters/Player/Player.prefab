@@ -4839,7 +4839,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1095527019}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.243, y: 0.151, z: 0}
+  m_LocalPosition: {x: -0.014, y: 0.157, z: 0}
   m_LocalScale: {x: 0.05, y: 0.05, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4908,6 +4908,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1125793662}
   - component: {fileID: 1125793663}
+  - component: {fileID: 575176003}
   m_Layer: 6
   m_Name: Hitbox
   m_TagString: Untagged
@@ -4946,6 +4947,23 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.22408509, y: 0.3102126}
   m_Direction: 0
+--- !u!114 &575176003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125793661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d73b194744047f4994872698e295172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: 0}
+  attackingLayers:
+    serializedVersion: 2
+    m_Bits: 1025
+  health: {fileID: 2092749779}
 --- !u!1 &1725411424
 GameObject:
   m_ObjectHideFlags: 0
@@ -5090,6 +5108,7 @@ GameObject:
   - component: {fileID: 7143959024067221662}
   - component: {fileID: 1585665600511274920}
   - component: {fileID: 9119500141450112101}
+  - component: {fileID: 2092749779}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -5118,7 +5137,7 @@ Transform:
   - {fileID: 1725411425}
   - {fileID: 57565517}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &4120948176655017814
 Rigidbody2D:
@@ -5187,14 +5206,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fdbdf94fab045f4a930cd2227525823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPoint: {fileID: 1095527020}
   hitboxCenter: {fileID: 1125793662}
   attackSize: 0.3
-  attackDamage: 4
+  attackDamage: 10
   attackKnockback: 4
+  attackOffset: 0.3
   debugHitboxes: 1
   hitboxIndicatorPrefab: {fileID: 7842766238382575663, guid: 26745dd7c1fea5d4fb0446a8b9b89e35, type: 3}
-  attackPointOffset: 0.3
   cooldown: 0.2
   playerMeleeAttackEvent: {fileID: 11400000, guid: bca9bce8d4ae74e42a010da58c627a9d, type: 2}
 --- !u!114 &1585665600511274920
@@ -5226,6 +5244,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <PlayerSpeed>k__BackingField: 2
+--- !u!114 &2092749779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5187959634886955620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b31733e78078274eb8bfd19e1429a3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthController: {fileID: 11400000, guid: c6f4155bb5a3e0a43ab85cfaaa35bd24, type: 2}
+  regenPeriod: 3
 --- !u!1 &6491090493566711643
 GameObject:
   m_ObjectHideFlags: 0

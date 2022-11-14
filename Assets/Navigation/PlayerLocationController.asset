@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5cc64a8888b0e44393033fd8d3e2621, type: 3}
   m_Name: PlayerLocationController
   m_EditorClassIdentifier: 
-  islandName: Delta
+  islandName: Shipwreck Cove
+  startingIslandName: Shipwreck Cove

@@ -7,6 +7,7 @@ namespace Assets.Navigation
     public class PlayerLocationController : ScriptableObject
     {
         public string islandName;
+        [SerializeField] private string startingIslandName;
 
         public Island GetIsland()
         {
@@ -20,6 +21,11 @@ namespace Assets.Navigation
             }
             Debug.LogWarning("An island with name " + islandName + " could not be found.");
             return FindObjectOfType<Island>();
+        }
+
+        public void NewGame()
+        {
+            islandName = startingIslandName;
         }
     }
 }
