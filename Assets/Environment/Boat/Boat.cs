@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Boat : Interactable
 {
-    [SerializeField] private SceneAsset navigationScene;
+    [SerializeField] private string navigationSceneName;
     protected override bool Interact()
     {
-        SceneManager.LoadScene(navigationScene.name);
+        SceneManager.LoadScene(navigationSceneName);
         return true;
     }
 }

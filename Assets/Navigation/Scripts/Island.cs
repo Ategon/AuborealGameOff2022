@@ -19,7 +19,7 @@ namespace Assets.Navigation
         [SerializeField] private IslandMouseExit islandMouseExit;
         [SerializeField] private ThirstController thirstController;
         [SerializeField] private PlayerLocationController playerLocationController;
-        [SerializeField] private SceneAsset loadedScene;
+        [SerializeField] private string loadedSceneName;
         [Header("Visual Trail")]
         [SerializeField] private RouteTrail routeTrailPrefab;
         private List<RouteTrail> routeTrails;
@@ -49,7 +49,7 @@ namespace Assets.Navigation
         public void DockBoat()
         {
             playerLocationController.islandName = islandName;
-            SceneManager.LoadSceneAsync(loadedScene.name);
+            SceneManager.LoadSceneAsync(loadedSceneName);
         }
         public int GetThirstCostFromDocked()
         {
