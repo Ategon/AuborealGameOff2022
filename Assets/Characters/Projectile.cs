@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using Characters.Enemies;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
@@ -9,6 +8,11 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.TryGetComponent(out KnockBackable knockBackable))
+        {
+            knockBackable.Knock(transform.position);
+        }
+
         Attackable attackable = collision.GetComponent<Attackable>();
         if (attackable != null)
         {
@@ -17,6 +21,7 @@ public class Projectile : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+
     }
 
 }
