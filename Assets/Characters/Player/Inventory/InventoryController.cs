@@ -36,4 +36,9 @@ namespace Assets.Player.Inventory
             return false;
         }
     }
+    public enum ResourceType
+    {
+        Wood,
+        Treasure
+    }
 }

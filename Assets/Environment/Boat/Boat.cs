@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 public class Boat : Interactable
 {
     [SerializeField] private SceneAsset navigationScene;
-    protected override void Interact()
+    protected override bool Interact()
     {
         SceneManager.LoadScene(navigationScene.name);
+        return true;
     }
 }
