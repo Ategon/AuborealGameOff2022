@@ -8,9 +8,9 @@ namespace Assets.Navigation
     {
         [SerializeField] private Island island;
 
-        public void DockBoat(Boat boat)
+        public void DockBoat()
         {
-            island.DockBoat(boat);
+            island.DockBoat();
         }
     }
 }

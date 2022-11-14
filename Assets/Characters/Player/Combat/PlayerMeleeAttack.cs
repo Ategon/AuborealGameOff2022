@@ -28,6 +28,7 @@ public class PlayerMeleeAttack : MeleeAttack
     private void OnDisable()
     {
         mousePosition.Disable();
+        attack.Disable();
     }
     void Update()
     {
