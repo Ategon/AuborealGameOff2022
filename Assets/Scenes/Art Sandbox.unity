@@ -6757,7 +6757,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.8
+  orthographic size: 2.17
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -32083,7 +32083,7 @@ MonoBehaviour:
       Data2: 1326813727
       Data3: 137955729
       Data4: -99602352
-    Path: event:/Temp
+    Path: event:/temps/temp
   Event: 
   PlayEvent: 1
   StopEvent: 2

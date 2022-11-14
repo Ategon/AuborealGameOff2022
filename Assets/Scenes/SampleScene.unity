@@ -584,7 +584,7 @@ MonoBehaviour:
       Data2: 1326813727
       Data3: 137955729
       Data4: -99602352
-    Path: event:/Temp
+    Path: event:/temps/temp
   Event: 
   PlayEvent: 1
   StopEvent: 2

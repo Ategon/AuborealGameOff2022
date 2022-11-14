@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Navigation/NavigationTestScene.unity
     guid: dd247cf18e9d22e44861d7f7e30a3703
+  - enabled: 1
+    path: Assets/Characters/Enemies/EnemySandbox.unity
+    guid: 1060760f89153e14bb867bf4c60cc170
   m_configObjects: {}
