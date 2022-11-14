@@ -20,5 +20,10 @@ namespace Assets.Player.Health
                 currentHealth = Mathf.Min(maxHealth, currentHealth + changeAmount);
             healthChangedEvent.Raise(this, null);
         }
+
+        public void NewGame()
+        {
+            currentHealth = maxHealth;
+        }
     }
 }

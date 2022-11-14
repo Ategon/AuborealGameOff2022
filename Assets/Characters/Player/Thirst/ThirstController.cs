@@ -11,6 +11,7 @@ namespace Assets.Player.Thirst
     {
         public int currentThirst;
         public int maxThirst;
+        [SerializeField] private int startingThirst;
         [SerializeField] private ThirstChangedEvent thirstChangedEvent;
 
         public void ChangeThirst(int changeAmount)
@@ -20,6 +21,11 @@ namespace Assets.Player.Thirst
             if (changeAmount > 0)
                 currentThirst = Mathf.Min(maxThirst, currentThirst + changeAmount);
             thirstChangedEvent.Raise(this, null);
+        }
+
+        public void NewGame()
+        {
+            currentThirst = startingThirst;
         }
     }
 }

@@ -44,3 +44,9 @@ MonoBehaviour:
       Data3: -197330040
       Data4: -1269118012
     Path: event:/temps/temp_music
+  - Guid:
+      Data1: -1048085915
+      Data2: 1321064507
+      Data3: -197330040
+      Data4: -1269118012
+    Path: event:/temps/temp_music

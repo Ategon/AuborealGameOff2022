@@ -6,7 +6,7 @@ public class SceneChanger : MonoBehaviour
 {
     [SerializeField] private SceneAsset loadedScene;
 
-    public void ChangeScene()
+    public virtual void ChangeScene()
     {
         SceneManager.LoadSceneAsync(loadedScene.name);
     }
