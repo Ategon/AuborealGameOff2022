@@ -9,6 +9,7 @@ public class EnemyAI : MonoBehaviour
     NavMeshAgent agent;
     Animator anim;
     public Transform player;
+    public MeleeAttack meleeAttack;
     private StateMathematicalValues stateMathValues;
     public List<GameObject> checkpoints;
 
@@ -16,25 +17,23 @@ public class EnemyAI : MonoBehaviour
     public float attackDist;
     public float patrolDist;
     public float attackCooldown;
+    public float patrolSpeed;
+    public float pursueSpeed;
     public bool isMeleeAttacking;
     public bool isRangedAttacking;
 
-    public string checkpointsTag;
 
 
     State currentState;
     // Start is called before the first frame update
     void Start()
     {
-        checkpoints.AddRange(GameObject.FindGameObjectsWithTag(checkpointsTag));
-        checkpoints = checkpoints.OrderBy(waypoint => waypoint.name).ToList();
-
-        stateMathValues = new StateMathematicalValues(visDist, attackDist, patrolDist, attackCooldown, checkpoints, isMeleeAttacking, isRangedAttacking);
+        stateMathValues = new StateMathematicalValues(visDist, attackDist, patrolDist, attackCooldown, patrolSpeed, pursueSpeed, checkpoints, isMeleeAttacking, isRangedAttacking); ;
         agent = this.GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         anim = this.GetComponent<Animator>();
-        StateValues stateValues = new StateValues(this.gameObject, agent, anim, player, stateMathValues);
+        StateValues stateValues = new StateValues(this.gameObject, agent, anim, player, meleeAttack, stateMathValues); ;
         currentState = new Idle(stateValues);
     }
     // Update is called once per frame
