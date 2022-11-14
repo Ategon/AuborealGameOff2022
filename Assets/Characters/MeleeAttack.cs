@@ -9,9 +9,9 @@ public class MeleeAttack : MonoBehaviour
     [Header("References")]
     [SerializeField] protected Transform hitboxCenter;
     [Header("Attack Stats")]
-    [SerializeField] private float attackSize;
-    [SerializeField] private int attackDamage;
-    [SerializeField] private float attackKnockback;
+    public float attackSize;
+     public int attackDamage;
+    public float attackKnockback;
     [SerializeField] private float attackOffset;
     [Header("Debug")]
     [SerializeField] private bool debugHitboxes;
