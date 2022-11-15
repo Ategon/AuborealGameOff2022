@@ -729,6 +729,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 102900000, guid: 591a7daa08faf3c4aa247d2adc8ab2be, type: 3}
     - target: {fileID: 8890400564754637675, guid: 0c970ff6be9d8d847b651a20ad776c9d, type: 3}
+      propertyPath: loadedSceneName
+      value: FinalLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8890400564754637675, guid: 0c970ff6be9d8d847b651a20ad776c9d, type: 3}
       propertyPath: routes.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -920,6 +924,10 @@ PrefabInstance:
       propertyPath: loadedScene
       value: 
       objectReference: {fileID: 102900000, guid: d3d431c263ce7934e9b51219d271b3a2, type: 3}
+    - target: {fileID: 8890400564754637675, guid: 0c970ff6be9d8d847b651a20ad776c9d, type: 3}
+      propertyPath: loadedSceneName
+      value: StartingLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 8890400564754637675, guid: 0c970ff6be9d8d847b651a20ad776c9d, type: 3}
       propertyPath: routes.Array.size
       value: 1

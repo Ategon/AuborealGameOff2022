@@ -387,7 +387,7 @@ MonoBehaviour:
   verb: Board
   depletesWhenUsed: 0
   depletedPrefab: {fileID: 0}
-  navigationScene: {fileID: 102900000, guid: dd247cf18e9d22e44861d7f7e30a3703, type: 3}
+  navigationSceneName: NavigationMap
 --- !u!1 &7778947695793387383
 GameObject:
   m_ObjectHideFlags: 0

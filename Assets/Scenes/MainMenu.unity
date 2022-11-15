@@ -464,7 +464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee4b9cd43d517c4bb66c034ee5791c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadedScene: {fileID: 102900000, guid: d3d431c263ce7934e9b51219d271b3a2, type: 3}
+  loadedSceneName: StartingLevel
   thirstController: {fileID: 11400000, guid: bf10bf0bed56e3946b6c3e6278b44038, type: 2}
   healthController: {fileID: 11400000, guid: c6f4155bb5a3e0a43ab85cfaaa35bd24, type: 2}
   inventoryController: {fileID: 11400000, guid: acf58a9829ecd3142b7d3b2126479049, type: 2}
@@ -751,7 +751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a45813ab50cabcf4e872a0535c26419b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadedScene: {fileID: 102900000, guid: 7b73a3894f410e74d9aeb1138f62b298, type: 3}
+  loadedSceneName: 
 --- !u!1 &549104436
 GameObject:
   m_ObjectHideFlags: 0
