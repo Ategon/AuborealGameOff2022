@@ -26,8 +26,9 @@ public class PlayerHealth : Health
 
         if (healthController.currentHealth <= 0)
         {
-            transform.Find("Visuals").gameObject.SetActive(false);
-            gameManager.Win();
+            GetComponentInChildren<PlayerSilhouette>().stopCoroutine = true;
+            this.gameObject.SetActive(false);
+            gameManager.Lose();
         }
     }
     public override void ChangeHealth(int changeAmount)

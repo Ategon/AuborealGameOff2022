@@ -13,6 +13,7 @@ public class PlayerSilhouette : MonoBehaviour
 
     private bool checking = false;
     private bool hidden = false;
+    public bool stopCoroutine = false;
 
     Coroutine lastCoroutine;
 
@@ -24,6 +25,11 @@ public class PlayerSilhouette : MonoBehaviour
 
     private void Update()
     {
+        if (stopCoroutine)
+        {
+            StopAllCoroutines();
+            return;
+        }
         if (checking)
         {
             int amountInFront = 0;
@@ -70,6 +76,11 @@ public class PlayerSilhouette : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (stopCoroutine)
+        {
+            StopAllCoroutines();
+            return;
+        }
         SpriteRenderer sr = collision.GetComponent<SpriteRenderer>();
         if (sr != null)
         {
