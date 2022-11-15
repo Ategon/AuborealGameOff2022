@@ -54,7 +54,11 @@ public class State
         Vector3 direction = stateValues.player.position - stateValues.enemy.transform.position;
         if (direction.magnitude<stateValues.stateMathValues.attackDist)
         {
-            return true;
+            if (stateValues.stateMathValues.isMeleeAttacking)
+                return true;
+            if (stateValues.stateMathValues.isRangedAttacking &
+                !Physics2D.Linecast(stateValues.agent.transform.position, stateValues.player.transform.position, stateValues.stateMathValues.projectileCollisionLayers))
+                return true;
         }
         return false;
     }
@@ -297,7 +301,6 @@ public class meleeAttack : State
 public class rangedAttack : State
 {
     float attackCooldown;
-    Transform playerWhenAttack = null;
     public rangedAttack(StateValues _stateValues)
         : base(_stateValues)
     {
@@ -321,12 +324,7 @@ public class rangedAttack : State
         }
         if (attackCooldown <= 0)
         {
-            if (playerWhenAttack!=null)
-            {
-                if (Vector3.Distance(playerWhenAttack.position, stateValues.player.position) < 3f)
-                    Debug.Log("Damage");
-            }
-            playerWhenAttack = stateValues.player;
+            stateValues.rangedAttack.Fire(stateValues.agent.transform.position, stateValues.player.position);
 
             attackCooldown = stateValues.stateMathValues.attackCooldown;
         }

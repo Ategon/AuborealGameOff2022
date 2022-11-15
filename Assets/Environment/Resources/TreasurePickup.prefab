@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 2213371610363329298}
   - component: {fileID: 2213371610363329297}
   - component: {fileID: 2213371610363329296}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: InteractionRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 9206349533665073257}
   - component: {fileID: 9206349533665073258}
   - component: {fileID: 9206349533665073259}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: InteractionRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -410,6 +410,10 @@ MonoBehaviour:
   resourceType: 0
   cost: 3
   itemName: Melee Upgrade
+  meleeDamageAmount: 0
+  meleeSizeAmount: 0
+  meleeKnockbackAmount: 0
+  meleeAttack: {fileID: 0}
 --- !u!1 &9206349533979072712
 GameObject:
   m_ObjectHideFlags: 0

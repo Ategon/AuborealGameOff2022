@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 9206349533665073257}
   - component: {fileID: 9206349533665073258}
   - component: {fileID: 9206349533665073259}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: InteractionRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -371,7 +371,7 @@ Transform:
   - {fileID: 9206349535264987237}
   - {fileID: 9206349533759464309}
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &9206349533953085225
 CapsuleCollider2D:

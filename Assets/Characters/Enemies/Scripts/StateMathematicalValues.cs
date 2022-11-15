@@ -6,6 +6,7 @@ public class StateMathematicalValues
 {
     public float visDist;
     public float attackDist;
+    public int projectileCollisionLayers;
     public float patrolDist;
     public float attackCooldown;
     public float patrolSpeed;
@@ -14,10 +15,11 @@ public class StateMathematicalValues
     public bool isMeleeAttacking;
     public bool isRangedAttacking;
 
-    public StateMathematicalValues(float _visDist, float _attackDist, float _patrolDist, float _attackCooldown, float _patrolSpeed, float _pursueSpeed, List<GameObject> _checkpoints, bool _isMeleeAttacking, bool _isRangedAttacking)
+    public StateMathematicalValues(float _visDist, float _attackDist, int _projectileCollisionLayers, float _patrolDist, float _attackCooldown, float _patrolSpeed, float _pursueSpeed, List<GameObject> _checkpoints, bool _isMeleeAttacking, bool _isRangedAttacking)
     {
         visDist = _visDist;
         attackDist = _attackDist;
+        projectileCollisionLayers = _projectileCollisionLayers;
         patrolDist = _patrolDist;
         attackCooldown = _attackCooldown;
         patrolSpeed = _patrolSpeed;
