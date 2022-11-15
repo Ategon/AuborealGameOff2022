@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 9206349533665073257}
   - component: {fileID: 9206349533665073258}
   - component: {fileID: 9206349533665073259}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: InteractionRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -410,6 +410,9 @@ MonoBehaviour:
   resourceType: 0
   cost: 2
   itemName: Ranged Attack Upgrade
+  PlayerShoot: {fileID: 0}
+  projectileDamage: 0
+  projectileSpeed: 0
 --- !u!1 &9206349533979072712
 GameObject:
   m_ObjectHideFlags: 0

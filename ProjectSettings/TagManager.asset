@@ -18,9 +18,9 @@ TagManager:
   - Reflection
   - Minimap
   - Enemy
-  - 
-  - 
-  - 
+  - Player Projectile
+  - Enemy Projectile
+  - Intangible
   - 
   - 
   - 
