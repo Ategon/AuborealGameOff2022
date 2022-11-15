@@ -29,6 +29,11 @@ public class Cursor : MonoBehaviour
 
     void Update()
     {
+        if (!pm.gameObject.activeInHierarchy)
+        {
+            UnityEngine.Cursor.visible = true;
+            return;
+        }
         Aim = mainCamera.ScreenToWorldPoint(pm.Aim);
 
         child.SetActive(true);

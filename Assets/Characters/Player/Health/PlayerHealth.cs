@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerHealth : Health
 {
     [SerializeField] private HealthController healthController;
+    [SerializeField] private GameManager gameManager;
     [SerializeField] private float regenPeriod;
     private float timeToNextHeal;
 
@@ -21,6 +22,13 @@ public class PlayerHealth : Health
         {
             ChangeHealth(1);
             timeToNextHeal = regenPeriod;
+        }
+
+        if (healthController.currentHealth <= 0)
+        {
+            GetComponentInChildren<PlayerSilhouette>().stopCoroutine = true;
+            this.gameObject.SetActive(false);
+            gameManager.Lose();
         }
     }
     public override void ChangeHealth(int changeAmount)
