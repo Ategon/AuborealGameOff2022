@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - MeleeEnemyCheckpoint
+  - RangedEnemyCheckpoint
   layers:
   - Default
   - TransparentFX
@@ -16,10 +17,10 @@ TagManager:
   - Ground
   - Reflection
   - Minimap
-  - 
-  - 
-  - 
-  - 
+  - Enemy
+  - Player Projectile
+  - Enemy Projectile
+  - Intangible
   - 
   - 
   - 

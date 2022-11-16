@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using Assets.EventSystem;
 using Assets.Player.Thirst;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Navigation
 {
@@ -16,6 +18,8 @@ namespace Assets.Navigation
         [SerializeField] private IslandMouseEnter islandMouseEnter;
         [SerializeField] private IslandMouseExit islandMouseExit;
         [SerializeField] private ThirstController thirstController;
+        [SerializeField] private PlayerLocationController playerLocationController;
+        [SerializeField] private string loadedSceneName;
         [Header("Visual Trail")]
         [SerializeField] private RouteTrail routeTrailPrefab;
         private List<RouteTrail> routeTrails;
@@ -36,11 +40,16 @@ namespace Assets.Navigation
             islandMouseEnter.RemoveListener(OnIslandEnter);
             islandMouseExit.RemoveListener(OnIslandExit);
         }
-        public void DockBoat(Boat boat)
+        public void InitializeBoat(Boat boat)
         {
             isBoatDockedHere = true;
             this.boat = boat;
             CreateRouteTrails();
+        }
+        public void DockBoat()
+        {
+            playerLocationController.islandName = islandName;
+            SceneManager.LoadSceneAsync(loadedSceneName);
         }
         public int GetThirstCostFromDocked()
         {

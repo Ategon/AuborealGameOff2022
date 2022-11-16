@@ -35,5 +35,16 @@ namespace Assets.Player.Inventory
             }
             return false;
         }
+
+        public void NewGame()
+        {
+            treasureCount = 0;
+            woodCount = 0;
+        }
+    }
+    public enum ResourceType
+    {
+        Wood,
+        Treasure
     }
 }

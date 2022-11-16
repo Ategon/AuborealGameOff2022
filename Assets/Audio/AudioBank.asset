@@ -18,23 +18,35 @@ MonoBehaviour:
       Data2: 1313716454
       Data3: 618970258
       Data4: -1911928426
-    Path: event:/TempSwordSwing
+    Path: event:/temps/tempSwordSwing
   <ERLevels>k__BackingField:
   - Guid:
-      Data1: -1392812034
-      Data2: 1326813727
-      Data3: 137955729
-      Data4: -99602352
-    Path: event:/Temp
+      Data1: -1048085915
+      Data2: 1321064507
+      Data3: -197330040
+      Data4: -1269118012
+    Path: event:/temps/temp_music
   - Guid:
-      Data1: -1392812034
-      Data2: 1326813727
-      Data3: 137955729
-      Data4: -99602352
-    Path: event:/Temp
+      Data1: -1048085915
+      Data2: 1321064507
+      Data3: -197330040
+      Data4: -1269118012
+    Path: event:/temps/temp_music
   - Guid:
-      Data1: -1392812034
-      Data2: 1326813727
-      Data3: 137955729
-      Data4: -99602352
-    Path: event:/Temp
+      Data1: -1048085915
+      Data2: 1321064507
+      Data3: -197330040
+      Data4: -1269118012
+    Path: event:/temps/temp_music
+  - Guid:
+      Data1: -1048085915
+      Data2: 1321064507
+      Data3: -197330040
+      Data4: -1269118012
+    Path: event:/temps/temp_music
+  - Guid:
+      Data1: -1048085915
+      Data2: 1321064507
+      Data3: -197330040
+      Data4: -1269118012
+    Path: event:/temps/temp_music

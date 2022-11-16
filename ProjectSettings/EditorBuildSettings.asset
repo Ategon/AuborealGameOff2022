@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Settings.unity
     guid: 7b73a3894f410e74d9aeb1138f62b298
   - enabled: 1
+    path: Assets/Navigation/NavigationMap.unity
+    guid: dd247cf18e9d22e44861d7f7e30a3703
+  - enabled: 1
     path: Assets/Scenes/StartingLevel.unity
-    guid: 17f1710e71d07674087b6587b9d6866b
+    guid: d3d431c263ce7934e9b51219d271b3a2
+  - enabled: 1
+    path: Assets/Scenes/FinalLevel.unity
+    guid: 591a7daa08faf3c4aa247d2adc8ab2be
   m_configObjects: {}

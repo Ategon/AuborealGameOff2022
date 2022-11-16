@@ -12,7 +12,6 @@ public abstract class Interactable : MonoBehaviour
     private bool isPlayerInRange;
     private Inputs inputs;
     private InputAction interact;
-    private static string key = "Z";
 
     private void Awake()
     {
@@ -29,7 +28,7 @@ public abstract class Interactable : MonoBehaviour
     {
         interact.Disable();
     }
-    public void PlayerEnterRange()
+    public virtual void PlayerEnterRange()
     {
         isPlayerInRange = true;
         if (interactionPopup != null)
@@ -39,7 +38,7 @@ public abstract class Interactable : MonoBehaviour
             interactionPopup.Show(verb, displayString);
         }
     }
-    public void PlayerExitRange()
+    public virtual void PlayerExitRange()
     {
         isPlayerInRange = false;
         if (interactionPopup != null)
@@ -51,11 +50,10 @@ public abstract class Interactable : MonoBehaviour
     {
         if (isPlayerInRange)
         {
-            Interact();
-            if (depletesWhenUsed) { Deplete(); }
+            if (Interact() & depletesWhenUsed) { Deplete(); }
         }
     }
-    protected abstract void Interact();
+    protected abstract bool Interact();
 
     private void Deplete()
     {

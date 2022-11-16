@@ -22,8 +22,18 @@ public class Cursor : MonoBehaviour
         pm = FindObjectOfType<PlayerMovement>();
     }
 
+    private void OnDisable()
+    {
+        UnityEngine.Cursor.visible = true;
+    }
+
     void Update()
     {
+        if (!pm.gameObject.activeInHierarchy)
+        {
+            UnityEngine.Cursor.visible = true;
+            return;
+        }
         Aim = mainCamera.ScreenToWorldPoint(pm.Aim);
 
         child.SetActive(true);
@@ -49,4 +59,5 @@ public class Cursor : MonoBehaviour
 
         child.transform.localScale = new Vector3(0.5f + size, 0.5f + size, 1);
     }
+
 }
