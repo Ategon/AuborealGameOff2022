@@ -5,7 +5,7 @@
 			<value>temp_music</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{79ef79d1-ff8c-430a-9f45-298a13233279}</destination>
@@ -104,9 +104,6 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{b7b0bc35-4db6-4c75-b174-a6217a85cb0d}">
-		<property name="volume">
-			<value>-8</value>
-		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -176,6 +173,7 @@
 		<relationship name="effects">
 			<destination>{3210c0ea-2669-47c6-8b1d-8fd3dec7dc38}</destination>
 			<destination>{927448a6-6342-45ad-b55c-893c7fec89c9}</destination>
+			<destination>{1a49db65-afef-44b9-8d35-e9fd11f6173b}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{1c78127b-7b46-4932-9c32-c245f0b64c4e}" />
@@ -194,16 +192,33 @@
 	<object class="MixerBusFader" id="{3210c0ea-2669-47c6-8b1d-8fd3dec7dc38}" />
 	<object class="ThreeEQEffect" id="{927448a6-6342-45ad-b55c-893c7fec89c9}">
 		<property name="lowGain">
-			<value>-3.5</value>
+			<value>-22.5</value>
 		</property>
 		<property name="midGain">
-			<value>1</value>
+			<value>-15.5</value>
 		</property>
 		<property name="highGain">
-			<value>-3.5</value>
+			<value>-15</value>
+		</property>
+		<property name="lowCrossover">
+			<value>600</value>
+		</property>
+		<property name="highCrossover">
+			<value>2800</value>
 		</property>
 		<property name="crossoverSlope">
 			<value>0</value>
+		</property>
+	</object>
+	<object class="SpatialiserEffect" id="{1a49db65-afef-44b9-8d35-e9fd11f6173b}">
+		<property name="distanceRolloffType">
+			<value>4</value>
+		</property>
+		<property name="panBlend">
+			<value>0.319999993</value>
+		</property>
+		<property name="userStereoSeparation">
+			<value>158</value>
 		</property>
 	</object>
 </objects>
