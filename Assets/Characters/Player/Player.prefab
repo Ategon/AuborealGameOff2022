@@ -5081,6 +5081,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shownColor: {r: 0, g: 0, b: 0, a: 0.6117647}
   hiddenColor: {r: 0, g: 0, b: 0, a: 0}
+  stopCoroutine: 0
 --- !u!114 &8150499496805634943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5193,6 +5194,7 @@ MonoBehaviour:
   projectileDamage: 2
   projectileKnockbackMagnitude: 3
   projectileSpawnPoint: {fileID: 1095527020}
+  inventoryController: {fileID: 11400000, guid: acf58a9829ecd3142b7d3b2126479049, type: 2}
   cooldown: 0.5
 --- !u!114 &7143959024067221662
 MonoBehaviour:
@@ -5257,6 +5259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthController: {fileID: 11400000, guid: c6f4155bb5a3e0a43ab85cfaaa35bd24, type: 2}
+  gameManager: {fileID: 0}
   regenPeriod: 3
 --- !u!1 &6491090493566711643
 GameObject:

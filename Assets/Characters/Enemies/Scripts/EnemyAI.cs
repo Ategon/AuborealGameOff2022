@@ -46,7 +46,6 @@ public class EnemyAI : MonoBehaviour
                 }
             }
         }
-        Debug.Log(projectileCollisionLayers);
         stateMathValues = new StateMathematicalValues(visDist, attackDist, projectileCollisionLayers, patrolDist, attackCooldown, patrolSpeed,
             pursueSpeed, checkpoints, isMeleeAttacking, isRangedAttacking);
         ;

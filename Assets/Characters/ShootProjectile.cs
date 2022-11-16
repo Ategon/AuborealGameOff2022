@@ -5,6 +5,7 @@ using UnityEngine;
 public class ShootProjectile : MonoBehaviour
 {
     public GameObject projectilePrefab;
+    [Header("Projectile Stats")]
     [SerializeField] public float projectileSpeed;
     public int projectileDamage;
     public float projectileKnockbackMagnitude;
