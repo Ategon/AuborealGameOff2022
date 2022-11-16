@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
+using Assets.Player.Inventory;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerShootProjectile : ShootProjectile
 {
+    [Header("References")]
     [SerializeField] private Transform projectileSpawnPoint;
+    [SerializeField] private InventoryController inventoryController;
     private Inputs inputs;
     private InputAction shootProjectile;
     private InputAction mousePosition;
@@ -39,7 +42,7 @@ public class PlayerShootProjectile : ShootProjectile
     }
     private void OnPressShoot(InputAction.CallbackContext context)
     {
-        if (timeUntilNextFire <= 0)
+        if (timeUntilNextFire <= 0 & inventoryController.ChangeAmmo(-1))
         {
             Vector2 mousePos = camera.ScreenToWorldPoint(mousePosition.ReadValue<Vector2>());
             Fire(projectileSpawnPoint.position, mousePos);

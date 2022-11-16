@@ -13,6 +13,8 @@ namespace Assets.Player.Inventory
         [SerializeField] private WoodChangedEvent woodChangedEvent;
         public int treasureCount;
         [SerializeField] private TreasureChangedEvent treasureChangedEvent;
+        public int ammoCount;
+        [SerializeField] private AmmoChangedEvent ammoChangedEvent;
 
         public bool ChangeWood(int changeAmount)
         {
@@ -31,6 +33,17 @@ namespace Assets.Player.Inventory
             {
                 treasureCount += changeAmount;
                 treasureChangedEvent.Raise(this, null);
+                return true;
+            }
+            return false;
+        }
+
+        public bool ChangeAmmo(int changeAmount)
+        {
+            if (ammoCount + changeAmount >= 0)
+            {
+                ammoCount += changeAmount;
+                ammoChangedEvent.Raise(this, null);
                 return true;
             }
             return false;
