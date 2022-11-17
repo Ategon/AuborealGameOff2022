@@ -4,14 +4,20 @@ using UnityEngine.InputSystem;
 
 public class PlayerMeleeAttack : MeleeAttack
 {
-    [Header("Player Attack")]
+    [Header("Animator")]
+    [SerializeField] private Animator animator;
     private Inputs inputs;
     private InputAction mousePosition;
     private InputAction attack;
     private new Camera camera;
+    [Header("Player Attack")]
     [SerializeField] private float cooldown;
     private float timeUntilNextAttack;
     [SerializeField] private PlayerMeleeAttackEvent playerMeleeAttackEvent;
+    [Header("Attack Momentum")]
+    public float attackVelocity;
+    [HideInInspector] public bool hasAttackMomentum;
+    [HideInInspector] public Vector2 attackDirection;
     private void Awake()
     {
         inputs = new Inputs();
@@ -23,7 +29,7 @@ public class PlayerMeleeAttack : MeleeAttack
         mousePosition.Enable();
         attack = inputs.Player.Attack;
         attack.Enable();
-        attack.performed += OnAttack;
+        attack.performed += OnAttackButtonPressed;
     }
     private void OnDisable()
     {
@@ -38,14 +44,27 @@ public class PlayerMeleeAttack : MeleeAttack
         }
     }
 
-    private void OnAttack(InputAction.CallbackContext context)
+    private void OnAttackButtonPressed(InputAction.CallbackContext context)
     {
         if (timeUntilNextAttack <= 0)
         {
-            playerMeleeAttackEvent.Raise(this, null);
+            animator.SetTrigger("Attack");
             timeUntilNextAttack = cooldown;
+            hasAttackMomentum = true;
             Vector3 mousePos = camera.ScreenToWorldPoint(mousePosition.ReadValue<Vector2>());
-            Attack(mousePos);
+            attackDirection = (new Vector2(mousePos.x - hitboxCenter.position.x, mousePos.y - hitboxCenter.position.y)).normalized;
         }
     }
+
+    public void DealAttackDamage()
+    {
+        playerMeleeAttackEvent.Raise(this, null);
+        Attack(hitboxCenter.position + new Vector3(attackDirection.x, attackDirection.y, 0));
+    }
+
+    public void FinishAttackAnimation()
+    {
+        hasAttackMomentum = false;
+    }
+
 }
