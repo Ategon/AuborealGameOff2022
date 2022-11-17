@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject LoseScreen;
-    [SerializeField] private GameObject WinScreen;
     public void Lose()
     {
         LoseScreen.SetActive(true);
@@ -14,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     public void Win()
     {
-        WinScreen.SetActive(true);
+        SceneManager.LoadScene("WinScreen");
     }
 
     public void Restart()
