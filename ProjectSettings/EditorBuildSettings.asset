@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalLevel.unity
     guid: 591a7daa08faf3c4aa247d2adc8ab2be
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: f3e0c42c6ff5277418560425cb16bd8e
   m_configObjects: {}
