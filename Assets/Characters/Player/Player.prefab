@@ -5194,8 +5194,11 @@ MonoBehaviour:
   projectileDamage: 2
   projectileKnockbackMagnitude: 3
   projectileSpawnPoint: {fileID: 1095527020}
+  playerMovement: {fileID: 9119500141450112101}
   inventoryController: {fileID: 11400000, guid: acf58a9829ecd3142b7d3b2126479049, type: 2}
   cooldown: 0.5
+  animator: {fileID: 3997124552067024247}
+  isShooting: 0
 --- !u!114 &7143959024067221662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5218,8 +5221,9 @@ MonoBehaviour:
   animator: {fileID: 3997124552067024247}
   cooldown: 0.2
   playerMeleeAttackEvent: {fileID: 11400000, guid: bca9bce8d4ae74e42a010da58c627a9d, type: 2}
+  playerMovement: {fileID: 9119500141450112101}
   attackVelocity: 1.6
-  hasAttackMomentum: 0
+  isAttacking: 0
   attackDirection: {x: 0, y: 0}
 --- !u!114 &1585665600511274920
 MonoBehaviour:
@@ -5251,6 +5255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <PlayerSpeed>k__BackingField: 2
   _playerMeleeAttack: {fileID: 7143959024067221662}
+  _playerShootProjectile: {fileID: 7143959024067221658}
 --- !u!114 &2092749779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5849,6 +5854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMeleeAttack: {fileID: 7143959024067221662}
+  shootProjectile: {fileID: 7143959024067221658}
 --- !u!95 &3997124552067024247
 Animator:
   serializedVersion: 4

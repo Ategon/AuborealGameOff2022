@@ -20,6 +20,7 @@ namespace Characters.Player.Movement
         private Vector2 _aim;
         [Header("References")]
         [SerializeField] private PlayerMeleeAttack _playerMeleeAttack;
+        [SerializeField] private PlayerShootProjectile _playerShootProjectile;
 
         private void Awake()
             => Init();
@@ -65,9 +66,13 @@ namespace Characters.Player.Movement
 
         private void FixedUpdate()
         {
-            if (_playerMeleeAttack.hasAttackMomentum)
+            if (_playerMeleeAttack.isAttacking)
             {
                 Move(_playerMeleeAttack.attackDirection, _playerMeleeAttack.attackVelocity);
+            }
+            else if (_playerShootProjectile.isShooting)
+            {
+
             }
             else
             {
@@ -86,6 +91,11 @@ namespace Characters.Player.Movement
         {
             var targetPosition = _playerRidigbody.position + direction * (speed * Time.fixedDeltaTime);
             _playerRidigbody.MovePosition(targetPosition);
+        }
+
+        public bool IsBusy()
+        {
+            return _playerMeleeAttack.isAttacking | _playerShootProjectile.isShooting;
         }
 
     }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerAnimationEventListener : MonoBehaviour
 {
     [SerializeField] private PlayerMeleeAttack playerMeleeAttack;
+    [SerializeField] private PlayerShootProjectile shootProjectile;
 
     public void DealAttackDamage()
     {
@@ -15,4 +16,14 @@ public class PlayerAnimationEventListener : MonoBehaviour
     {
         playerMeleeAttack.FinishAttackAnimation();
     }
+
+    public void FinishShootAnimation()
+    {
+        shootProjectile.FinishShootAnimation();
+    }
+
+    public void ShootProjectile()
+    {
+        shootProjectile.ShootProjectile();
+    }    
 }
