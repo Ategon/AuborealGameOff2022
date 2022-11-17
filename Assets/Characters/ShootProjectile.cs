@@ -17,6 +17,5 @@ public class ShootProjectile : MonoBehaviour
         Vector2 direction = (target - projectileSpawnPoint).normalized;
         projectile.rigidbody.velocity = direction * projectileSpeed;
         projectile.damage = new Damage(projectileDamage, projectileKnockbackMagnitude, direction);
-        Debug.Log("Projectile Fired");
     }
 }

@@ -18,6 +18,8 @@ namespace Characters.Player.Movement
         private PlayerDash _playerDash;
         private Rigidbody2D _playerRidigbody;
         private Vector2 _aim;
+        [Header("References")]
+        [SerializeField] private PlayerMeleeAttack _playerMeleeAttack;
 
         private void Awake()
             => Init();
@@ -63,20 +65,28 @@ namespace Characters.Player.Movement
 
         private void FixedUpdate()
         {
-            if (_playerDash.CanDash)
+            if (_playerMeleeAttack.hasAttackMomentum)
             {
-                _playerDash.Dash();
+                Move(_playerMeleeAttack.attackDirection, _playerMeleeAttack.attackVelocity);
             }
             else
             {
-                Move();
+                if (_playerDash.CanDash)
+                {
+                    _playerDash.Dash();
+                }
+                else
+                {
+                    Move(_playerDirection, PlayerSpeed);
+                }
             }
         }
 
-        private void Move()
+        private void Move(Vector2 direction, float speed)
         {
-            var targetPosition = _playerRidigbody.position + _playerDirection * (PlayerSpeed * Time.fixedDeltaTime);
+            var targetPosition = _playerRidigbody.position + direction * (speed * Time.fixedDeltaTime);
             _playerRidigbody.MovePosition(targetPosition);
         }
+
     }
 }

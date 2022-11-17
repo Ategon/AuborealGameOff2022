@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b534fd5c96f61544ab28692928328f8, type: 3}
   m_Name: HealthController
   m_EditorClassIdentifier: 
-  currentHealth: 7
-  maxHealth: 7
+  currentHealth: 25
+  maxHealth: 25
   largestMaxHealth: 25
   smallestMaxHealth: 5
   healthChangedEvent: {fileID: 11400000, guid: d122ba008914f51438ea6fb2505ee845, type: 2}
