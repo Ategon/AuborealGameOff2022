@@ -5191,7 +5191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 8747798639918260009, guid: c4b5eda37e1b39b4380c56a04d574431, type: 3}
   projectileSpeed: 3
-  projectileDamage: 2
+  projectileDamage: 5
   projectileKnockbackMagnitude: 3
   projectileSpawnPoint: {fileID: 1095527020}
   playerMovement: {fileID: 9119500141450112101}
