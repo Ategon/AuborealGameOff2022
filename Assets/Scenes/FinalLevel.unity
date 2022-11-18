@@ -111313,60 +111313,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8210114988872205282, guid: 68c31f6279bab3547ba6997a0faff1bd, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 85d091fa955cd8e4896d7de4a9660b3c, type: 3}
-    - target: {fileID: 8210114988872205282, guid: 68c31f6279bab3547ba6997a0faff1bd, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8210114988872205282, guid: 68c31f6279bab3547ba6997a0faff1bd, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8210114988872205282, guid: 68c31f6279bab3547ba6997a0faff1bd, type: 3}
-      propertyPath: m_Color.r
-      value: 0.9127811
-      objectReference: {fileID: 0}
-    - target: {fileID: 8210114988884896455, guid: 68c31f6279bab3547ba6997a0faff1bd, type: 3}
-      propertyPath: interactable
-      value: 
-      objectReference: {fileID: 8539593878335104536}
-    m_RemovedComponents:
-    - {fileID: 8210114987598542494, guid: 68c31f6279bab3547ba6997a0faff1bd, type: 3}
+    m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 68c31f6279bab3547ba6997a0faff1bd, type: 3}
---- !u!1 &8539593878335104534 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8210114987598542493, guid: 68c31f6279bab3547ba6997a0faff1bd, type: 3}
-  m_PrefabInstance: {fileID: 8539593878335104533}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8539593878335104535 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8210114988185498243, guid: 68c31f6279bab3547ba6997a0faff1bd, type: 3}
-  m_PrefabInstance: {fileID: 8539593878335104533}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9f17c3162a50534b8e238cb0146dd3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8539593878335104536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8539593878335104534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67568d05a54755b4fbb26a2ebae83310, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionPopup: {fileID: 8539593878335104535}
-  verb: Win
-  depletesWhenUsed: 0
-  depletedPrefab: {fileID: 0}
-  gameManager: {fileID: 0}

@@ -8,9 +8,25 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2213371610351358516, guid: 0783cb6be23a557468cc1b125ad10308, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 85d091fa955cd8e4896d7de4a9660b3c, type: 3}
+    - target: {fileID: 2213371610351358516, guid: 0783cb6be23a557468cc1b125ad10308, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2213371610351358516, guid: 0783cb6be23a557468cc1b125ad10308, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9127811
+      objectReference: {fileID: 0}
+    - target: {fileID: 2213371610363329297, guid: 0783cb6be23a557468cc1b125ad10308, type: 3}
+      propertyPath: interactable
+      value: 
+      objectReference: {fileID: 8539593878335104536}
     - target: {fileID: 2213371611490297673, guid: 0783cb6be23a557468cc1b125ad10308, type: 3}
       propertyPath: m_RootOrder
-      value: 35
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 2213371611490297673, guid: 0783cb6be23a557468cc1b125ad10308, type: 3}
       propertyPath: m_LocalPosition.x
@@ -56,6 +72,40 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinIntercatable
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2213371611490297672, guid: 0783cb6be23a557468cc1b125ad10308, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0783cb6be23a557468cc1b125ad10308, type: 3}
+--- !u!1 &8210114987598542493 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2213371611490297675, guid: 0783cb6be23a557468cc1b125ad10308, type: 3}
+  m_PrefabInstance: {fileID: 8018458844931543510}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8539593878335104536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8210114987598542493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67568d05a54755b4fbb26a2ebae83310, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionPopup: {fileID: 8210114988185498243}
+  verb: Win
+  depletesWhenUsed: 0
+  depletedPrefab: {fileID: 0}
+  gameManager: {fileID: 0}
+--- !u!114 &8210114988185498243 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2213371610936894293, guid: 0783cb6be23a557468cc1b125ad10308, type: 3}
+  m_PrefabInstance: {fileID: 8018458844931543510}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9f17c3162a50534b8e238cb0146dd3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
