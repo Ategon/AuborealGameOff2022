@@ -16,5 +16,5 @@ MonoBehaviour:
   woodChangedEvent: {fileID: 11400000, guid: d85ea15d08cbd6f47956efa56c4fb824, type: 2}
   treasureCount: 0
   treasureChangedEvent: {fileID: 11400000, guid: 01f8528580d955a468d79a94d2cf6829, type: 2}
-  ammoCount: 5
+  ammoCount: 50
   ammoChangedEvent: {fileID: 11400000, guid: f6a2293f664266a4d925e43660f43594, type: 2}

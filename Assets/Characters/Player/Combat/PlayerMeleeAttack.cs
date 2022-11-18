@@ -1,4 +1,5 @@
 using Assets.Audio.Events;
+using Characters.Player.Movement;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,10 +14,12 @@ public class PlayerMeleeAttack : MeleeAttack
     [Header("Player Attack")]
     [SerializeField] private float cooldown;
     private float timeUntilNextAttack;
+    [Header("References")]
     [SerializeField] private PlayerMeleeAttackEvent playerMeleeAttackEvent;
+    [SerializeField] private PlayerMovement playerMovement;
     [Header("Attack Momentum")]
     public float attackVelocity;
-    [HideInInspector] public bool hasAttackMomentum;
+    [HideInInspector] public bool isAttacking;
     [HideInInspector] public Vector2 attackDirection;
     private void Awake()
     {
@@ -46,11 +49,11 @@ public class PlayerMeleeAttack : MeleeAttack
 
     private void OnAttackButtonPressed(InputAction.CallbackContext context)
     {
-        if (timeUntilNextAttack <= 0)
+        if (timeUntilNextAttack <= 0 & !playerMovement.IsBusy())
         {
             animator.SetTrigger("Attack");
             timeUntilNextAttack = cooldown;
-            hasAttackMomentum = true;
+            isAttacking = true;
             Vector3 mousePos = camera.ScreenToWorldPoint(mousePosition.ReadValue<Vector2>());
             attackDirection = (new Vector2(mousePos.x - hitboxCenter.position.x, mousePos.y - hitboxCenter.position.y)).normalized;
         }
@@ -64,7 +67,7 @@ public class PlayerMeleeAttack : MeleeAttack
 
     public void FinishAttackAnimation()
     {
-        hasAttackMomentum = false;
+        isAttacking = false;
     }
 
 }
