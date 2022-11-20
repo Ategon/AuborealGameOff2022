@@ -21,6 +21,10 @@ public class PlayerMeleeAttack : MeleeAttack
     public float attackVelocity;
     [HideInInspector] public bool isAttacking;
     [HideInInspector] public Vector2 attackDirection;
+
+
+    private int attackType = 0;
+    
     private void Awake()
     {
         inputs = new Inputs();
@@ -51,6 +55,10 @@ public class PlayerMeleeAttack : MeleeAttack
     {
         if (timeUntilNextAttack <= 0 & !playerMovement.IsBusy())
         {
+            animator.SetInteger("AttackType", attackType);
+
+            attackType = attackType == 0 ? 1 : 0;
+
             animator.SetTrigger("Attack");
             timeUntilNextAttack = cooldown;
             isAttacking = true;

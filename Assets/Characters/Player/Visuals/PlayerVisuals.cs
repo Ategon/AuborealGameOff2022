@@ -7,6 +7,7 @@ public class PlayerVisuals : MonoBehaviour
 {
     private SpriteRenderer sr;
     private PlayerMovement pm;
+    private Animator anim;
 
     private bool facingRight;
 
@@ -16,12 +17,19 @@ public class PlayerVisuals : MonoBehaviour
     {
         sr = GetComponent<SpriteRenderer>();
         pm = GetComponentInParent<PlayerMovement>();
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
     {
+        if (pm.IsBusy())
+        {
+            return;
+        }
+        
         if (pm.PlayerDirection != Vector2.zero)
         {
+            anim.Play("Walk");
             if (pm.PlayerDirection.x > 0 && !facingRight)
             {
                 Flip();
@@ -30,6 +38,9 @@ public class PlayerVisuals : MonoBehaviour
             {
                 Flip();
             }
+        }
+        else {
+            anim.Play("Idle");
         }
         /* Paper mario style flipping
         if (pm.PlayerDirection.x > 0 && !facingRight)
