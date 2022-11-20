@@ -94,6 +94,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2613436627695009296}
   - component: {fileID: 2613436627695009297}
+  - component: {fileID: 7472231394567845644}
+  - component: {fileID: 7618570378576446843}
   m_Layer: 0
   m_Name: Visuals
   m_TagString: Untagged
@@ -168,6 +170,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &7472231394567845644
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2613436627695009302}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 33891d3675ce98d46a8905369cf052aa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7618570378576446843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2613436627695009302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcbc35ce539e9f7499e9cf5aeb4684a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMeleeAttack: {fileID: 2392465478386273100}
 --- !u!1 &2613436627731946224
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,10 +215,10 @@ GameObject:
   - component: {fileID: 2613436627731946227}
   - component: {fileID: 2613436627731946237}
   - component: {fileID: 2613436627731946239}
-  - component: {fileID: 2613436627731946236}
   - component: {fileID: 2613436627731946238}
   - component: {fileID: 2613436627731946233}
   - component: {fileID: 2613436627731946232}
+  - component: {fileID: 2392465478386273100}
   m_Layer: 10
   m_Name: TigerShark
   m_TagString: Untagged
@@ -221,7 +256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  meleeAttack: {fileID: 2613436627731946236}
+  meleeAttack: {fileID: 2392465478386273100}
   rangedAttack: {fileID: 0}
   checkpoints:
   - {fileID: 0}
@@ -230,9 +265,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   visDist: 2
-  attackDist: 0.6
+  attackDist: 1.5
   patrolDist: 14
-  attackCooldown: 1
+  attackCooldown: 1.1
   patrolSpeed: 1.2
   pursueSpeed: 1.8
   isMeleeAttacking: 1
@@ -275,25 +310,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.021440214, y: 0.025728464}
   m_Size: {x: 0.8713615, y: 0.6398114}
   m_Direction: 1
---- !u!114 &2613436627731946236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2613436627731946224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f17f78b9bdec3134ea9221205b2491f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitboxCenter: {fileID: 2613436627731946226}
-  attackSize: 0.4
-  attackDamage: 2
-  attackKnockback: 6
-  attackOffset: 0.3
-  debugHitboxes: 1
-  hitboxIndicatorPrefab: {fileID: 7842766238382575663, guid: 7f15fa1107b20184f9f530683981036e, type: 3}
 --- !u!114 &2613436627731946238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,7 +339,7 @@ MonoBehaviour:
   rigidbody: {fileID: 0}
   attackingLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 2112
   health: {fileID: 2613436627731946238}
 --- !u!114 &2613436627731946232
 MonoBehaviour:
@@ -339,3 +355,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <KnockTime>k__BackingField: 0.5
   <KnockThurst>k__BackingField: 2
+--- !u!114 &2392465478386273100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2613436627731946224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c3282f4dcadc3489b37b9771eef271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitboxCenter: {fileID: 2613436627731946226}
+  attackSize: 0.35
+  attackDamage: 4
+  attackKnockback: 0
+  attackOffset: 0.35
+  debugHitboxes: 1
+  hitboxIndicatorPrefab: {fileID: 7842766238382575663, guid: 7f15fa1107b20184f9f530683981036e, type: 3}
+  animator: {fileID: 7472231394567845644}
+  navMeshAgent: {fileID: 2613436627731946237}
+  attackVelocity: 2.3
+  isAttacking: 0
+  attackDirection: {x: 0, y: 0}
+  justAttacked: 0
