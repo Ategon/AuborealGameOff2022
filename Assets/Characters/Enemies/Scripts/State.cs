@@ -267,7 +267,6 @@ public class meleeAttack : State
 
     public override void Enter()
     {
-        //stateValues.anim.SetTrigger("isShooting");
         attackCooldown = stateValues.stateMathValues.attackCooldown;
         stateValues.agent.isStopped = true;
         base.Enter();
@@ -275,14 +274,14 @@ public class meleeAttack : State
 
     public override void Update()
     {
-        if (!CanAttackPlayer())
+        if (!CanAttackPlayer() & !stateValues.meleeAttack.isAttacking)
         {
             nextState = new Idle(stateValues);
             stage = EVENT.EXIT;
         }
         if (attackCooldown<=0)
         {
-            stateValues.meleeAttack.Attack(stateValues.player.position);
+            stateValues.meleeAttack.BeginAttacking(stateValues.player.position);
             attackCooldown = stateValues.stateMathValues.attackCooldown;
         }
         else
@@ -293,7 +292,6 @@ public class meleeAttack : State
 
     public override void Exit()
     {
-        //stateValues.anim.ResetTrigger("isShooting");
         base.Exit();
     }
 }

@@ -8,7 +8,7 @@ public class EnemyAI : MonoBehaviour
     NavMeshAgent agent;
     Animator anim;
     public Transform player;
-    public MeleeAttack meleeAttack;
+    public EnemyMeleeAttack meleeAttack;
     public ShootProjectile rangedAttack;
     private StateMathematicalValues stateMathValues;
     public List<GameObject> checkpoints;
