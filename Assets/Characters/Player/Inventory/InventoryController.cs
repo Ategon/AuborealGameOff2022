@@ -22,6 +22,7 @@ namespace Assets.Player.Inventory
         [SerializeField] private EquipmentDescriptionBank equipmentDescriptionBank;
         [SerializeField] private EquipmentPickedUpEvent equipmentPickedUpEvent;
         public bool compassOwned;
+        public bool diviningRodOwned;
 
         public bool ChangeWood(int changeAmount)
         {
@@ -67,6 +68,13 @@ namespace Assets.Player.Inventory
             EquipmentPickupEventParameters eventParameters = new EquipmentPickupEventParameters("Compass", equipmentDescriptionBank.compassDescription);
             equipmentPickedUpEvent.Raise(this, eventParameters);
             compassOwned = true;
+        }
+
+        public void PickUpDiviningRod()
+        {
+            EquipmentPickupEventParameters eventParameters = new EquipmentPickupEventParameters("Divining Rod", equipmentDescriptionBank.diviningRodDescription);
+            equipmentPickedUpEvent.Raise(this, eventParameters);
+            diviningRodOwned = true;
         }
     }
     public enum ResourceType

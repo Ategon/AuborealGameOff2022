@@ -7,6 +7,7 @@ namespace Assets.Player.Inventory
     public class EquipmentDescriptionBank : ScriptableObject
     {
         public string compassDescription;
+        public string diviningRodDescription;
 
         public string GetEquipmentDescription(string equipmentName)
         {
@@ -14,8 +15,12 @@ namespace Assets.Player.Inventory
             {
                 case "Compass":
                     return compassDescription;
+                case "Divining Rod":
+                    return diviningRodDescription;
             }
             return "";
         }
+
+
     }
 }

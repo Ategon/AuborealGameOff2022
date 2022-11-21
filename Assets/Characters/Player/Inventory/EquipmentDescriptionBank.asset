@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   compassDescription: This item allows you to see the presence of other key equipment
     on the navigation map.
+  diviningRodDescription: This item allows you to see how much water is on an island
+    from the navigation map.

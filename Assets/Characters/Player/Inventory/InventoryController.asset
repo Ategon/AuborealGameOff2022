@@ -21,3 +21,4 @@ MonoBehaviour:
   equipmentDescriptionBank: {fileID: 11400000, guid: 89f2293a64f542e4e96b2b82d4d2bd7d, type: 2}
   equipmentPickedUpEvent: {fileID: 11400000, guid: e6e18ba6dceaeec478514074c74a904a, type: 2}
   compassOwned: 0
+  diviningRodOwned: 0
