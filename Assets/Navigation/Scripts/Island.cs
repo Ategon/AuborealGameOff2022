@@ -13,6 +13,7 @@ namespace Assets.Navigation
         [Header("Island Information")]
         public string islandName;
         public string equipmentName;
+        public int waterAmount;
         [Header("References")]
         public DockPoint dockPoint;
         [SerializeField] private IslandClickedEvent islandClickedEvent;

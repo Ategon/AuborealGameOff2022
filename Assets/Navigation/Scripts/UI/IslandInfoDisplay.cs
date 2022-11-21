@@ -11,6 +11,7 @@ public class IslandInfoDisplay : MonoBehaviour
     [SerializeField] private TextMeshProUGUI basicInfoTextComponent;
     [SerializeField] private TextMeshProUGUI equipmentNameTextComponent;
     [SerializeField] private TextMeshProUGUI equipmentDescriptionTextComponent;
+    [SerializeField] private TextMeshProUGUI resourceTextComponent;
     [Header("Mouse Events")]
     [SerializeField] private IslandClickedEvent islandClickedEvent;
     [SerializeField] private IslandMouseEnter islandMouseEnter;
@@ -53,6 +54,15 @@ public class IslandInfoDisplay : MonoBehaviour
                 equipmentDescriptionTextComponent.text = equipmentDescriptionBank.GetEquipmentDescription(island.equipmentName);
             }
         }
+        resourceTextComponent.text = "";
+        if (inventoryController.diviningRodOwned)
+        {
+            resourceTextComponent.text += "Water: " + island.waterAmount;
+        }
+        else
+        {
+            resourceTextComponent.text += "Water: UNKNOWN";
+        }
     }
     public void OnIslandExit(object sender, EventParameters arg2)
     {
@@ -68,6 +78,7 @@ public class IslandInfoDisplay : MonoBehaviour
         basicInfoTextComponent.text = "";
         equipmentNameTextComponent.text = "";
         equipmentDescriptionTextComponent.text = "";
+        resourceTextComponent.text = "";
     }
 
 }
