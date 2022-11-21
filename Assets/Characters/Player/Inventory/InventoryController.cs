@@ -9,12 +9,19 @@ namespace Assets.Player.Inventory
     [CreateAssetMenu(fileName = nameof(InventoryController), menuName = "ScriptableObjects/InventoryController")]
     public class InventoryController : ScriptableObject
     {
+        [Header("Wood")]
         public int woodCount;
         [SerializeField] private WoodChangedEvent woodChangedEvent;
+        [Header("Treasure")]
         public int treasureCount;
         [SerializeField] private TreasureChangedEvent treasureChangedEvent;
+        [Header("Ammo")]
         public int ammoCount;
         [SerializeField] private AmmoChangedEvent ammoChangedEvent;
+        [Header("Equipment")]
+        [SerializeField] private EquipmentDescriptionBank equipmentDescriptionBank;
+        [SerializeField] private EquipmentPickedUpEvent equipmentPickedUpEvent;
+        public bool compassOwned;
 
         public bool ChangeWood(int changeAmount)
         {
@@ -53,6 +60,13 @@ namespace Assets.Player.Inventory
         {
             treasureCount = 0;
             woodCount = 0;
+        }
+
+        public void PickUpCompass()
+        {
+            EquipmentPickupEventParameters eventParameters = new EquipmentPickupEventParameters("Compass", equipmentDescriptionBank.compassDescription);
+            equipmentPickedUpEvent.Raise(this, eventParameters);
+            compassOwned = true;
         }
     }
     public enum ResourceType
