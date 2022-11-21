@@ -3,6 +3,7 @@ using Assets.Navigation;
 using Assets.Player.Inventory;
 using TMPro;
 using UnityEngine;
+using System;
 
 
 public class IslandInfoDisplay : MonoBehaviour
@@ -43,15 +44,15 @@ public class IslandInfoDisplay : MonoBehaviour
         }
         if (inventoryController.compassOwned)
         {
-            if (island.equipmentName == "")
+            if (island.equipmentType == EquipmentType.None)
             {
                 equipmentNameTextComponent.text = "No equipment present.";
                 equipmentDescriptionTextComponent.text = "";
             }
             else
             {
-                equipmentNameTextComponent.text = island.equipmentName + " present!";
-                equipmentDescriptionTextComponent.text = equipmentDescriptionBank.GetEquipmentDescription(island.equipmentName);
+                equipmentNameTextComponent.text = equipmentDescriptionBank.GetEquipmentName(island.equipmentType) + " present!";
+                equipmentDescriptionTextComponent.text = equipmentDescriptionBank.GetEquipmentDescription(island.equipmentType);
             }
         }
         resourceTextComponent.text = "";

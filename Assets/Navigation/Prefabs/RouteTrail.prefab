@@ -48,4 +48,6 @@ MonoBehaviour:
   distanceBetweenDots: 0.4
   defaultColor: {r: 0.972549, g: 0.3137255, b: 0.3137255, a: 0.24313726}
   hoverColor: {r: 0.8867924, g: 0.06190812, b: 0.06190812, a: 0.76862746}
+  routeCostTextPrefab: {fileID: 8515413539814830877, guid: 3ab23e9643f58d14a8e2c3aa2e1ebaed, type: 3}
+  routeCostOffset: 0.3
   destination: {fileID: 0}
