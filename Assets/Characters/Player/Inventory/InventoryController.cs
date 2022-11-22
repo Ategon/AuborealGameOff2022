@@ -1,6 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using Assets.Player.Thirst;
+using System;
 using UnityEngine;
 
 
@@ -9,12 +7,21 @@ namespace Assets.Player.Inventory
     [CreateAssetMenu(fileName = nameof(InventoryController), menuName = "ScriptableObjects/InventoryController")]
     public class InventoryController : ScriptableObject
     {
+        [Header("Wood")]
         public int woodCount;
         [SerializeField] private WoodChangedEvent woodChangedEvent;
+        [Header("Treasure")]
         public int treasureCount;
         [SerializeField] private TreasureChangedEvent treasureChangedEvent;
+        [Header("Ammo")]
         public int ammoCount;
         [SerializeField] private AmmoChangedEvent ammoChangedEvent;
+        [Header("Equipment")]
+        [SerializeField] private EquipmentDescriptionBank equipmentDescriptionBank;
+        [SerializeField] private EquipmentPickedUpEvent equipmentPickedUpEvent;
+        public bool compassOwned;
+        public bool diviningRodOwned;
+        public bool nauticalChartOwned;
 
         public bool ChangeWood(int changeAmount)
         {
@@ -54,10 +61,37 @@ namespace Assets.Player.Inventory
             treasureCount = 0;
             woodCount = 0;
         }
+
+        public void AcquireEquipment(EquipmentType type)
+        {
+            string equipmentName = equipmentDescriptionBank.GetEquipmentName(type);
+            EquipmentPickupEventParameters eventParameters = new EquipmentPickupEventParameters(equipmentName, equipmentDescriptionBank.GetEquipmentDescription(type));
+            equipmentPickedUpEvent.Raise(this, eventParameters);
+            switch (type)
+            {
+                case EquipmentType.Compass:
+                    compassOwned = true;
+                    break;
+                case EquipmentType.DiviningRod:
+                    diviningRodOwned = true;
+                    break;
+                case EquipmentType.NauticalChart:
+                    nauticalChartOwned = true;
+                    break;
+            }
+        }
     }
     public enum ResourceType
     {
         Wood,
         Treasure
+    }
+
+    public enum EquipmentType
+    { 
+        Compass,
+        DiviningRod,
+        NauticalChart,
+        None
     }
 }

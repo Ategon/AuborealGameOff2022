@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
+using Assets.Player.Inventory;
+using Assets.EventSystem;
 
 public class Dialogue : MonoBehaviour
 {
@@ -20,6 +22,9 @@ public class Dialogue : MonoBehaviour
         StartDialogue();
     }
 
+
+
+
     public void DialogueButton()
     {
         if (textComponent.text == lines[index])
@@ -35,8 +40,15 @@ public class Dialogue : MonoBehaviour
 
     private void StartDialogue()
     {
+        Time.timeScale = 0f;
         index = 0;
         StartCoroutine(TypeLine());
+    }
+
+    public void StartDialogue(string[] lines)
+    {
+        this.lines = lines;
+        StartDialogue();
     }
 
     private void NextLine()
@@ -49,6 +61,8 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
+            Time.timeScale = 1f;
+            textComponent.text = string.Empty;
             gameObject.SetActive(false);
         }
     }
@@ -57,7 +71,10 @@ public class Dialogue : MonoBehaviour
         foreach (char c in lines[index].ToCharArray())
         {
             textComponent.text += c;
-            yield return new WaitForSeconds(textSpeed);
+            yield return new WaitForSecondsRealtime(textSpeed);
         }
     }
+
+
+
 }

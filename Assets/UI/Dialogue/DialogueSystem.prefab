@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 4174495856702403282}
   - component: {fileID: 4174495856702403283}
   - component: {fileID: 4174495856702403284}
+  - component: {fileID: 4448224091507449195}
   m_Layer: 5
   m_Name: DialogueSystem
   m_TagString: Untagged
@@ -167,7 +168,7 @@ RectTransform:
   m_Children:
   - {fileID: 4174495856860473917}
   m_Father: {fileID: 0}
-  m_RootOrder: 59
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -236,6 +237,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &4448224091507449195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4174495856702403285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 028a45738ef12f34ca97b18c69f00744, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  equipmentPickedUpEvent: {fileID: 11400000, guid: e6e18ba6dceaeec478514074c74a904a, type: 2}
+  dialogue: {fileID: 4174495856860473916}
 --- !u!1 &4174495856860473918
 GameObject:
   m_ObjectHideFlags: 0
