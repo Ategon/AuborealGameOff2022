@@ -18,3 +18,5 @@ MonoBehaviour:
     from the navigation map.
   nauticalChartDescription: This items allows you to see the distance between any
     islands.
+  resourceMapDescription: This items allows you to see how many resources are available
+    on an island from the navigation map.

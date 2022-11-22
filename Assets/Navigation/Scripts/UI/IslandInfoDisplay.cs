@@ -58,11 +58,21 @@ public class IslandInfoDisplay : MonoBehaviour
         resourceTextComponent.text = "";
         if (inventoryController.diviningRodOwned)
         {
-            resourceTextComponent.text += "Water: " + island.waterAmount;
+            resourceTextComponent.text += "Water: " + island.waterAmount + "\n";
         }
         else
         {
-            resourceTextComponent.text += "Water: UNKNOWN";
+            resourceTextComponent.text += "Water: UNKNOWN\n";
+        }
+        if (inventoryController.resourceMapOwned)
+        {
+            resourceTextComponent.text += "Treasure: " + island.treasureAmount + "\n";
+            resourceTextComponent.text += "Wood: " + island.woodAmount + "\n";
+        }
+        else
+        {
+            resourceTextComponent.text += "Treasure: UNKNOWN\n";
+            resourceTextComponent.text += "Wood: UNKNOWN\n";
         }
     }
     public void OnIslandExit(object sender, EventParameters arg2)
