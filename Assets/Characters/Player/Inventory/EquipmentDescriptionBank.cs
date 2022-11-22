@@ -11,6 +11,7 @@ namespace Assets.Player.Inventory
         public string diviningRodDescription;
         public string nauticalChartDescription;
         public string resourceMapDescription;
+        public string sextantDescription;
 
         public string GetEquipmentDescription(EquipmentType type)
         {
@@ -24,6 +25,8 @@ namespace Assets.Player.Inventory
                     return diviningRodDescription;
                 case EquipmentType.ResourceMap:
                     return resourceMapDescription;
+                case EquipmentType.Sextant:
+                    return sextantDescription;
             }
             return "";
         }

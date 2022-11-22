@@ -16,7 +16,9 @@ MonoBehaviour:
     on the navigation map.
   diviningRodDescription: This item allows you to see how much water is on an island
     from the navigation map.
-  nauticalChartDescription: This items allows you to see the distance between any
+  nauticalChartDescription: This item allows you to see the distance between any
     islands.
-  resourceMapDescription: This items allows you to see how many resources are available
+  resourceMapDescription: This item allows you to see how many resources are available
     on an island from the navigation map.
+  sextantDescription: This item allows you to sail out into the open ocean, completing
+    the game.
