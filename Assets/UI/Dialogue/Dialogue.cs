@@ -13,13 +13,15 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private float textSpeed;
     [SerializeField] private InputActionReference mouseButton;
 
+    private float animationTime = 0.5f;
     private int index;
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
         textComponent.text = string.Empty;
-        StartDialogue();
+        anim = GetComponent<Animator>();
     }
 
 
@@ -38,7 +40,7 @@ public class Dialogue : MonoBehaviour
         }
     }
 
-    private void StartDialogue()
+    public void StartDialogue()
     {
         Time.timeScale = 0f;
         index = 0;
@@ -48,7 +50,7 @@ public class Dialogue : MonoBehaviour
     public void StartDialogue(string[] lines)
     {
         this.lines = lines;
-        StartDialogue();
+        Invoke("StartDialogue", animationTime);
     }
 
     private void NextLine()
@@ -63,9 +65,15 @@ public class Dialogue : MonoBehaviour
         {
             Time.timeScale = 1f;
             textComponent.text = string.Empty;
-            gameObject.SetActive(false);
+            anim.Play("DialogueBoxSlideOut");
         }
     }
+
+    public void DisableThis()
+    {
+        this.gameObject.SetActive(false);
+    }
+
     IEnumerator TypeLine()
     {
         foreach (char c in lines[index].ToCharArray())

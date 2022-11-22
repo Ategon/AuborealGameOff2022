@@ -14,15 +14,18 @@ public class ToolTips : MonoBehaviour
     void Start()
     {
         textComponent.text = string.Empty;
-        Debug.Log(line.Length);
-        ChangeLine();
+        EnterLine();
     }
 
-    public void ChangeLine()
+    public void EnterLine()
     {
         textComponent.text = line;
         Vector2 sizeDelta = GetComponent<RectTransform>().sizeDelta;
         GetComponent<RectTransform>().sizeDelta = new Vector2(offsize * line.Length , sizeDelta.y);
-        Debug.Log(GetComponent<RectTransform>().anchoredPosition);
+    }
+
+    public void DisableThis()
+    {
+        this.gameObject.SetActive(false);
     }
 }

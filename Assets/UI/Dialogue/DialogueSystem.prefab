@@ -168,7 +168,7 @@ RectTransform:
   m_Children:
   - {fileID: 4174495856860473917}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 59
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -263,6 +263,7 @@ GameObject:
   - component: {fileID: 4174495856860473914}
   - component: {fileID: 4174495856860473915}
   - component: {fileID: 4174495856860473916}
+  - component: {fileID: 1402876949}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -289,7 +290,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -229.31892}
+  m_AnchoredPosition: {x: 0, y: -230}
   m_SizeDelta: {x: 1107.331, y: 205.36298}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4174495856860473914
@@ -346,8 +347,28 @@ MonoBehaviour:
   lines:
   - Test Dialogue
   - Hello Player
-  textSpeed: 0.3
+  textSpeed: 0.1
   mouseButton: {fileID: 1120369429361536294, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+--- !u!95 &1402876949
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4174495856860473918}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0e057ce0dcac31d4fa46f7a17fc04225, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4174495856986469924
 GameObject:
   m_ObjectHideFlags: 0
