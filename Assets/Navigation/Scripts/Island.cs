@@ -15,6 +15,8 @@ namespace Assets.Navigation
         public string islandName;
         public EquipmentType equipmentType;
         public int waterAmount;
+        public int woodAmount;
+        public int treasureAmount;
         [Header("References")]
         public DockPoint dockPoint;
         [SerializeField] private IslandClickedEvent islandClickedEvent;

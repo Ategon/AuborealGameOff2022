@@ -1080,6 +1080,10 @@ PrefabInstance:
       value: MacGuffin Island
       objectReference: {fileID: 0}
     - target: {fileID: 8890400564754637675, guid: 0c970ff6be9d8d847b651a20ad776c9d, type: 3}
+      propertyPath: woodAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8890400564754637675, guid: 0c970ff6be9d8d847b651a20ad776c9d, type: 3}
       propertyPath: loadedScene
       value: 
       objectReference: {fileID: 102900000, guid: 591a7daa08faf3c4aa247d2adc8ab2be, type: 3}
@@ -1089,6 +1093,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8890400564754637675, guid: 0c970ff6be9d8d847b651a20ad776c9d, type: 3}
       propertyPath: equipmentType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8890400564754637675, guid: 0c970ff6be9d8d847b651a20ad776c9d, type: 3}
+      propertyPath: treasureAmount
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8890400564754637675, guid: 0c970ff6be9d8d847b651a20ad776c9d, type: 3}
@@ -1429,6 +1437,10 @@ PrefabInstance:
       value: Wistful Bay
       objectReference: {fileID: 0}
     - target: {fileID: 8890400564754637675, guid: 0c970ff6be9d8d847b651a20ad776c9d, type: 3}
+      propertyPath: woodAmount
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8890400564754637675, guid: 0c970ff6be9d8d847b651a20ad776c9d, type: 3}
       propertyPath: loadedScene
       value: 
       objectReference: {fileID: 102900000, guid: 591a7daa08faf3c4aa247d2adc8ab2be, type: 3}
@@ -1439,6 +1451,10 @@ PrefabInstance:
     - target: {fileID: 8890400564754637675, guid: 0c970ff6be9d8d847b651a20ad776c9d, type: 3}
       propertyPath: equipmentType
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8890400564754637675, guid: 0c970ff6be9d8d847b651a20ad776c9d, type: 3}
+      propertyPath: treasureAmount
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8890400564754637675, guid: 0c970ff6be9d8d847b651a20ad776c9d, type: 3}
       propertyPath: loadedSceneName
@@ -1555,6 +1571,10 @@ PrefabInstance:
       value: Fearful Atoll
       objectReference: {fileID: 0}
     - target: {fileID: 8890400564754637675, guid: 0c970ff6be9d8d847b651a20ad776c9d, type: 3}
+      propertyPath: woodAmount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8890400564754637675, guid: 0c970ff6be9d8d847b651a20ad776c9d, type: 3}
       propertyPath: loadedScene
       value: 
       objectReference: {fileID: 102900000, guid: 591a7daa08faf3c4aa247d2adc8ab2be, type: 3}
@@ -1565,6 +1585,10 @@ PrefabInstance:
     - target: {fileID: 8890400564754637675, guid: 0c970ff6be9d8d847b651a20ad776c9d, type: 3}
       propertyPath: equipmentType
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8890400564754637675, guid: 0c970ff6be9d8d847b651a20ad776c9d, type: 3}
+      propertyPath: treasureAmount
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8890400564754637675, guid: 0c970ff6be9d8d847b651a20ad776c9d, type: 3}
       propertyPath: loadedSceneName
@@ -1825,6 +1849,10 @@ PrefabInstance:
       value: Shipwreck Cove
       objectReference: {fileID: 0}
     - target: {fileID: 8890400564754637675, guid: 0c970ff6be9d8d847b651a20ad776c9d, type: 3}
+      propertyPath: woodAmount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8890400564754637675, guid: 0c970ff6be9d8d847b651a20ad776c9d, type: 3}
       propertyPath: loadedScene
       value: 
       objectReference: {fileID: 102900000, guid: d3d431c263ce7934e9b51219d271b3a2, type: 3}
@@ -1839,6 +1867,10 @@ PrefabInstance:
     - target: {fileID: 8890400564754637675, guid: 0c970ff6be9d8d847b651a20ad776c9d, type: 3}
       propertyPath: equipmentType
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8890400564754637675, guid: 0c970ff6be9d8d847b651a20ad776c9d, type: 3}
+      propertyPath: treasureAmount
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8890400564754637675, guid: 0c970ff6be9d8d847b651a20ad776c9d, type: 3}
       propertyPath: loadedSceneName
