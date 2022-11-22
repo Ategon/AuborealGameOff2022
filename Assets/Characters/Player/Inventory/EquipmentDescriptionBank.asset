@@ -16,3 +16,5 @@ MonoBehaviour:
     on the navigation map.
   diviningRodDescription: This item allows you to see how much water is on an island
     from the navigation map.
+  nauticalChartDescription: This items allows you to see the distance between any
+    islands.

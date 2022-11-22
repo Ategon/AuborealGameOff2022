@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c70764463197eb142b37d8cfd3ab4a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactable: {fileID: 4397645929196187348}
+  interactable: {fileID: 913492040847563335}
 --- !u!70 &2213371610363329296
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -529,7 +529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2213371611490297673}
   - component: {fileID: 2213371611490297674}
-  - component: {fileID: 4397645929196187348}
+  - component: {fileID: 913492040847563335}
   m_Layer: 0
   m_Name: CompassPickup
   m_TagString: Untagged
@@ -573,7 +573,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.005590468, y: 0.010083379}
   m_Size: {x: 0.23682705, y: 0.17106532}
   m_Direction: 1
---- !u!114 &4397645929196187348
+--- !u!114 &913492040847563335
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -582,11 +582,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2213371611490297675}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 538f2f2915489d44faf84285b3beb8ba, type: 3}
+  m_Script: {fileID: 11500000, guid: 8683f9f558dad0c4085a06423ef8425f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   interactionPopup: {fileID: 2213371610936894293}
   verb: Pick Up
   depletesWhenUsed: 1
   depletedPrefab: {fileID: 0}
+  equipmentType: 0
   inventoryController: {fileID: 11400000, guid: acf58a9829ecd3142b7d3b2126479049, type: 2}

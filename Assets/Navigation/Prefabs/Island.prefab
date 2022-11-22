@@ -261,11 +261,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   islandName: 
+  equipmentType: 0
+  waterAmount: 0
   dockPoint: {fileID: 8890400564181962415}
   islandClickedEvent: {fileID: 11400000, guid: a2d31f459f56f284584f8ae5cea2d4ab, type: 2}
   islandMouseEnter: {fileID: 11400000, guid: 6c87d6ea08cbab14b8c0c0f251d87837, type: 2}
   islandMouseExit: {fileID: 11400000, guid: 0d7ac54742c73874fb70a2ddd93a7189, type: 2}
   thirstController: {fileID: 11400000, guid: bf10bf0bed56e3946b6c3e6278b44038, type: 2}
+  playerLocationController: {fileID: 11400000, guid: 2d6c724e4992147419f3db8a166415b3, type: 2}
+  inventoryController: {fileID: 11400000, guid: acf58a9829ecd3142b7d3b2126479049, type: 2}
+  loadedSceneName: 
   routeTrailPrefab: {fileID: 1447846968458909057, guid: c700abbdc0b708f409d8007bf8c1a505, type: 3}
   routes:
   - destination: {fileID: 0}
