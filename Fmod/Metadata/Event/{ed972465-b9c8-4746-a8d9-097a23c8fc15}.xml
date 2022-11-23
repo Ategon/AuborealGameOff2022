@@ -304,10 +304,10 @@
 	<object class="MixerBusFader" id="{7a425d97-6446-49f9-a811-2a4cb4aa9223}" />
 	<object class="ThreeEQEffect" id="{0beb0474-281d-4ddf-9fb2-1ac8e496a297}">
 		<property name="lowGain">
-			<value>-13</value>
+			<value>-24.5</value>
 		</property>
 		<property name="midGain">
-			<value>-7.5</value>
+			<value>-11</value>
 		</property>
 		<property name="highGain">
 			<value>-2.5</value>
@@ -397,6 +397,9 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{23e70dd1-fcce-4a5a-8c91-2bf5c095af1c}">
+		<property name="volume">
+			<value>-6</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{833a89fa-59d8-4763-b475-6c424715dcd5}</destination>
 		</relationship>
@@ -448,7 +451,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>1.5</value>
 		</property>
 		<property name="curveShape">
 			<value>0.896025717</value>
@@ -459,7 +462,7 @@
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>-80</value>
+			<value>-70</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{fd4ffe2d-7a4c-4cf4-844f-13c8d7dee4af}">
@@ -467,7 +470,7 @@
 			<value>0.70000000000000007</value>
 		</property>
 		<property name="value">
-			<value>-24</value>
+			<value>-21.8571415</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{5b58580e-f4b8-4ef0-aefa-ca8e6afa8d58}">
@@ -475,7 +478,7 @@
 			<value>0.45000000000000001</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>1.5</value>
 		</property>
 		<property name="curveShape">
 			<value>0.397884786</value>
