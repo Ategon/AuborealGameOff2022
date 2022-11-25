@@ -23,6 +23,7 @@ namespace Assets.Player.Inventory
         public bool diviningRodOwned;
         public bool nauticalChartOwned;
         public bool resourceMapOwned;
+        public bool sextantOwned;
 
         public bool ChangeWood(int changeAmount)
         {
@@ -82,6 +83,9 @@ namespace Assets.Player.Inventory
                 case EquipmentType.ResourceMap:
                     resourceMapOwned = true;
                     break;
+                case EquipmentType.Sextant:
+                    sextantOwned = true;
+                    break;
             }
         }
     }
@@ -97,6 +101,7 @@ namespace Assets.Player.Inventory
         DiviningRod,
         NauticalChart,
         ResourceMap,
+        Sextant,
         None
     }
 }
