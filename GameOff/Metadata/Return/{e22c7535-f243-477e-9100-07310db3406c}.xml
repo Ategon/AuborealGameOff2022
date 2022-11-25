@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="MixerReturn" id="{e22c7535-f243-477e-9100-07310db3406c}">
+		<property name="name">
+			<value>hurt punch</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{bcc79371-2deb-4ec7-931b-b49408d18f07}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{f76f2f47-1b17-43ab-afe4-c3ecabac2e59}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{eb3df38f-3556-4d74-8dfa-f6b66cff11b6}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{bcc79371-2deb-4ec7-931b-b49408d18f07}">
+		<relationship name="effects">
+			<destination>{14d37648-7973-41f5-aa89-93c1d3295ee8}</destination>
+			<destination>{28f1f55e-7761-4a47-9c13-d0be7f4eb740}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{f76f2f47-1b17-43ab-afe4-c3ecabac2e59}" />
+	<object class="MixerBusFader" id="{14d37648-7973-41f5-aa89-93c1d3295ee8}" />
+	<object class="Sidechain" id="{28f1f55e-7761-4a47-9c13-d0be7f4eb740}" />
+</objects>

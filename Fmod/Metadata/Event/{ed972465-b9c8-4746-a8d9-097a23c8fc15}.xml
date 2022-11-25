@@ -200,7 +200,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{355e0bc6-7082-400b-ae0c-f18d7e6dfe58}">
 		<property name="volume">
-			<value>-3</value>
+			<value>-7.5</value>
 		</property>
 		<property name="name">
 			<value>monkeys_and_frogs</value>
@@ -265,6 +265,7 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{fbfd9f79-d4bc-4cf6-8bcf-ddefbe996cb5}">
 		<relationship name="effects">
+			<destination>{152cc287-1a9e-4af4-abbe-8f96fb4befa4}</destination>
 			<destination>{3be6bd5b-7be8-41f4-a39f-4bf5ea292e1a}</destination>
 			<destination>{56a08a90-7433-45f4-b11b-7b5393a6d721}</destination>
 		</relationship>
@@ -282,6 +283,7 @@
 		<relationship name="effects">
 			<destination>{bccf97ae-3f26-4122-9dc7-fad0845506fb}</destination>
 			<destination>{bb98d651-3b83-4885-958b-6c50a71e1f74}</destination>
+			<destination>{b61da3ae-6a9a-47ef-9020-1277a80e1549}</destination>
 			<destination>{6745dc9f-8227-46ac-bd41-b8fcc38d476e}</destination>
 		</relationship>
 	</object>
@@ -301,8 +303,17 @@
 	<object class="SpatialiserEffect" id="{c5024564-c99d-47ea-ab18-2a999c8a4564}" />
 	<object class="MixerBusFader" id="{7a425d97-6446-49f9-a811-2a4cb4aa9223}" />
 	<object class="ThreeEQEffect" id="{0beb0474-281d-4ddf-9fb2-1ac8e496a297}">
-		<property name="highGain">
+		<property name="lowGain">
 			<value>-13</value>
+		</property>
+		<property name="midGain">
+			<value>-7.5</value>
+		</property>
+		<property name="highGain">
+			<value>-2.5</value>
+		</property>
+		<property name="crossoverSlope">
+			<value>0</value>
 		</property>
 	</object>
 	<object class="SingleSound" id="{0be3b43d-01b2-4c1f-a0f8-0f3e75049a6e}">
@@ -343,19 +354,33 @@
 			<destination>{2a276f6f-cf5a-4e76-939f-7f6637598cd2}</destination>
 		</relationship>
 	</object>
+	<object class="SFXReverbEffect" id="{152cc287-1a9e-4af4-abbe-8f96fb4befa4}">
+		<property name="decayTime">
+			<value>2400</value>
+		</property>
+		<property name="lowShelfFrequency">
+			<value>360</value>
+		</property>
+		<property name="dryLevel">
+			<value>0.5</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{3be6bd5b-7be8-41f4-a39f-4bf5ea292e1a}" />
 	<object class="ThreeEQEffect" id="{56a08a90-7433-45f4-b11b-7b5393a6d721}">
 		<property name="lowGain">
-			<value>-15.5</value>
+			<value>-17</value>
 		</property>
 		<property name="midGain">
-			<value>2</value>
+			<value>-19.5</value>
 		</property>
 		<property name="highGain">
 			<value>-9</value>
 		</property>
 		<property name="highCrossover">
 			<value>5500</value>
+		</property>
+		<property name="crossoverSlope">
+			<value>0</value>
 		</property>
 	</object>
 	<object class="SingleSound" id="{6814850f-061c-48bf-9460-130cab6ea412}">
@@ -387,13 +412,27 @@
 			<value>-22</value>
 		</property>
 		<property name="midGain">
-			<value>-4</value>
+			<value>-14</value>
 		</property>
 		<property name="highGain">
 			<value>-0.5</value>
 		</property>
 		<property name="highCrossover">
 			<value>3600</value>
+		</property>
+	</object>
+	<object class="SFXReverbEffect" id="{b61da3ae-6a9a-47ef-9020-1277a80e1549}">
+		<property name="decayTime">
+			<value>3200</value>
+		</property>
+		<property name="lowShelfFrequency">
+			<value>310</value>
+		</property>
+		<property name="lowShelfGain">
+			<value>-18</value>
+		</property>
+		<property name="wetLevel">
+			<value>-5.5</value>
 		</property>
 	</object>
 	<object class="SpatialiserEffect" id="{6745dc9f-8227-46ac-bd41-b8fcc38d476e}">
