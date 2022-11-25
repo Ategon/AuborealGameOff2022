@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class EnemyHealth : Health
 {
-    [SerializeField] private int maxHealth;
+    public int maxHealth;
     [SerializeField] private int startingHealth;
-    private int currentHealth;
+    [HideInInspector] public int currentHealth;
     private void Awake()
     {
         currentHealth = startingHealth;
@@ -15,7 +15,11 @@ public class EnemyHealth : Health
     public override void ChangeHealth(int changeAmount)
     {
         currentHealth = Mathf.Min(maxHealth, currentHealth + changeAmount);
-        if (currentHealth < 0)
-            Destroy(gameObject);
+        if (currentHealth <= 0)
+            Die();
+    }
+    protected virtual void Die()
+    {
+        Destroy(gameObject);
     }
 }
