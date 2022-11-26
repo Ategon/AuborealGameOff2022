@@ -5110,6 +5110,7 @@ GameObject:
   - component: {fileID: 1585665600511274920}
   - component: {fileID: 9119500141450112101}
   - component: {fileID: 2092749779}
+  - component: {fileID: 2074316220938895930}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -5196,6 +5197,7 @@ MonoBehaviour:
   projectileSpawnPoint: {fileID: 1095527020}
   playerMovement: {fileID: 9119500141450112101}
   inventoryController: {fileID: 11400000, guid: acf58a9829ecd3142b7d3b2126479049, type: 2}
+  playerShootEvent: {fileID: 11400000, guid: d8011d944e8edde4aa7d57ad542bdadd, type: 2}
   cooldown: 0.5
   animator: {fileID: 3997124552067024247}
   isShooting: 0
@@ -5220,7 +5222,8 @@ MonoBehaviour:
   hitboxIndicatorPrefab: {fileID: 7842766238382575663, guid: 26745dd7c1fea5d4fb0446a8b9b89e35, type: 3}
   animator: {fileID: 3997124552067024247}
   cooldown: 0.2
-  playerMeleeAttackEvent: {fileID: 11400000, guid: bca9bce8d4ae74e42a010da58c627a9d, type: 2}
+  playerMeleeSwingEvent: {fileID: 11400000, guid: f68360d41d191bf469ef417b0401b284, type: 2}
+  playerMeleeHitEvent: {fileID: 11400000, guid: e77790e5a4ac1a34bba2fea4cd1a4575, type: 2}
   playerMovement: {fileID: 9119500141450112101}
   attackVelocity: 1.6
   isAttacking: 0
@@ -5241,6 +5244,7 @@ MonoBehaviour:
     Force: 3
     ActiveTime: 0.3
     CooldownTime: 0.5
+  _playerDashEvent: {fileID: 11400000, guid: 73a47132fb16e3846a17f1d3acfb1381, type: 2}
 --- !u!114 &9119500141450112101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5256,6 +5260,7 @@ MonoBehaviour:
   <PlayerSpeed>k__BackingField: 2
   _playerMeleeAttack: {fileID: 7143959024067221662}
   _playerShootProjectile: {fileID: 7143959024067221658}
+  _playerFootstepSound: {fileID: 2074316220938895930}
 --- !u!114 &2092749779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5271,6 +5276,21 @@ MonoBehaviour:
   healthController: {fileID: 11400000, guid: c6f4155bb5a3e0a43ab85cfaaa35bd24, type: 2}
   gameManager: {fileID: 0}
   regenPeriod: 3
+--- !u!114 &2074316220938895930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5187959634886955620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02c94d0a8e4287b4db12c36b9a82d03d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerFootstepEvent: {fileID: 11400000, guid: 0c02930a85b50a148afba249b30f80ba, type: 2}
+  timeBetweenFootsteps: 0.4
+  isWalking: 0
 --- !u!1 &6491090493566711643
 GameObject:
   m_ObjectHideFlags: 0

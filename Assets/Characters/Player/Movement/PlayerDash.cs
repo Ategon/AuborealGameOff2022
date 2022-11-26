@@ -1,4 +1,5 @@
 using System;
+using Assets.Audio.Events;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,6 +9,7 @@ namespace Characters.Player.Movement
     public class PlayerDash : MonoBehaviour
     {
         [field: SerializeField] public DashData DashData { get; private set; }
+        [SerializeField] private PlayerDashEvent _playerDashEvent;
 
         private float _dashActiveTime;
         private float _dashCooldownTime;
@@ -44,6 +46,7 @@ namespace Characters.Player.Movement
             _dashActiveTime = DashData.ActiveTime;
             _dashCooldownTime = DashData.CooldownTime;
             _dashDirection = _inputs.Player.Move.ReadValue<Vector2>();
+            _playerDashEvent.Raise(this, null);
 
             CanDash = true;
         }
