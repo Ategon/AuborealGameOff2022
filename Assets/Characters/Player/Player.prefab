@@ -20417,7 +20417,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5525fe31d90d9744822279535a8a326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  additionalFlippees: []
+  additionalFlippees:
+  - {fileID: 943406676}
   particleFlipees:
   - {fileID: 568309182}
   - {fileID: 0}
