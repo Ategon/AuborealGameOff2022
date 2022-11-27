@@ -16,10 +16,11 @@ public class MeleeAttack : MonoBehaviour
     [Header("Debug")]
     [SerializeField] private bool debugHitboxes;
     [SerializeField] private GameObject hitboxIndicatorPrefab;
-     public void Attack(Vector3 target)
+     public bool Attack(Vector3 target)
     {
         Vector3 attackPosition = FindPointFromOffset(hitboxCenter.position, target, attackOffset);
         Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPosition, attackSize);
+        bool connected = false;
         if (debugHitboxes)
         {
             GameObject indicator = Instantiate(hitboxIndicatorPrefab, attackPosition, Quaternion.identity);
@@ -30,14 +31,17 @@ public class MeleeAttack : MonoBehaviour
             Attackable attackable = collider.GetComponent<Attackable>();
             if (attackable != null)
             {
-                attackable.ReceiveDamage(gameObject.layer, new Damage(attackDamage, attackKnockback, (collider.transform.position - hitboxCenter.transform.position).normalized));
+                if (attackable.ReceiveDamage(gameObject.layer, new Damage(attackDamage, attackKnockback, (collider.transform.position - hitboxCenter.transform.position).normalized)))
+                    connected = true;
             }
 
             if (collider.TryGetComponent(out KnockBackable knockBackable))
             {
                 knockBackable.Knock(hitboxCenter.position);
+                connected = true;
             }
         }
+        return connected;
     }
 
     protected Vector3 FindPointFromOffset(Vector3 hitboxCenterPosition, Vector3 target, float attackOffset)

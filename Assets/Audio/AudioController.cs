@@ -14,7 +14,11 @@ namespace Assets.Audio
         [SerializeField] private AudioBank audioBank;
 
         [Header("Events")]
-        [SerializeField] private PlayerMeleeAttackEvent playerMeleeAttackEvent;
+        [SerializeField] private PlayerMeleeSwingEvent playerMeleeSwingEvent;
+        [SerializeField] private PlayerMeleeHitEvent playerMeleeHitEvent;
+        [SerializeField] private PlayerFootstepEvent playerFootstepEvent;
+        [SerializeField] private PlayerDashEvent playerDashEvent;
+        [SerializeField] private PlayerShootEvent playerShootEvent;
 
 
         private EventInstance _persistentER;
@@ -43,14 +47,22 @@ namespace Assets.Audio
         {
             SceneManager.sceneLoaded += OnSceneLoaded;
 
-            playerMeleeAttackEvent.AddListener(OnPlayerMeleeAttackEvent);
+            playerMeleeSwingEvent.AddListener(OnPlayerMeleeSwingEvent);
+            playerMeleeHitEvent.AddListener(OnPlayerMeleeHitEvent);
+            playerDashEvent.AddListener(OnPlayerDashEvent);
+            playerFootstepEvent.AddListener(OnPlayerFootstepEvent);
+            playerShootEvent.AddListener(OnPlayerShootEvent);
         }
 
         private void OnDisable()
         {
             SceneManager.sceneLoaded -= OnSceneLoaded;
 
-            playerMeleeAttackEvent.RemoveListener(OnPlayerMeleeAttackEvent);
+            playerMeleeSwingEvent.RemoveListener(OnPlayerMeleeSwingEvent);
+            playerMeleeHitEvent.RemoveListener(OnPlayerMeleeHitEvent);
+            playerDashEvent.RemoveListener(OnPlayerDashEvent);
+            playerFootstepEvent.RemoveListener(OnPlayerFootstepEvent);
+            playerShootEvent.RemoveListener(OnPlayerShootEvent);
         }
 
         private bool IsPlaying(FMOD.Studio.EventInstance instance)
@@ -84,11 +96,36 @@ namespace Assets.Audio
             RuntimeManager.PlayOneShot(eventReference, location);
         }
 
+        private void PlayOneShotSoundLabelled(EventReference eventReference, string labelName, string labelValue, Vector3 location = default)
+        {
+            Debug.Log("One Shot Sound Labelled Called");
+            EventInstance instance = RuntimeManager.CreateInstance(eventReference);
+            instance.setParameterByNameWithLabel(labelName, labelValue);
+            instance.start();
+        }
+
         #region Events Callbacks
 
-        private void OnPlayerMeleeAttackEvent(object sender, EventParameters parameters)
+        private void OnPlayerMeleeSwingEvent(object sender, EventParameters parameters)
         {
-            PlayOneShotSound(audioBank.ERPlayerMeleeAttack);
+            PlayOneShotSound(audioBank.ERPlayerMeleeSwing);
+        }
+        private void OnPlayerMeleeHitEvent(object sender, EventParameters parameters)
+        {
+            PlayOneShotSound(audioBank.ERPlayerMeleeHit);
+        }
+        private void OnPlayerFootstepEvent(object sender, EventParameters parameters)
+        {
+            FootstepEventParameters footstepEventParameters = parameters as FootstepEventParameters;
+            PlayOneShotSoundLabelled(audioBank.ERPlayerFootsteps, footstepEventParameters.labelName, footstepEventParameters.labelValue);
+        }
+        private void OnPlayerShootEvent(object sender, EventParameters parameters)
+        {
+            PlayOneShotSound(audioBank.ERPlayerShoot);
+        }
+        private void OnPlayerDashEvent(object sender, EventParameters parameters)
+        {
+            PlayOneShotSound(audioBank.ERPlayerDash);
         }
 
         #endregion

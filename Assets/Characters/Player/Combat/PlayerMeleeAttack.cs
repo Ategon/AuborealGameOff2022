@@ -15,7 +15,8 @@ public class PlayerMeleeAttack : MeleeAttack
     [SerializeField] private float cooldown;
     private float timeUntilNextAttack;
     [Header("References")]
-    [SerializeField] private PlayerMeleeAttackEvent playerMeleeAttackEvent;
+    [SerializeField] private PlayerMeleeSwingEvent playerMeleeSwingEvent;
+    [SerializeField] private PlayerMeleeHitEvent playerMeleeHitEvent;
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private Cursor cursor;
     [SerializeField] private ParticleSystem swordParticles;
@@ -76,8 +77,15 @@ public class PlayerMeleeAttack : MeleeAttack
 
     public void DealAttackDamage()
     {
-        playerMeleeAttackEvent.Raise(this, null);
-        Attack(hitboxCenter.position + new Vector3(attackDirection.x, attackDirection.y, 0));
+        if (Attack(hitboxCenter.position + new Vector3(attackDirection.x, attackDirection.y, 0)))
+        {
+            playerMeleeHitEvent.Raise(this, null);
+        }
+        else
+        {
+            playerMeleeSwingEvent.Raise(this, null);
+        }
+        
     }
 
     public void FinishAttackAnimation()

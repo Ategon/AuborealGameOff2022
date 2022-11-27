@@ -45,4 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioBank: {fileID: 11400000, guid: 8509c4a9500106a4da9285b8089f1c4f, type: 2}
-  playerMeleeAttackEvent: {fileID: 11400000, guid: bca9bce8d4ae74e42a010da58c627a9d, type: 2}
+  playerMeleeSwingEvent: {fileID: 11400000, guid: f68360d41d191bf469ef417b0401b284, type: 2}
+  playerMeleeHitEvent: {fileID: 11400000, guid: e77790e5a4ac1a34bba2fea4cd1a4575, type: 2}
+  playerFootstepEvent: {fileID: 11400000, guid: 0c02930a85b50a148afba249b30f80ba, type: 2}
+  playerDashEvent: {fileID: 11400000, guid: 73a47132fb16e3846a17f1d3acfb1381, type: 2}
+  playerShootEvent: {fileID: 11400000, guid: d8011d944e8edde4aa7d57ad542bdadd, type: 2}
