@@ -8,22 +8,36 @@ public class PlayerVisuals : MonoBehaviour
     private SpriteRenderer sr;
     private PlayerMovement pm;
     private Animator anim;
+    private Camera cam;
 
     private bool facingRight;
 
     private Coroutine flippingCoroutine;
 
-    private void Awake()
+    [SerializeField] private Transform[] additionalFlippees;
+    [SerializeField] private ParticleSystem[] particleFlipees;
+    [SerializeField] private bool overrideFlip;
+
+    private void Start()
     {
         sr = GetComponent<SpriteRenderer>();
         pm = GetComponentInParent<PlayerMovement>();
         anim = GetComponent<Animator>();
+        cam = Camera.main;
     }
 
     private void Update()
     {
         if (pm.IsBusy())
         {
+            if (cam.ScreenToWorldPoint(pm.Aim).x > transform.position.x && !facingRight)
+            {
+                Flip();
+            }
+            else if (cam.ScreenToWorldPoint(pm.Aim).x < transform.position.x && facingRight)
+            {
+                Flip();
+            }
             return;
         }
         
@@ -37,6 +51,13 @@ public class PlayerVisuals : MonoBehaviour
             else if (pm.PlayerDirection.x < 0 && facingRight)
             {
                 Flip();
+            }
+
+            foreach (ParticleSystem ps in particleFlipees)
+            {
+                if (!ps) continue; 
+                ParticleSystem.MainModule main = ps.main;
+                main.startRotation = new ParticleSystem.MinMaxCurve(Vector2.SignedAngle(pm.PlayerDirection.normalized, Vector2.right) * Mathf.Deg2Rad * -1);
             }
         }
         else {
@@ -57,11 +78,22 @@ public class PlayerVisuals : MonoBehaviour
         */
     }
 
+    private float Angle(Vector2 vector2)
+    {
+        return 360 - (Mathf.Atan2(vector2.x, vector2.y) * Mathf.Rad2Deg * Mathf.Sign(vector2.x));
+    }
+
     private void Flip()
     {
+        if (overrideFlip) return;
         facingRight = !facingRight;
         if (flippingCoroutine != null) StopCoroutine(flippingCoroutine);
         flippingCoroutine = StartCoroutine(GoToScale(facingRight ? -1 : 1, 0.1f));
+
+        foreach (Transform t in additionalFlippees)
+        {
+            t.localScale = new Vector3(t.localScale.x * -1, t.localScale.y, t.localScale.z);
+        }
     }
 
     private IEnumerator GoToScale(float targetScale, float duration)

@@ -6,12 +6,17 @@ using Characters.Player.Movement;
 
 public class Cursor : MonoBehaviour
 {
+    public float BonusSize { get { return bonusSize; } set { bonusSize = value; } }
+
     Image image;
-    private float rotationSpeed = 100;
+    [SerializeField] private float rotationSpeed = 100;
+    private float bonusSize = 0;
     private float size = 0;
     public Camera mainCamera;
     [SerializeField] private GameObject child;
     private PlayerMovement pm;
+
+    Vector2 lastScreenPoint = Vector2.zero;
 
     public Vector2 Aim = new Vector2();
 
@@ -34,6 +39,13 @@ public class Cursor : MonoBehaviour
             UnityEngine.Cursor.visible = true;
             return;
         }
+
+        if (pm.Aim != lastScreenPoint)
+        {
+            lastScreenPoint = pm.Aim;
+            size = 0.25f;
+        }
+
         Aim = mainCamera.ScreenToWorldPoint(pm.Aim);
 
         child.SetActive(true);
@@ -41,7 +53,11 @@ public class Cursor : MonoBehaviour
 
         float screenWidthDiff = Screen.width / Screen.width;
         float screenHeightDiff = Screen.height / Screen.height;
-        if (size > 0) size -= Time.deltaTime;
+        
+        if (bonusSize < 0) bonusSize += Time.deltaTime;
+        else if (bonusSize > 0) bonusSize = 0;
+
+        if (size > 0) size -= Time.deltaTime / 10;
         else if (size < 0) size = 0;
         // //Vector3 pos = data.sharedData.MainCamera.ScreenToWorldPoint(data.PlayerState.CursorPos);
         // //transform.position = new Vector3(pos.x, 1, pos.z);
@@ -52,12 +68,7 @@ public class Cursor : MonoBehaviour
         image.rectTransform.position = new Vector3(screenPos.x / screenWidthDiff, screenPos.y / screenHeightDiff, 1);
         child.transform.Rotate(0f, 0.0f, rotationSpeed * Time.deltaTime, Space.Self);
 
-        if (Aim != Vector2.zero)
-        {
-            size = 0.5f;
-        }
-
-        child.transform.localScale = new Vector3(0.5f + size, 0.5f + size, 1);
+        child.transform.localScale = new Vector3(0.75f + bonusSize + size, 0.75f + bonusSize + size, 1);
     }
 
 }

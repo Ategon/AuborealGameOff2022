@@ -20,7 +20,7 @@ public class ScreenShakeController : MonoBehaviour
 
     private void OnEnable()
     {
-        StartShake(1f, 0f);
+        StartShake(1f, 0.01f);
         healthChangedEvent.AddListener(OnHealthChange);
     }
     private void OnDisable()
@@ -41,7 +41,6 @@ public class ScreenShakeController : MonoBehaviour
     #region Public functions
     public void StartShake(float time, float power, ShakeType type = ShakeType.Random)
     {
-        Debug.Log(time + " " + power);
         if (power > shakePower)
         {
             shakeTimer = time;

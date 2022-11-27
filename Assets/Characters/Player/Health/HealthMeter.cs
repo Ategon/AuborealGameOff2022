@@ -89,7 +89,7 @@ namespace Assets.Player.Health
                 waveRenderer.color = Color.Lerp(lowWaveColor, highWaveColor, end);
                 waveDamageRenderer.color = Color.Lerp(lowDamageColor, highDamageColor, start);
 
-                Color targetColor = waveDamageRenderer.color = Color.Lerp(lowDamageColor, highDamageColor, end);
+                Color targetColor = Color.Lerp(lowDamageColor, highDamageColor, end);
 
                 wavePos.localPosition = new Vector3(lowWavePos + (waveDiff * end), wavePos.localPosition.y, wavePos.localPosition.z);
                 waveDamagePos.localPosition = new Vector3(lowWavePos + (waveDiff * start), waveDamagePos.localPosition.y, waveDamagePos.localPosition.z);

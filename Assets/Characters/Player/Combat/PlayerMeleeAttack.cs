@@ -17,6 +17,8 @@ public class PlayerMeleeAttack : MeleeAttack
     [Header("References")]
     [SerializeField] private PlayerMeleeAttackEvent playerMeleeAttackEvent;
     [SerializeField] private PlayerMovement playerMovement;
+    [SerializeField] private Cursor cursor;
+    [SerializeField] private ParticleSystem swordParticles;
     [Header("Attack Momentum")]
     public float attackVelocity;
     [HideInInspector] public bool isAttacking;
@@ -57,13 +59,18 @@ public class PlayerMeleeAttack : MeleeAttack
         {
             animator.SetInteger("AttackType", attackType);
 
-            attackType = attackType == 0 ? 1 : 0;
+            attackType = 0;
+            // for animation swapping change to this. currently second anim sucks
+            //attackType = attackType == 0 ? 1 : 0;
 
+            swordParticles.Play();
             animator.SetTrigger("Attack");
             timeUntilNextAttack = cooldown;
             isAttacking = true;
             Vector3 mousePos = camera.ScreenToWorldPoint(mousePosition.ReadValue<Vector2>());
             attackDirection = (new Vector2(mousePos.x - hitboxCenter.position.x, mousePos.y - hitboxCenter.position.y)).normalized;
+
+            if(cursor) cursor.BonusSize = -0.35f;
         }
     }
 
