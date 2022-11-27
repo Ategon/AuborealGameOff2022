@@ -226,6 +226,8 @@ MonoBehaviour:
   summonMinDelay: 0.25
   summonMaxDelay: 2
   overrideParent: {fileID: 0}
+  useOverrideColor: 1
+  overrideColor: {r: 0.85882354, g: 0.2, b: 0.2, a: 0.019607844}
 --- !u!1 &696338397
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,6 +317,8 @@ MonoBehaviour:
   summonMinDelay: 0.25
   summonMaxDelay: 2
   overrideParent: {fileID: 0}
+  useOverrideColor: 1
+  overrideColor: {r: 0.2, g: 0.65882355, b: 0.85882354, a: 0.019607844}
 --- !u!1 &1284466343
 GameObject:
   m_ObjectHideFlags: 0
