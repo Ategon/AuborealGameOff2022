@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{7c050f6f-1126-44ac-8bc4-984321423788}">
+		<property name="assetPath">
+			<value>island music fighting1.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>339.22612244897959</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{56e68f36-e6d4-487a-a51e-b84e2c7dfacb}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -9,10 +9,10 @@ public class StateValues
     public NavMeshAgent agent;
     public Animator anim;
     public Transform player;
-    public MeleeAttack meleeAttack;
+    public EnemyMeleeAttack meleeAttack;
     public ShootProjectile rangedAttack;
     public StateMathematicalValues stateMathValues;
-    public StateValues(GameObject _enemy, NavMeshAgent _agent, Animator _anim, Transform _player, MeleeAttack _meleeAttack, ShootProjectile _rangedAttack, StateMathematicalValues _stateMathValues)
+    public StateValues(GameObject _enemy, NavMeshAgent _agent, Animator _anim, Transform _player, EnemyMeleeAttack _meleeAttack, ShootProjectile _rangedAttack, StateMathematicalValues _stateMathValues)
     {
         enemy = _enemy;
         agent = _agent;

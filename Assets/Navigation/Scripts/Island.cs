@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Assets.EventSystem;
+using Assets.Player.Inventory;
 using Assets.Player.Thirst;
 using UnityEditor;
 using UnityEngine;
@@ -12,6 +13,10 @@ namespace Assets.Navigation
     {
         [Header("Island Information")]
         public string islandName;
+        public EquipmentType equipmentType;
+        public int waterAmount;
+        public int woodAmount;
+        public int treasureAmount;
         [Header("References")]
         public DockPoint dockPoint;
         [SerializeField] private IslandClickedEvent islandClickedEvent;
@@ -19,6 +24,7 @@ namespace Assets.Navigation
         [SerializeField] private IslandMouseExit islandMouseExit;
         [SerializeField] private ThirstController thirstController;
         [SerializeField] private PlayerLocationController playerLocationController;
+        [SerializeField] private InventoryController inventoryController;
         [SerializeField] private string loadedSceneName;
         [Header("Visual Trail")]
         [SerializeField] private RouteTrail routeTrailPrefab;
@@ -67,10 +73,14 @@ namespace Assets.Navigation
             routeTrails = new List<RouteTrail>();
             foreach (Route route in routes)
             {
-                RouteTrail routeTrail = Instantiate(routeTrailPrefab, transform.position, Quaternion.identity);
-                routeTrail.CreateRouteDots(dockPoint.transform.position, route.destination.transform.position);
-                routeTrail.destination = route.destination;
-                routeTrails.Add(routeTrail);
+                if (!route.destination.isBoatDockedHere)
+                { 
+                    RouteTrail routeTrail = Instantiate(routeTrailPrefab, transform.position, Quaternion.identity);
+                    routeTrail.CreateRouteDots(transform.position, route.destination.transform.position);
+                    routeTrail.CreateCostText(transform.position, route.destination.transform.position, route.thirstCost);
+                    routeTrail.destination = route.destination;
+                    routeTrails.Add(routeTrail);
+                }
             }
         }
         // This is a listener to the Island Clicked event: it is called when
@@ -93,8 +103,7 @@ namespace Assets.Navigation
         {
             isBoatDockedHere = false;
             boat.SetDestination(route.destination);
-            routeTrails.ForEach(routeTrail => { Destroy(routeTrail.gameObject); });
-            routeTrails = null;
+            DeleteRouteTrails();
             thirstController.ChangeThirst(-route.thirstCost);
         }
         public void OnIslandEnter(object sender, EventParameters arg2)
@@ -109,6 +118,10 @@ namespace Assets.Navigation
                     }
                 }
             }
+            if (!isBoatDockedHere & inventoryController.nauticalChartOwned & ReferenceEquals(sender, this))
+            {
+                CreateRouteTrails();
+            }
         }
         public void OnIslandExit(object sender, EventParameters arg2)
         {
@@ -116,6 +129,15 @@ namespace Assets.Navigation
             {
                 routeTrails.ForEach(routeTrail => { routeTrail.StopHover(); });
             }
+            if (!isBoatDockedHere & inventoryController.nauticalChartOwned & routeTrails != null)
+            {
+                DeleteRouteTrails();
+            }
+        }
+        private void DeleteRouteTrails()
+        {
+            routeTrails.ForEach(routeTrail => { Destroy(routeTrail.gameObject); });
+            routeTrails = null;
         }
         public void RaiseIslandClick()
         {
