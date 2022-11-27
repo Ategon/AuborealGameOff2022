@@ -15,6 +15,9 @@ namespace Characters.Player.Movement
         private Rigidbody2D _rigidbody;
         private Vector2 _dashDirection;
 
+        [SerializeField] GameObject dashParticles;
+        [SerializeField] GameObject dashIndicator;
+
         public bool CanDash { get; private set; } = false;
 
         private void Awake()
@@ -44,6 +47,7 @@ namespace Characters.Player.Movement
             _dashActiveTime = DashData.ActiveTime;
             _dashCooldownTime = DashData.CooldownTime;
             _dashDirection = _inputs.Player.Move.ReadValue<Vector2>();
+            dashParticles.SetActive(true);
 
             CanDash = true;
         }
@@ -57,8 +61,16 @@ namespace Characters.Player.Movement
             else
             {
                 CanDash = false;
+                dashParticles.SetActive(false);
                 if (_dashCooldownTime > 0)
+                {
                     _dashCooldownTime -= Time.deltaTime;
+                    dashIndicator.transform.localScale = new Vector3(_dashCooldownTime / DashData.CooldownTime * 0.23f, 0.03f, 0);
+                }
+                else
+                {
+                    dashIndicator.transform.localScale = new Vector3(0, 0, 0);
+                }
             }
         }
 
