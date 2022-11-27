@@ -21,6 +21,7 @@ namespace Characters.Player.Movement
         [Header("References")]
         [SerializeField] private PlayerMeleeAttack _playerMeleeAttack;
         [SerializeField] private PlayerShootProjectile _playerShootProjectile;
+        [SerializeField] private PlayerFootstepSound _playerFootstepSound;
 
         private void Awake()
             => Init();
@@ -83,6 +84,14 @@ namespace Characters.Player.Movement
                 else
                 {
                     Move(_playerDirection, PlayerSpeed);
+                    if (_playerDirection != Vector2.zero)
+                    {
+                        _playerFootstepSound.isWalking = true;
+                    }
+                    else
+                    {
+                        _playerFootstepSound.isWalking = false;
+                    }
                 }
             }
         }

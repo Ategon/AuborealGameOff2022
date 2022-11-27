@@ -3,6 +3,7 @@ using Assets.Navigation;
 using Assets.Player.Inventory;
 using TMPro;
 using UnityEngine;
+using System;
 
 
 public class IslandInfoDisplay : MonoBehaviour
@@ -43,25 +44,35 @@ public class IslandInfoDisplay : MonoBehaviour
         }
         if (inventoryController.compassOwned)
         {
-            if (island.equipmentName == "")
+            if (island.equipmentType == EquipmentType.None)
             {
                 equipmentNameTextComponent.text = "No equipment present.";
                 equipmentDescriptionTextComponent.text = "";
             }
             else
             {
-                equipmentNameTextComponent.text = island.equipmentName + " present!";
-                equipmentDescriptionTextComponent.text = equipmentDescriptionBank.GetEquipmentDescription(island.equipmentName);
+                equipmentNameTextComponent.text = equipmentDescriptionBank.GetEquipmentName(island.equipmentType) + " present!";
+                equipmentDescriptionTextComponent.text = equipmentDescriptionBank.GetEquipmentDescription(island.equipmentType);
             }
         }
         resourceTextComponent.text = "";
         if (inventoryController.diviningRodOwned)
         {
-            resourceTextComponent.text += "Water: " + island.waterAmount;
+            resourceTextComponent.text += "Water: " + island.waterAmount + "\n";
         }
         else
         {
-            resourceTextComponent.text += "Water: UNKNOWN";
+            resourceTextComponent.text += "Water: UNKNOWN\n";
+        }
+        if (inventoryController.resourceMapOwned)
+        {
+            resourceTextComponent.text += "Treasure: " + island.treasureAmount + "\n";
+            resourceTextComponent.text += "Wood: " + island.woodAmount + "\n";
+        }
+        else
+        {
+            resourceTextComponent.text += "Treasure: UNKNOWN\n";
+            resourceTextComponent.text += "Wood: UNKNOWN\n";
         }
     }
     public void OnIslandExit(object sender, EventParameters arg2)

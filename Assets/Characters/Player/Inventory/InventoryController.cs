@@ -1,6 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using Assets.Player.Thirst;
+using System;
 using UnityEngine;
 
 
@@ -23,6 +21,9 @@ namespace Assets.Player.Inventory
         [SerializeField] private EquipmentPickedUpEvent equipmentPickedUpEvent;
         public bool compassOwned;
         public bool diviningRodOwned;
+        public bool nauticalChartOwned;
+        public bool resourceMapOwned;
+        public bool sextantOwned;
 
         public bool ChangeWood(int changeAmount)
         {
@@ -63,23 +64,44 @@ namespace Assets.Player.Inventory
             woodCount = 0;
         }
 
-        public void PickUpCompass()
+        public void AcquireEquipment(EquipmentType type)
         {
-            EquipmentPickupEventParameters eventParameters = new EquipmentPickupEventParameters("Compass", equipmentDescriptionBank.compassDescription);
+            string equipmentName = equipmentDescriptionBank.GetEquipmentName(type);
+            EquipmentPickupEventParameters eventParameters = new EquipmentPickupEventParameters(equipmentName, equipmentDescriptionBank.GetEquipmentDescription(type));
             equipmentPickedUpEvent.Raise(this, eventParameters);
-            compassOwned = true;
-        }
-
-        public void PickUpDiviningRod()
-        {
-            EquipmentPickupEventParameters eventParameters = new EquipmentPickupEventParameters("Divining Rod", equipmentDescriptionBank.diviningRodDescription);
-            equipmentPickedUpEvent.Raise(this, eventParameters);
-            diviningRodOwned = true;
+            switch (type)
+            {
+                case EquipmentType.Compass:
+                    compassOwned = true;
+                    break;
+                case EquipmentType.DiviningRod:
+                    diviningRodOwned = true;
+                    break;
+                case EquipmentType.NauticalChart:
+                    nauticalChartOwned = true;
+                    break;
+                case EquipmentType.ResourceMap:
+                    resourceMapOwned = true;
+                    break;
+                case EquipmentType.Sextant:
+                    sextantOwned = true;
+                    break;
+            }
         }
     }
     public enum ResourceType
     {
         Wood,
         Treasure
+    }
+
+    public enum EquipmentType
+    { 
+        Compass,
+        DiviningRod,
+        NauticalChart,
+        ResourceMap,
+        Sextant,
+        None
     }
 }
