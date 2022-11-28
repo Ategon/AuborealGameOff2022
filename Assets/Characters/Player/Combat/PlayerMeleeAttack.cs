@@ -77,13 +77,10 @@ public class PlayerMeleeAttack : MeleeAttack
 
     public void DealAttackDamage()
     {
+        playerMeleeSwingEvent.Raise(this, null);
         if (Attack(hitboxCenter.position + new Vector3(attackDirection.x, attackDirection.y, 0)))
         {
             playerMeleeHitEvent.Raise(this, null);
-        }
-        else
-        {
-            playerMeleeSwingEvent.Raise(this, null);
         }
         
     }
