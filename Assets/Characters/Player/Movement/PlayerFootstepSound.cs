@@ -17,7 +17,6 @@ public class PlayerFootstepSound : MonoBehaviour
             timeSinceLastFootstep += Time.deltaTime;
             if (timeSinceLastFootstep > timeBetweenFootsteps)
             {
-                Debug.Log("Event being raised");
                 FootstepEventParameters footstepEventParameters;
                 if (isOnGrass)
                 {

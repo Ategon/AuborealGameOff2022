@@ -14986,6 +14986,7 @@ GameObject:
   - component: {fileID: 9119500141450112101}
   - component: {fileID: 2092749779}
   - component: {fileID: 2074316220938895930}
+  - component: {fileID: 6701513395127649577}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -15174,6 +15175,22 @@ MonoBehaviour:
   playerFootstepEvent: {fileID: 11400000, guid: 0c02930a85b50a148afba249b30f80ba, type: 2}
   timeBetweenFootsteps: 0.4
   isWalking: 0
+--- !u!114 &6701513395127649577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5187959634886955620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5285fc503e367b14abfafb940a1106eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioController: {fileID: 3817389552235135699, guid: 9a06f547ef0ebea43a6014aafdf33dd1, type: 3}
+  maxDistance: 2
+  minDistance: 1
+  timeBetweenChecks: 0.25
 --- !u!1 &6248258556466577005
 GameObject:
   m_ObjectHideFlags: 0
