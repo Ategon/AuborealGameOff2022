@@ -39,7 +39,7 @@ namespace Assets.Audio
                 _islandAmbienceER.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(FindObjectOfType<FMODUnity.StudioListener>().transform));
                 _islandAmbienceER.start();
             }
-            if (IsPlaying(_persistentER) &&
+            if (// IsPlaying(_persistentER) &&
                 lastestSceneIndex <= 1 &&
                 scene.buildIndex <= 1)
             {
