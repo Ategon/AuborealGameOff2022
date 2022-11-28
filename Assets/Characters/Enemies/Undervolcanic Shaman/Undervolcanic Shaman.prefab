@@ -223,6 +223,7 @@ MonoBehaviour:
   player: {fileID: 0}
   meleeAttack: {fileID: 0}
   rangedAttack: {fileID: 4939589383131188148}
+  numAggroedEnemyChangeEvent: {fileID: 11400000, guid: e6a1df7ab8b1db44ab5401fbddad2369, type: 2}
   checkpoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -287,8 +288,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 962cb268a0fc91447a35eede805f92a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numAggroedEnemyChangeEvent: {fileID: 11400000, guid: e6a1df7ab8b1db44ab5401fbddad2369, type: 2}
   maxHealth: 50
   startingHealth: 50
+  currentHealth: 0
 --- !u!114 &2613436627731946233
 MonoBehaviour:
   m_ObjectHideFlags: 0
