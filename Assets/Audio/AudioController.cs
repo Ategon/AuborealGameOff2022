@@ -22,11 +22,23 @@ namespace Assets.Audio
 
 
         private EventInstance _persistentER;
+        private EventInstance _seaAmbienceER;
+        private EventInstance _islandAmbienceER;
         private int lastestSceneIndex = 0;
+
 
 
         private void OnSceneLoaded(Scene scene, LoadSceneMode sceneMode)
         {
+            if (!(IsPlaying(_seaAmbienceER)))
+            {
+                _seaAmbienceER = RuntimeManager.CreateInstance(audioBank.ERSeaAmbience);
+                _seaAmbienceER.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(FindObjectOfType<FMODUnity.StudioListener>().transform));
+                _seaAmbienceER.start();
+                _islandAmbienceER = RuntimeManager.CreateInstance(audioBank.ERIslandAmbience);
+                _islandAmbienceER.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(FindObjectOfType<FMODUnity.StudioListener>().transform));
+                _islandAmbienceER.start();
+            }
             if (IsPlaying(_persistentER) &&
                 lastestSceneIndex <= 1 &&
                 scene.buildIndex <= 1)
@@ -80,6 +92,7 @@ namespace Assets.Audio
                 _persistentER.setParameterByName("prop", Random.Range(0.55f, 1f));
         }
 
+
         private void OnDestroy()
         {
             StopPersistentMusic();
@@ -98,10 +111,14 @@ namespace Assets.Audio
 
         private void PlayOneShotSoundLabelled(EventReference eventReference, string labelName, string labelValue, Vector3 location = default)
         {
-            Debug.Log("One Shot Sound Labelled Called");
             EventInstance instance = RuntimeManager.CreateInstance(eventReference);
             instance.setParameterByNameWithLabel(labelName, labelValue);
             instance.start();
+        }
+
+        public void SetSeaDistance(float seaDistance)
+        {
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("sea distance", 1 - seaDistance);
         }
 
         #region Events Callbacks

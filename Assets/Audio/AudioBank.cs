@@ -13,6 +13,10 @@ namespace Assets.Audio
         [field: SerializeField] public EventReference ERPlayerShoot { get; private set; }
         [field: SerializeField] public EventReference ERPlayerDash { get; private set; }
 
+        [field: Header("Ambient")]
+        [field: SerializeField] public EventReference ERSeaAmbience { get; private set; }
+        [field: SerializeField] public EventReference ERIslandAmbience { get; private set; }
+
         [field: Header("BGM")]
         [field: SerializeField] public EventReference[] ERLevels { get; private set; }
 
