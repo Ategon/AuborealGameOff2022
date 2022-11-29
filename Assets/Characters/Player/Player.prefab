@@ -148,7 +148,7 @@ MonoBehaviour:
   rigidbody: {fileID: 0}
   attackingLayers:
     serializedVersion: 2
-    m_Bits: 1025
+    m_Bits: 5121
   health: {fileID: 2092749779}
 --- !u!1 &1725411424
 GameObject:
@@ -15129,6 +15129,7 @@ MonoBehaviour:
   _playerDashEvent: {fileID: 11400000, guid: 73a47132fb16e3846a17f1d3acfb1381, type: 2}
   dashParticles: {fileID: 3842454859219077222}
   dashIndicator: {fileID: 784607992490289837}
+  playerVisuals: {fileID: 0}
 --- !u!114 &9119500141450112101
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -198,7 +198,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2613436627731946224}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.098, y: 0.909, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
@@ -206,7 +206,7 @@ Transform:
   - {fileID: 2613436627695009296}
   - {fileID: 757969766927347150}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2613436627731946227
 MonoBehaviour:
@@ -230,12 +230,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  visDist: 2
-  attackDist: 0.6
-  patrolDist: 14
+  visDist: 4
+  attackDist: 2.5
+  patrolDist: 10
   attackCooldown: 1
-  patrolSpeed: 1.2
-  pursueSpeed: 1.8
+  patrolSpeed: 1
+  pursueSpeed: 1.5
   isMeleeAttacking: 0
   isRangedAttacking: 1
 --- !u!195 &2613436627731946237
