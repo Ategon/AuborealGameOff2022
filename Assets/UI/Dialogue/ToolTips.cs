@@ -7,7 +7,7 @@ using System;
 public class ToolTips : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI textComponent;
-    public string line;
+    [SerializeField] private string line;
     [SerializeField] private float offsize;
 
     // Start is called before the first frame update

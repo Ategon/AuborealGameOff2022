@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e440087b3cd0c2c498d7821eb32aa771, type: 3}
   m_Name: EquipmentDescriptionBank
   m_EditorClassIdentifier: 
-  compassDescription: This item allows me to see the presence of other key equipment
+  compassDescription: This item allows you to see the presence of other key equipment
     on the navigation map.
-  diviningRodDescription: This item allows me to see how much water is on an island
+  diviningRodDescription: This item allows you to see how much water is on an island
     from the navigation map.
-  nauticalChartDescription: This item allows me to see the distance between any islands.
-  resourceMapDescription: This item allows me to see how many resources are available
+  nauticalChartDescription: This item allows you to see the distance between any
+    islands.
+  resourceMapDescription: This item allows you to see how many resources are available
     on an island from the navigation map.
-  sextantDescription: This item allows me to sail out into the open ocean, completing
+  sextantDescription: This item allows you to sail out into the open ocean, completing
     the game.

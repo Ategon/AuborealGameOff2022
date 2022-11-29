@@ -13,7 +13,7 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private float textSpeed;
     [SerializeField] private InputActionReference mouseButton;
 
-    private float animationTime = 0.8f;
+    private float animationTime = 0.5f;
     private int index;
     private Animator anim;
 
@@ -40,7 +40,7 @@ public class Dialogue : MonoBehaviour
         }
     }
 
-    private void StartDialogue()
+    public void StartDialogue()
     {
         Time.timeScale = 0f;
         index = 0;
