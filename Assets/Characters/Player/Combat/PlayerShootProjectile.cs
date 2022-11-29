@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
-using Assets.Audio.Events;
 using Assets.Player.Inventory;
 using Characters.Player.Movement;
 using UnityEngine;
@@ -13,7 +12,6 @@ public class PlayerShootProjectile : ShootProjectile
     [SerializeField] private Transform projectileSpawnPoint;
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private InventoryController inventoryController;
-    [SerializeField] private PlayerShootEvent playerShootEvent;
     private Inputs inputs;
     private InputAction shootProjectile;
     private InputAction mousePosition;
@@ -61,7 +59,6 @@ public class PlayerShootProjectile : ShootProjectile
                 Vector3 mousePos = camera.ScreenToWorldPoint(mousePosition.ReadValue<Vector2>());
                 fireDirection = (new Vector2(mousePos.x - projectileSpawnPoint.position.x, mousePos.y - projectileSpawnPoint.position.y)).normalized;
                 timeUntilNextFire = cooldown;
-                playerShootEvent.Raise(this, null);
             }
         }
     }
@@ -74,6 +71,7 @@ public class PlayerShootProjectile : ShootProjectile
 
     public void FinishShootAnimation()
     {
+        Debug.Log("Finish Shooting CAlled");
         isShooting = false;
     }
 }

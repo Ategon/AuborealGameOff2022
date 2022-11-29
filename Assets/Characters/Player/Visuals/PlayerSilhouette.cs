@@ -16,16 +16,11 @@ public class PlayerSilhouette : MonoBehaviour
     public bool stopCoroutine = false;
 
     Coroutine lastCoroutine;
-    
+
     void Start()
     {
         collider = GetComponent<Collider2D>();
         sr = GetComponent<SpriteRenderer>();
-    }
-
-    private void OnDestroy()
-    {
-        if(lastCoroutine != null) StopCoroutine(lastCoroutine);
     }
 
     private void Update()
