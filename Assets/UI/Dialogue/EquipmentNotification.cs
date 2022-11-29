@@ -23,7 +23,7 @@ public class EquipmentNotification : MonoBehaviour
         dialogue.gameObject.SetActive(true);
         EquipmentPickupEventParameters eventParameters = arg2 as EquipmentPickupEventParameters;
         string[] lines = new string[2];
-        lines[0] = "You found the " + eventParameters.equipmentName + "!";
+        lines[0] = "I found the " + eventParameters.equipmentName + "!";
         lines[1] = eventParameters.equipmentDescription;
         dialogue.StartDialogue(lines);
     }
