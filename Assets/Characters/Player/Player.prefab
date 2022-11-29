@@ -15129,7 +15129,7 @@ MonoBehaviour:
   _playerDashEvent: {fileID: 11400000, guid: 73a47132fb16e3846a17f1d3acfb1381, type: 2}
   dashParticles: {fileID: 3842454859219077222}
   dashIndicator: {fileID: 784607992490289837}
-  playerVisuals: {fileID: 0}
+  playerVisuals: {fileID: 2424527418190724042}
 --- !u!114 &9119500141450112101
 MonoBehaviour:
   m_ObjectHideFlags: 0
