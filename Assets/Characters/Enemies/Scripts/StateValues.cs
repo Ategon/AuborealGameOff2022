@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Assets.Enemies;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -12,10 +11,8 @@ public class StateValues
     public Transform player;
     public EnemyMeleeAttack meleeAttack;
     public ShootProjectile rangedAttack;
-    public NumAggroedEnemyChangeEvent numAggroedEnemyChangeEvent;
     public StateMathematicalValues stateMathValues;
-    public StateValues(GameObject _enemy, NavMeshAgent _agent, Animator _anim, Transform _player, EnemyMeleeAttack _meleeAttack, ShootProjectile _rangedAttack,
-        NumAggroedEnemyChangeEvent _numAggroedEnemyChangeEvent, StateMathematicalValues _stateMathValues)
+    public StateValues(GameObject _enemy, NavMeshAgent _agent, Animator _anim, Transform _player, EnemyMeleeAttack _meleeAttack, ShootProjectile _rangedAttack, StateMathematicalValues _stateMathValues)
     {
         enemy = _enemy;
         agent = _agent;
@@ -23,7 +20,6 @@ public class StateValues
         player = _player;
         meleeAttack = _meleeAttack;
         rangedAttack = _rangedAttack;
-        numAggroedEnemyChangeEvent = _numAggroedEnemyChangeEvent;
         stateMathValues = _stateMathValues;
     }
 }

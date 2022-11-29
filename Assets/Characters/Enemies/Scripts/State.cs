@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using Assets.Enemies;
 public class State
 {
     public enum STATE
@@ -93,7 +92,6 @@ public class Idle: State
 
     public override void Enter()
     {
-        stateValues.numAggroedEnemyChangeEvent.Raise(this, new NumEnemyChangeEventParameters(-1));
         //stateValues.anim.SetTrigger("isIdle");
         base.Enter();
     }
@@ -186,7 +184,6 @@ public class Pursue: State
 
     public override void Enter()
     {
-        stateValues.numAggroedEnemyChangeEvent.Raise(this, new NumEnemyChangeEventParameters(1));
         //stateValues.anim.SetTrigger("isRunning");
         base.Enter();
     }
