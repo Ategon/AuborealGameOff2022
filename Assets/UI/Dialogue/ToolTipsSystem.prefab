@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8768499964301669504}
   - component: {fileID: 8768499964301669505}
   - component: {fileID: 8768499964301669510}
-  - component: {fileID: 9077697337455614777}
   m_Layer: 5
   m_Name: ToolTipsSystem
   m_TagString: Untagged
@@ -103,20 +102,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &9077697337455614777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8768499964301669511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 028a45738ef12f34ca97b18c69f00744, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  equipmentPickedUpEvent: {fileID: 11400000, guid: e6e18ba6dceaeec478514074c74a904a, type: 2}
-  dialogue: {fileID: 0}
 --- !u!1 &8768499965735332972
 GameObject:
   m_ObjectHideFlags: 0
