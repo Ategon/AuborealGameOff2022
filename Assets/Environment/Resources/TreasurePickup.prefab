@@ -429,7 +429,7 @@ GameObject:
   - component: {fileID: 2213371611490297673}
   - component: {fileID: 2213371611490297674}
   - component: {fileID: -602087008303398772}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TreasurePickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -453,7 +453,7 @@ Transform:
   - {fileID: 2213371610936894294}
   - {fileID: 2213371611206123401}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &2213371611490297674
 CapsuleCollider2D:

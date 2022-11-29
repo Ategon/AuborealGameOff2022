@@ -429,7 +429,7 @@ GameObject:
   - component: {fileID: 2213371611490297673}
   - component: {fileID: 2213371611490297674}
   - component: {fileID: 1207895468838028469}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WoodPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
