@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e2a2bc20e476c0f40b83fd1b9ac99d12, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ea13c59c188a0dd43bbe1a47364f7f81, type: 3}
   m_Color: {r: 0.72113043, g: 1, b: 0.1641509, a: 0}
   m_FlipX: 0
   m_FlipY: 0
@@ -263,6 +263,8 @@ MonoBehaviour:
   islandName: 
   equipmentType: 0
   waterAmount: 0
+  woodAmount: 0
+  treasureAmount: 0
   dockPoint: {fileID: 8890400564181962415}
   islandClickedEvent: {fileID: 11400000, guid: a2d31f459f56f284584f8ae5cea2d4ab, type: 2}
   islandMouseEnter: {fileID: 11400000, guid: 6c87d6ea08cbab14b8c0c0f251d87837, type: 2}
@@ -301,7 +303,7 @@ Transform:
   m_GameObject: {fileID: 8890400564792003220}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5889763794547900571}
@@ -348,7 +350,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: e2a2bc20e476c0f40b83fd1b9ac99d12, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ea13c59c188a0dd43bbe1a47364f7f81, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

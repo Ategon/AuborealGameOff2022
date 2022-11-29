@@ -10,6 +10,21 @@ namespace Assets.Navigation
         private bool isTraveling;
         private DockPoint destination;
 
+        private float bobAmount = 0.01f;
+        private float bobSpeed = -1;
+
+        private Vector3 startPos;
+
+        private void Start()
+        {
+            startPos = transform.localPosition;
+        }
+
+        private void FixedUpdate()
+        {
+            if (!isTraveling) transform.position = new Vector3(transform.position.x, startPos.y + Mathf.Sin(Time.time * bobSpeed) * bobAmount, transform.position.z);
+        }
+
         private void Awake()
         {
             Island dockedIsland = playerLocationController.GetIsland();
