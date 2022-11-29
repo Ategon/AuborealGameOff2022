@@ -7,16 +7,22 @@ public class ToolTipsTrigger : MonoBehaviour
     [SerializeField] private ToolTips toolTips;
     [SerializeField] private string line;
 
-    private void OnTriggerEnter2D()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        toolTips.gameObject.SetActive(true);
-        toolTips.line = line;
-        toolTips.EnterLine();
+        if (collision.tag == "Player")
+        {
+            toolTips.gameObject.SetActive(true);
+            toolTips.line = line;
+            toolTips.EnterLine();
+        }
     }
 
-    private void OnTriggerExit2D()
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        toolTips.gameObject.GetComponent<Animator>().Play("ToolTipsFadeOut");
-        this.gameObject.SetActive(false);
+        if (collision.tag == "Player")
+        {
+            toolTips.gameObject.GetComponent<Animator>().Play("ToolTipsFadeOut");
+            this.gameObject.SetActive(false);
+        }
     }
 }
