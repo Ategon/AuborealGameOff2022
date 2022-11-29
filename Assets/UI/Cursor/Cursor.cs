@@ -53,6 +53,8 @@ public class Cursor : MonoBehaviour
 
         float screenWidthDiff = Screen.width / Screen.width;
         float screenHeightDiff = Screen.height / Screen.height;
+
+        Debug.Log(bonusSize);
         
         if (bonusSize < 0) bonusSize += Time.deltaTime;
         else if (bonusSize > 0) bonusSize = 0;

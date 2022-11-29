@@ -33,6 +33,11 @@ public class PlayerMeleeAttack : MeleeAttack
         inputs = new Inputs();
         camera = Camera.main;
     }
+
+    private void Start()
+    {
+        cursor = FindObjectOfType<Cursor>();
+    }
     private void OnEnable()
     {
         mousePosition = inputs.Player.MousePosition;
@@ -71,7 +76,7 @@ public class PlayerMeleeAttack : MeleeAttack
             Vector3 mousePos = camera.ScreenToWorldPoint(mousePosition.ReadValue<Vector2>());
             attackDirection = (new Vector2(mousePos.x - hitboxCenter.position.x, mousePos.y - hitboxCenter.position.y)).normalized;
 
-            if(cursor) cursor.BonusSize = -0.55f;
+            if(cursor) cursor.BonusSize = -0.25f;
         }
     }
 
