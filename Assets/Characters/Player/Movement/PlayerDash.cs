@@ -1,4 +1,5 @@
 using System;
+using Assets.Audio.Events;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,12 +9,16 @@ namespace Characters.Player.Movement
     public class PlayerDash : MonoBehaviour
     {
         [field: SerializeField] public DashData DashData { get; private set; }
+        [SerializeField] private PlayerDashEvent _playerDashEvent;
 
         private float _dashActiveTime;
         private float _dashCooldownTime;
         private Inputs _inputs;
         private Rigidbody2D _rigidbody;
         private Vector2 _dashDirection;
+
+        [SerializeField] GameObject dashParticles;
+        [SerializeField] GameObject dashIndicator;
 
         public bool CanDash { get; private set; } = false;
 
@@ -44,6 +49,8 @@ namespace Characters.Player.Movement
             _dashActiveTime = DashData.ActiveTime;
             _dashCooldownTime = DashData.CooldownTime;
             _dashDirection = _inputs.Player.Move.ReadValue<Vector2>();
+            _playerDashEvent.Raise(this, null);
+            dashParticles.SetActive(true);
 
             CanDash = true;
         }
@@ -57,8 +64,16 @@ namespace Characters.Player.Movement
             else
             {
                 CanDash = false;
+                dashParticles.SetActive(false);
                 if (_dashCooldownTime > 0)
+                {
                     _dashCooldownTime -= Time.deltaTime;
+                    dashIndicator.transform.localScale = new Vector3(_dashCooldownTime / DashData.CooldownTime * 0.23f, 0.03f, 0);
+                }
+                else
+                {
+                    dashIndicator.transform.localScale = new Vector3(0, 0, 0);
+                }
             }
         }
 

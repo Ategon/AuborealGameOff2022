@@ -12,41 +12,83 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 802408f5f46c1e544be078f7fedd8069, type: 3}
   m_Name: AudioBank
   m_EditorClassIdentifier: 
-  <ERPlayerMeleeAttack>k__BackingField:
+  <ERPlayerMeleeSwing>k__BackingField:
     Guid:
       Data1: 418996891
       Data2: 1313716454
       Data3: 618970258
       Data4: -1911928426
-    Path: event:/temps/tempSwordSwing
+    Path: event:/sfx/sword_Swing
+  <ERPlayerMeleeHit>k__BackingField:
+    Guid:
+      Data1: 203147807
+      Data2: 1140511462
+      Data3: 159791024
+      Data4: 1882519959
+    Path: event:/sfx/sword_hit
+  <ERPlayerFootsteps>k__BackingField:
+    Guid:
+      Data1: 1374059057
+      Data2: 1129523589
+      Data3: -2127760495
+      Data4: 1797949620
+    Path: event:/sfx/footsteps
+  <ERPlayerShoot>k__BackingField:
+    Guid:
+      Data1: 422461446
+      Data2: 1280133119
+      Data3: 1789431225
+      Data4: -1334413037
+    Path: event:/sfx/shooting_gun
+  <ERPlayerDash>k__BackingField:
+    Guid:
+      Data1: 1014633653
+      Data2: 1330962583
+      Data3: -1407812219
+      Data4: 1056946597
+    Path: event:/sfx/dash
+  <ERSeaAmbience>k__BackingField:
+    Guid:
+      Data1: 1454562000
+      Data2: 1097573090
+      Data3: -1213726839
+      Data4: -1385759399
+    Path: event:/ambiences/sea_ambience
+  <ERIslandAmbience>k__BackingField:
+    Guid:
+      Data1: -308861851
+      Data2: 1195817416
+      Data3: 2047465896
+      Data4: 368887843
+    Path: event:/ambiences/island_ambience
   <ERLevels>k__BackingField:
   - Guid:
-      Data1: -1048085915
-      Data2: 1321064507
-      Data3: -197330040
-      Data4: -1269118012
-    Path: event:/temps/temp_music
+      Data1: -2015885812
+      Data2: 1164981942
+      Data3: -1082399328
+      Data4: -2010616057
+    Path: event:/music/island music 1
   - Guid:
-      Data1: -1048085915
-      Data2: 1321064507
-      Data3: -197330040
-      Data4: -1269118012
-    Path: event:/temps/temp_music
+      Data1: -2015885812
+      Data2: 1164981942
+      Data3: -1082399328
+      Data4: -2010616057
+    Path: event:/music/island music 1
   - Guid:
-      Data1: -1048085915
-      Data2: 1321064507
-      Data3: -197330040
-      Data4: -1269118012
-    Path: event:/temps/temp_music
+      Data1: -2015885812
+      Data2: 1164981942
+      Data3: -1082399328
+      Data4: -2010616057
+    Path: event:/music/island music 1
   - Guid:
-      Data1: -1048085915
-      Data2: 1321064507
-      Data3: -197330040
-      Data4: -1269118012
-    Path: event:/temps/temp_music
+      Data1: -2015885812
+      Data2: 1164981942
+      Data3: -1082399328
+      Data4: -2010616057
+    Path: event:/music/island music 1
   - Guid:
-      Data1: -1048085915
-      Data2: 1321064507
-      Data3: -197330040
-      Data4: -1269118012
-    Path: event:/temps/temp_music
+      Data1: -2015885812
+      Data2: 1164981942
+      Data3: -1082399328
+      Data4: -2010616057
+    Path: event:/music/island music 1

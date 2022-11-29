@@ -1,7 +1,7 @@
 using System.Collections.Generic;
+using Assets.Enemies;
 using UnityEngine;
 using UnityEngine.AI;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -10,6 +10,7 @@ public class EnemyAI : MonoBehaviour
     public Transform player;
     public EnemyMeleeAttack meleeAttack;
     public ShootProjectile rangedAttack;
+    public NumAggroedEnemyChangeEvent numAggroedEnemyChangeEvent;
     private StateMathematicalValues stateMathValues;
     public List<GameObject> checkpoints;
 
@@ -53,7 +54,7 @@ public class EnemyAI : MonoBehaviour
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         anim = this.GetComponent<Animator>();
-        StateValues stateValues = new StateValues(this.gameObject, agent, anim, player, meleeAttack, rangedAttack, stateMathValues);
+        StateValues stateValues = new StateValues(this.gameObject, agent, anim, player, meleeAttack, rangedAttack, numAggroedEnemyChangeEvent, stateMathValues); ;
         currentState = new Idle(stateValues);
 
 
