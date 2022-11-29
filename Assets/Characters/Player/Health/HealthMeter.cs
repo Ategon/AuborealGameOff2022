@@ -97,7 +97,7 @@ namespace Assets.Player.Health
                 lastTertiaryTween = DOTween.To(() => waveDamageRenderer.color, x => waveDamageRenderer.color = x, targetColor, 1).SetDelay(0.2f).SetEase(Ease.InOutQuad, 0.1f);
                 lastSecondaryTween = waveDamagePos.DOLocalMoveX(lowWavePos + (waveDiff * end), 1).SetDelay(0.2f).SetEase(Ease.InOutQuad, 0.1f);
             }
-            else
+            else if (end < start)
             {
                 if (lastQuaternaryTween != null) lastQuaternaryTween.Pause();
                 if (lastQuintenaryTween != null) lastQuintenaryTween.Pause();
@@ -107,12 +107,30 @@ namespace Assets.Player.Health
                 healthFill.fillAmount = start;
                 waveRenderer.color = Color.Lerp(lowWaveColor, highWaveColor, start);
 
-                Color targetColor = waveRenderer.color = Color.Lerp(lowWaveColor, highWaveColor, end);
+                Color targetColor = Color.Lerp(lowWaveColor, highWaveColor, end);
 
                 wavePos.localPosition = new Vector3(lowWavePos + (waveDiff * start), wavePos.localPosition.y, wavePos.localPosition.z);
                 lastQuaternaryTween = DOTween.To(() => healthFill.fillAmount, x => healthFill.fillAmount = x, end, 1).SetDelay(0.2f).SetEase(Ease.InOutQuad, 0.1f);
                 lastQuintenaryTween = DOTween.To(() => waveRenderer.color, x => waveRenderer.color = x, targetColor, 1).SetDelay(0.2f).SetEase(Ease.InOutQuad, 0.1f);
                 lastSextenaryTween = wavePos.DOLocalMoveX(lowWavePos + (waveDiff * end), 1).SetDelay(0.2f).SetEase(Ease.InOutQuad, 0.1f);
+            }
+            else
+            {
+                if (lastTween != null) lastTween.Pause();
+                if (lastSecondaryTween != null) lastSecondaryTween.Pause();
+                if (lastTertiaryTween != null) lastTertiaryTween.Pause();
+                if (lastQuaternaryTween != null) lastQuaternaryTween.Pause();
+                if (lastQuintenaryTween != null) lastQuintenaryTween.Pause();
+                if (lastSextenaryTween != null) lastSextenaryTween.Pause();
+
+                waveRenderer.color = Color.Lerp(lowWaveColor, highWaveColor, start);
+                waveDamageRenderer.color = Color.Lerp(lowDamageColor, highDamageColor, start);
+
+                healthDamageFill.fillAmount = start;
+                healthHealedFill.fillAmount = start;
+                healthFill.fillAmount = start;
+                wavePos.localPosition = new Vector3(lowWavePos + (waveDiff * start), wavePos.localPosition.y, wavePos.localPosition.z);
+                waveDamagePos.localPosition = new Vector3(lowWavePos + (waveDiff * start), waveDamagePos.localPosition.y, waveDamagePos.localPosition.z);
             }
         }
         
