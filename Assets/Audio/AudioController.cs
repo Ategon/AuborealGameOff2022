@@ -120,6 +120,11 @@ namespace Assets.Audio
         {
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("sea distance", 1 - seaDistance);
         }
+        
+        public void SetFightParameter(bool isFighting)
+        {
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("fight", isFighting ? 1 : 0);
+        }
 
         #region Events Callbacks
 
