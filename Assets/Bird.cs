@@ -12,6 +12,7 @@ public class Bird : MonoBehaviour
     private GameObject shadow;
     private Transform shadowTransform;
     private SpriteRenderer shadowRenderer;
+    private SpriteRenderer birdRenderer;
 
     private Vector3 startScale = new Vector3(0.22f, 0.16f, 0.5f);
 
@@ -23,6 +24,7 @@ public class Bird : MonoBehaviour
         shadow = transform.GetChild(0).gameObject;
         shadowTransform = shadow.transform;
         shadowRenderer = shadow.GetComponent<SpriteRenderer>();
+        birdRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -83,6 +85,7 @@ public class Bird : MonoBehaviour
         shadowTransform.DOLocalMove(new Vector3(shadowTransform.localPosition.x, shadowTransform.localPosition.y - 3f, 0), 1.0f);
         shadowTransform.DOScale(new Vector3(2f * startScale.x, 2f * startScale.y, 2f * startScale.z), 1.0f);
         shadowRenderer.DOColor(new Color(0, 0, 0, 0f), 1.0f);
+        birdRenderer.DOColor(new Color(1, 1, 1, 0f), 1.0f);
     }
 
     private void Return()
@@ -96,6 +99,7 @@ public class Bird : MonoBehaviour
         shadowTransform.DOLocalMove(new Vector3(shadowTransform.localPosition.x, shadowTransform.localPosition.y + 3.15f, 0), 1.0f);
         shadowTransform.DOScale(new Vector3(1.1f * startScale.x, 1.1f * startScale.y, 1.1f * startScale.z), 1.0f);
         shadowRenderer.DOColor(new Color(0, 0, 0, 0.17f), 1.0f);
+        birdRenderer.DOColor(new Color(1, 1, 1, 1f), 1.0f); 
         yield return new WaitForSeconds(1.0f);
         transform.DOLocalMove(new Vector3(transform.position.x, transform.position.y - 0.1f, 0), 0.5f);
         shadowTransform.DOLocalMove(new Vector3(shadowTransform.localPosition.x, shadowTransform.localPosition.y + 0.1f, 0), 0.5f);
