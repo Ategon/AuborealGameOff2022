@@ -71,7 +71,7 @@ public class PlayerMeleeAttack : MeleeAttack
             Vector3 mousePos = camera.ScreenToWorldPoint(mousePosition.ReadValue<Vector2>());
             attackDirection = (new Vector2(mousePos.x - hitboxCenter.position.x, mousePos.y - hitboxCenter.position.y)).normalized;
 
-            if(cursor) cursor.BonusSize = -0.35f;
+            if(cursor) cursor.BonusSize = -0.55f;
         }
     }
 

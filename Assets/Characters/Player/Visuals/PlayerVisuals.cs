@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Characters.Player.Movement;
+using DG.Tweening;
 
 public class PlayerVisuals : MonoBehaviour
 {
@@ -18,6 +19,43 @@ public class PlayerVisuals : MonoBehaviour
     [SerializeField] private ParticleSystem[] particleFlipees;
     [SerializeField] private bool overrideFlip;
 
+    private float scaleXdata = 1;
+    private float scaleYdata = 1;
+    private Tween lastTween = null;
+    private Tween lastSecondaryTween = null;
+
+    public void TriggerDash()
+    {
+        if (lastTween != null) lastTween.Kill();
+        if (lastSecondaryTween != null) lastSecondaryTween.Kill();
+
+        scaleXdata = 1;
+        scaleYdata = 1;
+
+        lastTween = DOTween.To(() => scaleYdata, x => scaleYdata = x, 0.8f, 0.1f).SetEase(Ease.OutQuad);
+        lastSecondaryTween = DOTween.To(() => scaleXdata, x => scaleXdata = x, 1.2f, 0.1f).SetEase(Ease.OutQuad).OnComplete(() =>
+        {
+            lastTween = DOTween.To(() => scaleYdata, x => scaleYdata = x, 0.9f, 0.1f).SetEase(Ease.OutQuad);
+            lastSecondaryTween = DOTween.To(() => scaleXdata, x => scaleXdata = x, 1.1f, 0.1f).SetEase(Ease.OutQuad);
+        });
+    }
+
+    public void TriggerDashEnd()
+    {
+        if (lastTween != null) lastTween.Kill();
+        if (lastSecondaryTween != null) lastSecondaryTween.Kill();
+
+        scaleYdata = 0.90f;
+        scaleXdata = 1.1f;
+
+        lastTween = DOTween.To(() => scaleYdata, x => scaleYdata = x, 1.05f, 0.1f).SetEase(Ease.OutQuad);
+        lastSecondaryTween = DOTween.To(() => scaleXdata, x => scaleXdata = x, 0.95f, 0.1f).SetEase(Ease.OutQuad).OnComplete(() =>
+        {
+            lastTween = DOTween.To(() => scaleYdata, x => scaleYdata = x, 1, 0.1f).SetEase(Ease.OutQuad);
+            lastSecondaryTween = DOTween.To(() => scaleXdata, x => scaleXdata = x, 1, 0.1f).SetEase(Ease.OutQuad);
+        });
+    }
+
     private void Start()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -28,6 +66,11 @@ public class PlayerVisuals : MonoBehaviour
 
     private void Update()
     {
+        if (scaleXdata != 1 || scaleYdata != 1)
+        {
+            transform.localScale = new Vector3(scaleXdata * Mathf.Sign(transform.localScale.x), scaleYdata, 1);
+        }
+
         if (pm.IsBusy())
         {
             if (cam.ScreenToWorldPoint(pm.Aim).x > transform.position.x && !facingRight)

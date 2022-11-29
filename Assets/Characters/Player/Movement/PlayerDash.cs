@@ -19,6 +19,7 @@ namespace Characters.Player.Movement
 
         [SerializeField] GameObject dashParticles;
         [SerializeField] GameObject dashIndicator;
+        [SerializeField] PlayerVisuals playerVisuals;
 
         public bool CanDash { get; private set; } = false;
 
@@ -51,6 +52,7 @@ namespace Characters.Player.Movement
             _dashDirection = _inputs.Player.Move.ReadValue<Vector2>();
             _playerDashEvent.Raise(this, null);
             dashParticles.SetActive(true);
+            playerVisuals.TriggerDash();
 
             CanDash = true;
         }
@@ -63,8 +65,12 @@ namespace Characters.Player.Movement
             }
             else
             {
-                CanDash = false;
-                dashParticles.SetActive(false);
+                if (CanDash)
+                {
+                    playerVisuals.TriggerDashEnd();
+                    CanDash = false;
+                    dashParticles.SetActive(false);
+                }
                 if (_dashCooldownTime > 0)
                 {
                     _dashCooldownTime -= Time.deltaTime;
