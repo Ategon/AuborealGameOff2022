@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossBombPattern: {fileID: 5903270438904038655}
+  bossHealthUI: {fileID: 0}
+  numAggroedEnemyChangeEvent: {fileID: 11400000, guid: e6a1df7ab8b1db44ab5401fbddad2369, type: 2}
 --- !u!58 &8051593969148702524
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -74,6 +76,7 @@ GameObject:
   - component: {fileID: -1631759738814142981}
   - component: {fileID: 5903270438904038655}
   - component: {fileID: 3991566973754849571}
+  - component: {fileID: 325091461}
   m_Layer: 10
   m_Name: Boss
   m_TagString: Untagged
@@ -111,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bombIndicatorPrefab: {fileID: 2899028822037470909, guid: 73369ab8c369ad64f84e07a4df443ef9, type: 3}
-  bombDamage: 3
+  bombDamage: 4
   bombBlastRadius: 0.3
   explosionDelay: 1.5
 --- !u!114 &5903270438904038655
@@ -131,11 +134,11 @@ MonoBehaviour:
   spawnBomb: {fileID: -1631759738814142981}
   distanceBetweeenBombs: 0.5
   isAggroed: 0
-  radiusDifference: 0.9
+  radiusDifference: 1.1
   minRadius: 0.5
   maxRadius: 3
   rayAngleDifference: 60
-  minDistance: 0.3
+  minDistance: 0.5
   maxDistance: 3
 --- !u!70 &3991566973754849571
 CapsuleCollider2D:
@@ -153,6 +156,24 @@ CapsuleCollider2D:
   m_Offset: {x: 0.031097932, y: -0.16396978}
   m_Size: {x: 0.7095358, y: 0.4720658}
   m_Direction: 1
+--- !u!114 &325091461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611386525365237930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2136fc804e1e5846905966a2ac15749, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numAggroedEnemyChangeEvent: {fileID: 11400000, guid: e6a1df7ab8b1db44ab5401fbddad2369, type: 2}
+  maxHealth: 50
+  startingHealth: 50
+  currentHealth: 0
+  equipmentDropPrefab: {fileID: 6383609612808223630, guid: 9cd3d80b142c2284f9c8abbf7a1d0f29, type: 3}
+  bossHealthChangedEvent: {fileID: 11400000, guid: 19e65cde1e6e0b847bf2de8aaf1874b4, type: 2}
 --- !u!1 &3442441846685446458
 GameObject:
   m_ObjectHideFlags: 0
