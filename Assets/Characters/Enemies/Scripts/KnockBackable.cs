@@ -7,6 +7,7 @@ namespace Characters.Enemies
     {
         [field: SerializeField] public float KnockTime { get; private set; }
         [field: SerializeField] public float KnockThurst { get; private set; }
+        [field: SerializeField] public EnemyMovementAnimation enemyMovementAnimation { get; private set; }
 
         private NavMeshAgent _navMeshAgent;
 
@@ -28,6 +29,7 @@ namespace Characters.Enemies
             Vector3 direction = distance.normalized;
             Vector3 thurstVector = direction * KnockThurst;
             _navMeshAgent.velocity = -thurstVector;
+            enemyMovementAnimation.LockDirection(KnockTime);
 
             // uncomment this for post effect or values to set
             // KnockTimer();

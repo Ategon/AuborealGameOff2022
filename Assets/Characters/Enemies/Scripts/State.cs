@@ -325,7 +325,7 @@ public class rangedAttack : State
         }
         if (attackCooldown <= 0)
         {
-            stateValues.rangedAttack.Fire(stateValues.agent.transform.position, stateValues.player.position);
+            stateValues.rangedAttack.StartShooting(stateValues.player.position);
 
             attackCooldown = stateValues.stateMathValues.attackCooldown;
         }
