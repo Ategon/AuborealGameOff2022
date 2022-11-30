@@ -9,7 +9,7 @@ public class EnemyAI : MonoBehaviour
     Animator anim;
     public Transform player;
     public EnemyMeleeAttack meleeAttack;
-    public ShootProjectile rangedAttack;
+    public EnemyShootProjectile rangedAttack;
     public NumAggroedEnemyChangeEvent numAggroedEnemyChangeEvent;
     private StateMathematicalValues stateMathValues;
     public List<GameObject> checkpoints;

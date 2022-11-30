@@ -94,8 +94,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2613436627695009296}
   - component: {fileID: 2613436627695009297}
-  - component: {fileID: 7472231394567845644}
-  - component: {fileID: 7618570378576446843}
+  - component: {fileID: 7566900459874302982}
+  - component: {fileID: 4962126039575328863}
   m_Layer: 0
   m_Name: Visuals
   m_TagString: Untagged
@@ -159,7 +159,7 @@ SpriteRenderer:
   m_SortingLayerID: 1123485675
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b55c67604bc670d40814c85e9e30312e, type: 3}
+  m_Sprite: {fileID: -1815344097, guid: 66aaae4b9b9e4ea4fa0bbb5aef2da271, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -170,7 +170,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &7472231394567845644
+--- !u!95 &7566900459874302982
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -180,7 +180,7 @@ Animator:
   m_GameObject: {fileID: 2613436627695009302}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 33891d3675ce98d46a8905369cf052aa, type: 2}
+  m_Controller: {fileID: 9100000, guid: f7eab405a1338004aba963f7d7783441, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -190,7 +190,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7618570378576446843
+--- !u!114 &4962126039575328863
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,7 +202,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcbc35ce539e9f7499e9cf5aeb4684a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyMeleeAttack: {fileID: 2392465478386273100}
+  enemyMeleeAttack: {fileID: 0}
+  enemyShootProjectile: {fileID: 2755564339550185038}
+  enemyHealth: {fileID: 2613436627731946238}
 --- !u!1 &2613436627731946224
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,10 +220,11 @@ GameObject:
   - component: {fileID: 2613436627731946238}
   - component: {fileID: 2613436627731946233}
   - component: {fileID: 2613436627731946232}
-  - component: {fileID: 2392465478386273100}
+  - component: {fileID: 634610684984408443}
+  - component: {fileID: 2755564339550185038}
   m_Layer: 10
-  m_Name: TigerShark
-  m_TagString: Enemy
+  m_Name: TikiSpearman
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -235,13 +238,13 @@ Transform:
   m_GameObject: {fileID: 2613436627731946224}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.098, y: 0.909, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2613436627695009296}
   - {fileID: 757969766927347150}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2613436627731946227
 MonoBehaviour:
@@ -256,8 +259,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  meleeAttack: {fileID: 2392465478386273100}
-  rangedAttack: {fileID: 0}
+  meleeAttack: {fileID: 0}
+  rangedAttack: {fileID: 2755564339550185038}
   numAggroedEnemyChangeEvent: {fileID: 11400000, guid: e6a1df7ab8b1db44ab5401fbddad2369, type: 2}
   checkpoints:
   - {fileID: 0}
@@ -265,14 +268,14 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  visDist: 2
-  attackDist: 1.5
-  patrolDist: 9
-  attackCooldown: 1.1
-  patrolSpeed: 1.2
-  pursueSpeed: 1.8
-  isMeleeAttacking: 1
-  isRangedAttacking: 0
+  visDist: 4
+  attackDist: 2.2
+  patrolDist: 10
+  attackCooldown: 1
+  patrolSpeed: 1
+  pursueSpeed: 1.5
+  isMeleeAttacking: 0
+  isRangedAttacking: 1
 --- !u!195 &2613436627731946237
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -324,6 +327,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numAggroedEnemyChangeEvent: {fileID: 11400000, guid: e6a1df7ab8b1db44ab5401fbddad2369, type: 2}
+  animator: {fileID: 7566900459874302982}
+  agent: {fileID: 2613436627731946237}
+  enemyMovementAnimation: {fileID: 634610684984408443}
   maxHealth: 50
   startingHealth: 50
   currentHealth: 0
@@ -342,7 +348,7 @@ MonoBehaviour:
   rigidbody: {fileID: 0}
   attackingLayers:
     serializedVersion: 2
-    m_Bits: 2112
+    m_Bits: 64
   health: {fileID: 2613436627731946238}
 --- !u!114 &2613436627731946232
 MonoBehaviour:
@@ -356,9 +362,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ac4e63ff8cf514db6ed7f411fccb80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <KnockTime>k__BackingField: 0.5
+  <KnockTime>k__BackingField: 0.4
   <KnockThurst>k__BackingField: 2
---- !u!114 &2392465478386273100
+  <enemyMovementAnimation>k__BackingField: {fileID: 634610684984408443}
+--- !u!114 &634610684984408443
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -367,19 +374,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 2613436627731946224}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1c3282f4dcadc3489b37b9771eef271, type: 3}
+  m_Script: {fileID: 11500000, guid: a3ff0ed1d1fe44447ba2ec4d9975b6c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitboxCenter: {fileID: 2613436627731946226}
-  attackSize: 0.35
-  attackDamage: 4
-  attackKnockback: 0
-  attackOffset: 0.35
-  debugHitboxes: 1
-  hitboxIndicatorPrefab: {fileID: 7842766238382575663, guid: 7f15fa1107b20184f9f530683981036e, type: 3}
-  animator: {fileID: 7472231394567845644}
-  navMeshAgent: {fileID: 2613436627731946237}
-  attackVelocity: 2.3
-  isAttacking: 0
-  attackDirection: {x: 0, y: 0}
-  justAttacked: 0
+  agent: {fileID: 2613436627731946237}
+  animator: {fileID: 7566900459874302982}
+  direction: 0
+--- !u!114 &2755564339550185038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2613436627731946224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c7984504e32e824994f1aedaf07d489, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 8747798639918260009, guid: f92fb41377303e54da83782417e6e88a, type: 3}
+  projectileSpeed: 5
+  projectileDamage: 3
+  projectileKnockbackMagnitude: 2
+  animator: {fileID: 7566900459874302982}
+  enemyMovementAnimation: {fileID: 634610684984408443}

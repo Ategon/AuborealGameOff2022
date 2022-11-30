@@ -270,7 +270,7 @@ public class meleeAttack : State
 
     public override void Enter()
     {
-        attackCooldown = stateValues.stateMathValues.attackCooldown;
+        attackCooldown = stateValues.stateMathValues.attackCooldown / 2;
         stateValues.agent.isStopped = true;
         base.Enter();
     }
@@ -325,7 +325,7 @@ public class rangedAttack : State
         }
         if (attackCooldown <= 0)
         {
-            stateValues.rangedAttack.Fire(stateValues.agent.transform.position, stateValues.player.position);
+            stateValues.rangedAttack.StartShooting(stateValues.player.position);
 
             attackCooldown = stateValues.stateMathValues.attackCooldown;
         }
