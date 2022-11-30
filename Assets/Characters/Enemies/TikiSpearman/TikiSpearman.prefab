@@ -329,6 +329,7 @@ MonoBehaviour:
   numAggroedEnemyChangeEvent: {fileID: 11400000, guid: e6a1df7ab8b1db44ab5401fbddad2369, type: 2}
   animator: {fileID: 7566900459874302982}
   agent: {fileID: 2613436627731946237}
+  enemyMovementAnimation: {fileID: 634610684984408443}
   maxHealth: 50
   startingHealth: 50
   currentHealth: 0
@@ -395,9 +396,5 @@ MonoBehaviour:
   projectileSpeed: 5
   projectileDamage: 3
   projectileKnockbackMagnitude: 2
-  downSprite: {fileID: 21300000, guid: 27f34c7b3b706684aa63d3583d55ee8b, type: 3}
-  leftSprite: {fileID: 21300000, guid: 22a41cc0f6be041449819453f2dc8bd9, type: 3}
-  upSprite: {fileID: 21300000, guid: 309d2045fb863964da999db07a773d7c, type: 3}
-  rightSprite: {fileID: 21300000, guid: bfaa4ba0a5b71a347bcc7cb58f176dc7, type: 3}
   animator: {fileID: 7566900459874302982}
   enemyMovementAnimation: {fileID: 634610684984408443}
