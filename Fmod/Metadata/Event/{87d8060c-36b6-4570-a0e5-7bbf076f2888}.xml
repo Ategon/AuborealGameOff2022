@@ -452,15 +452,15 @@
 	</object>
 	<object class="TransitionSourceSound" id="{82b8f17a-8fc7-4c70-b740-87732ce8cd49}">
 		<property name="length">
-			<value>4.5</value>
+			<value>3.6000000000000001</value>
 		</property>
 	</object>
 	<object class="TransitionDestinationSound" id="{77265f95-6c9e-4de3-b00b-0d60fe522d26}">
 		<property name="start">
-			<value>4.5</value>
+			<value>3.6000000000000001</value>
 		</property>
 		<property name="length">
-			<value>2.4999999999999991</value>
+			<value>3.399999999999999</value>
 		</property>
 	</object>
 	<object class="EventMixerGroup" id="{82741486-05ba-4b44-b4c2-343c3228143e}">
@@ -894,7 +894,7 @@
 			<value>158.99999999999994</value>
 		</property>
 		<property name="quantizationInterval">
-			<value>8</value>
+			<value>1</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{a4610d3a-66ce-4b09-a854-eda1d641687f}</destination>
@@ -1354,6 +1354,7 @@
 		<relationship name="automationPoints">
 			<destination>{4894d6ef-181e-4e2e-bd4a-99522f9b43e7}</destination>
 			<destination>{29ed3b45-67ca-4458-9ccb-421b806e5291}</destination>
+			<destination>{a11226a7-f2e1-4aff-ba1e-85087370c502}</destination>
 		</relationship>
 	</object>
 	<object class="AutomationPoint" id="{a8a3f777-14a3-4661-a6f8-8edf3a7bc004}">
@@ -1595,10 +1596,21 @@
 	</object>
 	<object class="AutomationPoint" id="{29ed3b45-67ca-4458-9ccb-421b806e5291}">
 		<property name="position">
-			<value>4.5</value>
+			<value>3.6000000000000001</value>
 		</property>
 		<property name="value">
 			<value>10</value>
+		</property>
+		<property name="curveShape">
+			<value>-0.731699705</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{a11226a7-f2e1-4aff-ba1e-85087370c502}">
+		<property name="position">
+			<value>6.9743662495717489</value>
+		</property>
+		<property name="value">
+			<value>21698.4258</value>
 		</property>
 	</object>
 </objects>
