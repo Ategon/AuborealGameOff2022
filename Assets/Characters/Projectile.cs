@@ -6,6 +6,11 @@ public class Projectile : MonoBehaviour
     public new Rigidbody2D rigidbody;
     public Damage damage;
     public LayerMask targetLayers;
+    [Header("(Optional) Directional Projectile Sprites")]
+    public Sprite downSprite;
+    public Sprite leftSprite;
+    public Sprite upSprite;
+    public Sprite rightSprite;
 
 
     private void OnTriggerEnter2D(Collider2D collision)

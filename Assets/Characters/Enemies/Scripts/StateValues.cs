@@ -11,10 +11,10 @@ public class StateValues
     public Animator anim;
     public Transform player;
     public EnemyMeleeAttack meleeAttack;
-    public ShootProjectile rangedAttack;
+    public EnemyShootProjectile rangedAttack;
     public NumAggroedEnemyChangeEvent numAggroedEnemyChangeEvent;
     public StateMathematicalValues stateMathValues;
-    public StateValues(GameObject _enemy, NavMeshAgent _agent, Animator _anim, Transform _player, EnemyMeleeAttack _meleeAttack, ShootProjectile _rangedAttack,
+    public StateValues(GameObject _enemy, NavMeshAgent _agent, Animator _anim, Transform _player, EnemyMeleeAttack _meleeAttack, EnemyShootProjectile _rangedAttack,
         NumAggroedEnemyChangeEvent _numAggroedEnemyChangeEvent, StateMathematicalValues _stateMathValues)
     {
         enemy = _enemy;
