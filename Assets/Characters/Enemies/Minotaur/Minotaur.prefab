@@ -159,7 +159,7 @@ SpriteRenderer:
   m_SortingLayerID: 1123485675
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b55c67604bc670d40814c85e9e30312e, type: 3}
+  m_Sprite: {fileID: -1964063111, guid: 03630a12a6ec6674bb1de4856dd2497a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -180,7 +180,7 @@ Animator:
   m_GameObject: {fileID: 2613436627695009302}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 33891d3675ce98d46a8905369cf052aa, type: 2}
+  m_Controller: {fileID: 22100000, guid: 6f020f5b01c45c947aa87a1220ada623, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -203,6 +203,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyMeleeAttack: {fileID: 2392465478386273100}
+  enemyShootProjectile: {fileID: 0}
+  enemyHealth: {fileID: 2613436627731946238}
 --- !u!1 &2613436627731946224
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,8 +221,9 @@ GameObject:
   - component: {fileID: 2613436627731946233}
   - component: {fileID: 2613436627731946232}
   - component: {fileID: 2392465478386273100}
+  - component: {fileID: 1371748913}
   m_Layer: 10
-  m_Name: TigerShark
+  m_Name: Minotaur
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -235,13 +238,13 @@ Transform:
   m_GameObject: {fileID: 2613436627731946224}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.098, y: 0.909, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2613436627695009296}
   - {fileID: 757969766927347150}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2613436627731946227
 MonoBehaviour:
@@ -266,9 +269,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   visDist: 2
-  attackDist: 1.5
+  attackDist: 1.1
   patrolDist: 9
-  attackCooldown: 1.1
+  attackCooldown: 1.4
   patrolSpeed: 1.2
   pursueSpeed: 1.8
   isMeleeAttacking: 1
@@ -308,8 +311,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.021440214, y: 0.025728464}
-  m_Size: {x: 0.8713615, y: 0.6398114}
+  m_Offset: {x: -0.0000000048132245, y: -0.040376257}
+  m_Size: {x: 0.63981247, y: 0.50760347}
   m_Direction: 1
 --- !u!114 &2613436627731946238
 MonoBehaviour:
@@ -324,6 +327,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numAggroedEnemyChangeEvent: {fileID: 11400000, guid: e6a1df7ab8b1db44ab5401fbddad2369, type: 2}
+  animator: {fileID: 7472231394567845644}
+  agent: {fileID: 2613436627731946237}
+  enemyMovementAnimation: {fileID: 1371748913}
+  enemyMeleeAttack: {fileID: 2392465478386273100}
   maxHealth: 50
   startingHealth: 50
   currentHealth: 0
@@ -358,6 +365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <KnockTime>k__BackingField: 0.5
   <KnockThurst>k__BackingField: 2
+  <enemyMovementAnimation>k__BackingField: {fileID: 1371748913}
 --- !u!114 &2392465478386273100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,11 +383,27 @@ MonoBehaviour:
   attackDamage: 4
   attackKnockback: 0
   attackOffset: 0.35
-  debugHitboxes: 1
+  debugHitboxes: 0
   hitboxIndicatorPrefab: {fileID: 7842766238382575663, guid: 7f15fa1107b20184f9f530683981036e, type: 3}
   animator: {fileID: 7472231394567845644}
   navMeshAgent: {fileID: 2613436627731946237}
-  attackVelocity: 2.3
+  enemyMovementAnimation: {fileID: 1371748913}
+  attackVelocity: 0.3
   isAttacking: 0
   attackDirection: {x: 0, y: 0}
   justAttacked: 0
+--- !u!114 &1371748913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2613436627731946224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3ff0ed1d1fe44447ba2ec4d9975b6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 2613436627731946237}
+  animator: {fileID: 7472231394567845644}
+  direction: 0

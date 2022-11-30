@@ -11,6 +11,8 @@ namespace Assets.Enemies
         [SerializeField] private NumAggroedEnemyChangeEvent numAggroedEnemyChangeEvent;
         [SerializeField] private Animator animator;
         [SerializeField] private NavMeshAgent agent;
+        [SerializeField] private EnemyMovementAnimation enemyMovementAnimation;
+        [SerializeField] private EnemyMeleeAttack enemyMeleeAttack;
         public int maxHealth;
         [SerializeField] private int startingHealth;
         [HideInInspector] public int currentHealth;
@@ -27,10 +29,15 @@ namespace Assets.Enemies
         protected virtual void Die()
         {
             numAggroedEnemyChangeEvent.Raise(this, new NumEnemyChangeEventParameters(-1));
+            Destroy(enemyMovementAnimation);
             if (agent != null)
             {
                 Destroy(agent);
             }
+            if (enemyMeleeAttack != null)
+            {
+                Destroy(enemyMeleeAttack);
+            }    
             if (animator != null)
             {
                 animator.SetTrigger("Die");
