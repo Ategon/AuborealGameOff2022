@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using Assets.Audio.Events;
+using Assets.Player.Upgrades;
 using Assets.Player.Inventory;
 using Characters.Player.Movement;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Assets.EventSystem;
 
 public class PlayerShootProjectile : ShootProjectile
 {
@@ -14,6 +16,8 @@ public class PlayerShootProjectile : ShootProjectile
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private InventoryController inventoryController;
     [SerializeField] private PlayerShootEvent playerShootEvent;
+    [SerializeField] private RangedUpgradeEvent rangedUpgradeEvent;
+    [SerializeField] private UpgradeController upgradeController;
     private Inputs inputs;
     private InputAction shootProjectile;
     private InputAction mousePosition;
@@ -30,6 +34,7 @@ public class PlayerShootProjectile : ShootProjectile
     {
         inputs = new Inputs();
         camera = Camera.main;
+        UpdateDamage();
     }
     private void Update()
     {
@@ -43,12 +48,14 @@ public class PlayerShootProjectile : ShootProjectile
         shootProjectile.Enable();
         mousePosition.Enable();
         shootProjectile.performed += OnPressShoot;
+        rangedUpgradeEvent.AddListener(OnRangedUpgrade);
 
     }
     private void OnDisable()
     {
         shootProjectile.Disable();
         mousePosition.Disable();
+        rangedUpgradeEvent.RemoveListener(OnRangedUpgrade);
     }
     private void OnPressShoot(InputAction.CallbackContext context)
     {
@@ -75,5 +82,15 @@ public class PlayerShootProjectile : ShootProjectile
     public void FinishShootAnimation()
     {
         isShooting = false;
+    }
+
+    private void OnRangedUpgrade(object sender, EventParameters args)
+    {
+        UpdateDamage();
+    }
+
+    private void UpdateDamage()
+    {
+        projectileDamage = upgradeController.rangedDamage;
     }
 }

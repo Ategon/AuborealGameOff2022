@@ -15078,6 +15078,8 @@ MonoBehaviour:
   playerMovement: {fileID: 9119500141450112101}
   inventoryController: {fileID: 11400000, guid: acf58a9829ecd3142b7d3b2126479049, type: 2}
   playerShootEvent: {fileID: 11400000, guid: d8011d944e8edde4aa7d57ad542bdadd, type: 2}
+  rangedUpgradeEvent: {fileID: 11400000, guid: 87a6df5a2ac65694b8815516621e6df9, type: 2}
+  upgradeController: {fileID: 11400000, guid: f019f850af188044080cb84e3d09a58c, type: 2}
   cooldown: 0.5
   animator: {fileID: 3997124552067024247}
   isShooting: 0
@@ -15107,6 +15109,8 @@ MonoBehaviour:
   playerMovement: {fileID: 9119500141450112101}
   cursor: {fileID: 0}
   swordParticles: {fileID: 3875143435090594287}
+  meleeUpgradeEvent: {fileID: 11400000, guid: f44f1c49b66df8b49a0d8b3047b9147d, type: 2}
+  upgradeController: {fileID: 11400000, guid: f019f850af188044080cb84e3d09a58c, type: 2}
   attackVelocity: 1.6
   isAttacking: 0
   attackDirection: {x: 0, y: 0}
