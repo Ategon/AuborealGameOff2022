@@ -9,7 +9,7 @@ namespace Assets.Enemies
     public class AggroedEnemyTracker : ScriptableObject
     {
         [SerializeField] private NumAggroedEnemyChangeEvent numAggroedEnemyChangeEvent;
-        [SerializeField] private AudioController audioController;
+        AudioController audioController;
         private int numEnemies;
 
         private void OnEnable()
@@ -31,7 +31,10 @@ namespace Assets.Enemies
         {
             NumEnemyChangeEventParameters enemyChangeEventParameters = (NumEnemyChangeEventParameters)arg2;
             numEnemies = Mathf.Max(0, enemyChangeEventParameters.changeValue + numEnemies);
-            if (audioController)
+
+            if (audioController == null)
+                audioController = FindObjectOfType<AudioController>();
+            if (audioController != null)
             {
                 audioController.SetFightParameter(numEnemies > 0);
             }
