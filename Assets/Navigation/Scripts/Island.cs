@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using Assets.EventSystem;
 using Assets.Player.Inventory;
 using Assets.Player.Thirst;
-using UnityEditor;
 using UnityEngine;
+using DG.Tweening;
 using UnityEngine.SceneManagement;
 
 namespace Assets.Navigation
@@ -52,11 +52,30 @@ namespace Assets.Navigation
             this.boat = boat;
             CreateRouteTrails();
         }
+
+        [SerializeField] private Transform[] exitObjects;
+        private bool entered = false;
+
         public void DockBoat()
         {
+            if (entered) return;
+            entered = true;
+            for (int i = 0; i < exitObjects.Length; i++)
+            {
+                exitObjects[i].DOLocalMove(Vector3.zero, 2f).SetEase(Ease.OutQuad);
+            }
             playerLocationController.islandName = islandName;
-            SceneManager.LoadSceneAsync(loadedSceneName);
+            StartCoroutine(swapScene());
         }
+
+        IEnumerator swapScene()
+        {
+            {
+                yield return new WaitForSeconds(2f);
+                SceneManager.LoadScene(loadedSceneName);
+            }
+        }
+        
         public int GetThirstCostFromDocked()
         {
             foreach (Route route in routes)
