@@ -26,4 +26,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 9c6f775240f21ee4ea2dc383766e455e
+  - enabled: 1
+    path: Assets/Scenes/Islands/Island 1.unity
+    guid: 61a7d423c32c45747bd68f9c318efdb6
+  - enabled: 1
+    path: Assets/Scenes/Islands/Island 2.unity
+    guid: 14e64a0f29b6989489a45928c8c44a14
+  - enabled: 1
+    path: Assets/Scenes/Islands/Island 3.unity
+    guid: d4c921895c62af44e9f15c9cf56a8222
+  - enabled: 1
+    path: Assets/Scenes/Islands/Island 4.unity
+    guid: f0ad1acf30a47f246829985eaa9ea377
+  - enabled: 1
+    path: Assets/Scenes/Islands/Island 5.unity
+    guid: a723ce73b16fb0a45ba76d870aa98572
+  - enabled: 1
+    path: Assets/Scenes/Islands/Island 6.unity
+    guid: b555b7782ef5fc64f8dd4dcb7f713ff4
   m_configObjects: {}
