@@ -13,12 +13,15 @@ public class EnemyMovementAnimation : MonoBehaviour
 
     private void Update()
     {
-        animator.SetFloat("Speed", agent.velocity.magnitude);
-        if (lockDirectionTime > 0)
-             lockDirectionTime -= Time.deltaTime;
-        if (agent.velocity.magnitude > 0.01f & lockDirectionTime <= 0)
+        if (agent)
         {
-            FaceDirection(agent.velocity);
+            animator.SetFloat("Speed", agent.velocity.magnitude);
+            if (lockDirectionTime > 0)
+                lockDirectionTime -= Time.deltaTime;
+            if (agent.velocity.magnitude > 0.01f & lockDirectionTime <= 0)
+            {
+                FaceDirection(agent.velocity);
+            }
         }
     }
 
