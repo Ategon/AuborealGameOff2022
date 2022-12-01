@@ -42,7 +42,14 @@ namespace Assets.Enemies
             if (enemyMeleeAttack != null)
             {
                 Destroy(enemyMeleeAttack);
-            }    
+            }
+            
+            EnemyAI ai = GetComponent<EnemyAI>();
+            if (ai  != null)
+            {
+               Destroy(ai);
+            }
+            
             if (animator != null)
             {
                 animator.SetTrigger("Die");
