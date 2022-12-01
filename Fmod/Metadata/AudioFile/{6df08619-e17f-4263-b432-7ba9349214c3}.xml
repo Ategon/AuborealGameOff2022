@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{6df08619-e17f-4263-b432-7ba9349214c3}">
+		<property name="assetPath">
+			<value>sfx_waterboss_step03.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.9733333333333334</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{56e68f36-e6d4-487a-a51e-b84e2c7dfacb}</destination>
+		</relationship>
+	</object>
+</objects>

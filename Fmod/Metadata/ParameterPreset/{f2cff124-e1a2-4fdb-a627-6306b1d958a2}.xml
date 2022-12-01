@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{f2cff124-e1a2-4fdb-a627-6306b1d958a2}">
+		<property name="name">
+			<value>water boss movment</value>
+		</property>
+		<relationship name="folder">
+			<destination>{696894c5-0803-4ba6-8ef1-98176a6205a6}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{75e991df-76dc-468b-893e-bfbe24b32377}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{75e991df-76dc-468b-893e-bfbe24b32377}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
