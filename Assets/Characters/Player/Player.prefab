@@ -15098,7 +15098,7 @@ MonoBehaviour:
   attackDamage: 10
   attackKnockback: 4
   attackOffset: 0.3
-  debugHitboxes: 1
+  debugHitboxes: 0
   hitboxIndicatorPrefab: {fileID: 7842766238382575663, guid: 26745dd7c1fea5d4fb0446a8b9b89e35, type: 3}
   animator: {fileID: 3997124552067024247}
   cooldown: 0.2

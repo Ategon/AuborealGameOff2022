@@ -169,7 +169,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &7472231394567845644
 Animator:
   serializedVersion: 4
@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 2392465478386273100}
   - component: {fileID: 1371748913}
   - component: {fileID: 4893377774224161521}
+  - component: {fileID: 2847556386348050047}
   m_Layer: 10
   m_Name: Minotaur
   m_TagString: Enemy
@@ -366,7 +367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <KnockTime>k__BackingField: 0.5
-  <KnockThurst>k__BackingField: 2
+  <KnockThurst>k__BackingField: 2.5
   <enemyMovementAnimation>k__BackingField: {fileID: 1371748913}
 --- !u!114 &2392465478386273100
 MonoBehaviour:
@@ -453,3 +454,24 @@ MonoBehaviour:
   navMeshAgent: {fileID: 2613436627731946237}
   timeBetweenFootsteps: 0.4
   isWalking: 0
+--- !u!50 &2847556386348050047
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2613436627731946224}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
