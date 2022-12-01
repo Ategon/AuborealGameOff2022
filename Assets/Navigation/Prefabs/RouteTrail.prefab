@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1447846968458909087
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1447846968458909056}
+  - component: {fileID: 1447846968458909057}
+  m_Layer: 0
+  m_Name: RouteTrail
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1447846968458909056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447846968458909087}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.598864, y: 1.1840469, z: 0.044904865}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1447846968458909057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447846968458909087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e278ff58b59b48a4b8b0a98fa059a0fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  routeDotPrefab: {fileID: 6001843665437313575, guid: 667bf9655cd57be47b17593068e87ebf, type: 3}
+  distanceBetweenDots: 0.4
+  defaultColor: {r: 0.972549, g: 0.3137255, b: 0.3137255, a: 0.24313726}
+  hoverColor: {r: 0.8867924, g: 0.06190812, b: 0.06190812, a: 0.76862746}
+  routeCostTextPrefab: {fileID: 8515413539814830877, guid: 3ab23e9643f58d14a8e2c3aa2e1ebaed, type: 3}
+  routeCostOffset: 0.3
+  destination: {fileID: 0}

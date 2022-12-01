@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{0a371279-956d-4ea8-9f34-689662ec592d}">
+		<property name="assetPath">
+			<value>die.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4.6153741496598641</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{56e68f36-e6d4-487a-a51e-b84e2c7dfacb}</destination>
+		</relationship>
+	</object>
+</objects>

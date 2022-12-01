@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25d35e625f7199247becb4a947af8a5b, type: 3}
+  m_Name: AggroedEnemyTracker
+  m_EditorClassIdentifier: 
+  numAggroedEnemyChangeEvent: {fileID: 11400000, guid: e6a1df7ab8b1db44ab5401fbddad2369, type: 2}
+  audioController: {fileID: 3817389552235135699, guid: 9a06f547ef0ebea43a6014aafdf33dd1, type: 3}

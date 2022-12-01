@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="MixerGroup" id="{5147bbd7-c496-464f-bf5c-d7f7547d76d5}">
+		<property name="name">
+			<value>Music</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{71798fb2-f8db-4086-9454-256b85c636ec}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{05eb7d94-e1a9-46c2-a811-af1d317bfbff}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{4f6f42e9-13b6-460c-aa6e-841ce51e1d0e}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{71798fb2-f8db-4086-9454-256b85c636ec}">
+		<relationship name="effects">
+			<destination>{095a09db-cfd3-4c97-a43e-63bad3840a46}</destination>
+			<destination>{67df14d7-cedb-4c75-9caf-246b219d5c05}</destination>
+			<destination>{7197d0af-6a8e-484b-a48e-dcf0ddff59d9}</destination>
+			<destination>{46cf1373-1c58-4ba1-9b71-f2c61a78d4c4}</destination>
+			<destination>{d732ad6a-5f1d-4365-8660-05354175db81}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{05eb7d94-e1a9-46c2-a811-af1d317bfbff}" />
+	<object class="MixerBusFader" id="{095a09db-cfd3-4c97-a43e-63bad3840a46}" />
+	<object class="LowpassEffect" id="{67df14d7-cedb-4c75-9caf-246b219d5c05}">
+		<property name="cutoff">
+			<value>22000</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{7d1f5db3-4b99-4b13-bcd4-4df6dfd0e1bb}</destination>
+		</relationship>
+	</object>
+	<object class="ParamEqEffect" id="{7197d0af-6a8e-484b-a48e-dcf0ddff59d9}">
+		<property name="centreFrequency">
+			<value>70</value>
+		</property>
+		<property name="bandwidth">
+			<value>5</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{7c337ec8-7259-4bc0-977f-a56501f16856}</destination>
+		</relationship>
+	</object>
+	<object class="LimiterEffect" id="{46cf1373-1c58-4ba1-9b71-f2c61a78d4c4}">
+		<property name="ceiling">
+			<value>-5.9000001</value>
+		</property>
+		<property name="release">
+			<value>820</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{c5fdd0da-547c-49be-a5ed-b7608cf1aab5}</destination>
+		</relationship>
+	</object>
+	<object class="LowpassEffect" id="{d732ad6a-5f1d-4365-8660-05354175db81}">
+		<property name="cutoff">
+			<value>22000</value>
+		</property>
+		<relationship name="automators">
+			<destination>{1723c595-add3-46ac-8243-a2b1be5dfcd7}</destination>
+		</relationship>
+	</object>
+	<object class="SidechainModulator" id="{7d1f5db3-4b99-4b13-bcd4-4df6dfd0e1bb}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>cutoff</value>
+		</property>
+		<property name="levelMode">
+			<value>1</value>
+		</property>
+		<property name="amount">
+			<value>-100</value>
+		</property>
+		<property name="attackTime">
+			<value>13</value>
+		</property>
+		<property name="releaseTime">
+			<value>140</value>
+		</property>
+		<property name="minimumThreshold">
+			<value>-54</value>
+		</property>
+		<property name="maximumThreshold">
+			<value>-13.5</value>
+		</property>
+		<relationship name="sidechains">
+			<destination>{28f1f55e-7761-4a47-9c13-d0be7f4eb740}</destination>
+		</relationship>
+	</object>
+	<object class="SidechainModulator" id="{7c337ec8-7259-4bc0-977f-a56501f16856}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>gain</value>
+		</property>
+		<property name="amount">
+			<value>6</value>
+		</property>
+		<property name="attackTime">
+			<value>10</value>
+		</property>
+		<property name="releaseTime">
+			<value>600</value>
+		</property>
+		<property name="minimumThreshold">
+			<value>-80</value>
+		</property>
+		<property name="maximumThreshold">
+			<value>10</value>
+		</property>
+		<relationship name="sidechains">
+			<destination>{c99d6054-c6f1-46ec-b86b-5e57a1c1c59f}</destination>
+		</relationship>
+	</object>
+	<object class="SidechainModulator" id="{c5fdd0da-547c-49be-a5ed-b7608cf1aab5}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>boost</value>
+		</property>
+		<property name="amount">
+			<value>28</value>
+		</property>
+		<property name="attackTime">
+			<value>57</value>
+		</property>
+		<property name="releaseTime">
+			<value>560</value>
+		</property>
+		<relationship name="sidechains">
+			<destination>{c99d6054-c6f1-46ec-b86b-5e57a1c1c59f}</destination>
+		</relationship>
+	</object>
+	<object class="Automator" id="{1723c595-add3-46ac-8243-a2b1be5dfcd7}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>cutoff</value>
+		</property>
+		<relationship name="automationCurves">
+			<destination>{f428f53b-28cb-4df6-b4b8-634c79abb2a4}</destination>
+		</relationship>
+	</object>
+	<object class="AutomationCurve" id="{f428f53b-28cb-4df6-b4b8-634c79abb2a4}">
+		<relationship name="parameter">
+			<destination>{0ae768c1-a3f6-4450-849a-757ed9996025}</destination>
+		</relationship>
+		<relationship name="automationPoints">
+			<destination>{12953774-5ad6-4557-afe8-3beee46187e2}</destination>
+			<destination>{bfe5ecd9-9808-4076-aea7-fc0ed0076603}</destination>
+		</relationship>
+	</object>
+	<object class="AutomationPoint" id="{12953774-5ad6-4557-afe8-3beee46187e2}">
+		<property name="position">
+			<value>1</value>
+		</property>
+		<property name="value">
+			<value>600</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{bfe5ecd9-9808-4076-aea7-fc0ed0076603}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="value">
+			<value>22000</value>
+		</property>
+		<property name="curveShape">
+			<value>0.437054753</value>
+		</property>
+	</object>
+</objects>

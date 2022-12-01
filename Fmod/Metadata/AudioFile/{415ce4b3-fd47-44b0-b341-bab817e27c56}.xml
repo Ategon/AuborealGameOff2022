@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{415ce4b3-fd47-44b0-b341-bab817e27c56}">
+		<property name="assetPath">
+			<value>MOGL_percussion_dark_cowbell.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.10675736961451247</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{56e68f36-e6d4-487a-a51e-b84e2c7dfacb}</destination>
+		</relationship>
+	</object>
+</objects>

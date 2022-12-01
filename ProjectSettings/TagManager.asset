@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - MeleeEnemyCheckpoint
+  - RangedEnemyCheckpoint
+  - Grass
+  - Enemy
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Player
+  - Ground
+  - Reflection
+  - Minimap
+  - Enemy
+  - Player Projectile
+  - Enemy Projectile
+  - Intangible
+  - Grass
+  - Pickup
+  - 
+  - 
+  - Player Hitbox
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Main Camera
+  - Minimap Camera
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Water
+    uniqueID: 4198424153
+    locked: 0
+  - name: Ground
+    uniqueID: 1371929691
+    locked: 0
+  - name: Entities
+    uniqueID: 1123485675
+    locked: 0
+  - name: Fireflies
+    uniqueID: 3984699069
+    locked: 0
+  - name: Minimap
+    uniqueID: 3283157705
+    locked: 0
+  - name: UI
+    uniqueID: 3505969109
+    locked: 0

@@ -1,0 +1,250 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2384417513588492743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d962d142a259c394da2bdb301b72eeb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabled: 1
+  distributionList:
+    distributions: []
+  architectures:
+  - target: 2
+    name: macOS
+    enabled: 1
+    binaryNameFormat: '{0}.app'
+  variants:
+  - variantName: macOS Architecture
+    selectedIndex: 0
+    values:
+    - Intelx64
+    - Apple Silicon
+    - Universal
+  - variantName: Build Output
+    selectedIndex: 0
+    values:
+    - App
+    - Xcode Project
+  platformName: macOS
+  dataDirNameFormat: '{0}.app/Contents'
+  targetGroup: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d5886119a5c7b34d8872ab527ca3e1b, type: 3}
+  m_Name: SuperUnityBuildSettings
+  m_EditorClassIdentifier: 
+  _basicSettings:
+    baseBuildFolder: Builds
+    buildPath: $VERSION/$PLATFORM
+    openFolderPostBuild: 1
+  _productParameters:
+    buildCounter: 1
+    buildVersion: 1.0.0.1
+    versionTemplate: 1.0.0.4
+    autoGenerate: 1
+    syncWithPlayerSettings: 0
+  _releaseTypeList:
+    releaseTypes:
+    - typeName: Standard Release
+      bundleIdentifier: com.Team-Auboreal.Auboreal-Game-Off-2022
+      companyName: Team Auboreal
+      productName: Auboreal Game Off 2022
+      buildOptions: 0
+      customDefines: 
+      sceneList:
+        enabledScenes:
+        - fileGUID: 252dba5e4c0d55f44ba3bfa824ba0b0b
+        - fileGUID: 7b73a3894f410e74d9aeb1138f62b298
+        - fileGUID: dd247cf18e9d22e44861d7f7e30a3703
+        - fileGUID: 3e4267dd28642be47ba2397637737782
+        - fileGUID: 591a7daa08faf3c4aa247d2adc8ab2be
+        - fileGUID: c6972bcb54c8ad645a1ead8328ee6a31
+        - fileGUID: 9c6f775240f21ee4ea2dc383766e455e
+        - fileGUID: 61a7d423c32c45747bd68f9c318efdb6
+        - fileGUID: 14e64a0f29b6989489a45928c8c44a14
+        - fileGUID: d4c921895c62af44e9f15c9cf56a8222
+        - fileGUID: f0ad1acf30a47f246829985eaa9ea377
+        - fileGUID: a723ce73b16fb0a45ba76d870aa98572
+        - fileGUID: b555b7782ef5fc64f8dd4dcb7f713ff4
+        - fileGUID: b0d531327d505404798939b37f9416c5
+  _platformList:
+    platforms:
+    - {fileID: 3917943538151164858}
+    - {fileID: -2384417513588492743}
+    - {fileID: 6286830353771452800}
+    - {fileID: 4263954091044443115}
+  _projectConfigurations:
+    configSet:
+      _Buckets: ffffffff04000000ffffffff0700000002000000ffffffffffffffff030000000500000000000000ffffffff01000000ffffffffffffffffffffffffffffffff08000000
+      _HashCodes: c0ceff792eb7be115603ed238457882b20a70325831d9f6192a9ec62fc3db3379241e6770000000000000000000000000000000000000000000000000000000000000000
+      _Next: ffffffffffffffffffffffffffffffffffffffffffffffffffffffff06000000ffffffff0000000000000000000000000000000000000000000000000000000000000000
+      _Count: 9
+      _Version: 9
+      _FreeList: -1
+      _FreeCount: 0
+      _Keys:
+      - Standard Release/PC/Windows x86 (App)
+      - Standard Release/PC
+      - Standard Release/macOS/macOS (Intelx64,App)
+      - Standard Release/macOS
+      - Standard Release/Linux/Linux x64
+      - Standard Release/Linux
+      - Standard Release/WebGL/WebGL
+      - Standard Release/WebGL
+      - Standard Release
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      _Values:
+      - enabled: 1
+        childKeys: []
+      - enabled: 1
+        childKeys:
+        - Standard Release/PC/Windows x86 (App)
+      - enabled: 1
+        childKeys: []
+      - enabled: 1
+        childKeys:
+        - Standard Release/macOS/macOS (Intelx64,App)
+      - enabled: 1
+        childKeys: []
+      - enabled: 1
+        childKeys:
+        - Standard Release/Linux/Linux x64
+      - enabled: 1
+        childKeys: []
+      - enabled: 1
+        childKeys:
+        - Standard Release/WebGL/WebGL
+      - enabled: 1
+        childKeys:
+        - Standard Release/PC
+        - Standard Release/macOS
+        - Standard Release/Linux
+        - Standard Release/WebGL
+      - enabled: 1
+        childKeys: []
+      - enabled: 1
+        childKeys: []
+      - enabled: 1
+        childKeys: []
+      - enabled: 1
+        childKeys: []
+      - enabled: 1
+        childKeys: []
+      - enabled: 1
+        childKeys: []
+      - enabled: 1
+        childKeys: []
+      - enabled: 1
+        childKeys: []
+    showViewOptions: 0
+    showConfigs: 0
+    showBuildInfo: 0
+    hideDisabled: 0
+    treeView: 0
+    selectedKeyChain: Standard Release/PC/Windows x86 (App)
+  _preBuildActions:
+    buildActions: []
+  _postBuildActions:
+    buildActions: []
+--- !u!114 &3917943538151164858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2786f6b2301a94f4288672ff5305244c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabled: 1
+  distributionList:
+    distributions: []
+  architectures:
+  - target: 5
+    name: Windows x86
+    enabled: 1
+    binaryNameFormat: '{0}.exe'
+  - target: 19
+    name: Windows x64
+    enabled: 0
+    binaryNameFormat: '{0}.exe'
+  variants:
+  - variantName: Build Output
+    selectedIndex: 0
+    values:
+    - App
+    - Visual Studio Solution
+  platformName: PC
+  dataDirNameFormat: '{0}_Data'
+  targetGroup: 1
+--- !u!114 &4263954091044443115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0acaf75cc66fc934ea46bf602fc7c245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabled: 1
+  distributionList:
+    distributions: []
+  architectures:
+  - target: 20
+    name: WebGL
+    enabled: 1
+    binaryNameFormat: '{0}'
+  variants: []
+  platformName: WebGL
+  dataDirNameFormat: '{0}_Data'
+  targetGroup: 13
+--- !u!114 &6286830353771452800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dc439ce9d1bfb34a821f7d6fabc4fef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabled: 1
+  distributionList:
+    distributions: []
+  architectures:
+  - target: 24
+    name: Linux x64
+    enabled: 1
+    binaryNameFormat: '{0}.x86_64'
+  variants: []
+  platformName: Linux
+  dataDirNameFormat: '{0}_Data'
+  targetGroup: 1

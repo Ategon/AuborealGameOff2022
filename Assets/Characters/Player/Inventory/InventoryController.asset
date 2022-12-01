@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2d93f876608e04409954ec77dd472e8, type: 3}
+  m_Name: InventoryController
+  m_EditorClassIdentifier: 
+  woodCount: 6
+  woodChangedEvent: {fileID: 11400000, guid: d85ea15d08cbd6f47956efa56c4fb824, type: 2}
+  treasureCount: 0
+  treasureChangedEvent: {fileID: 11400000, guid: 01f8528580d955a468d79a94d2cf6829, type: 2}
+  ammoCount: 50
+  startingAmmo: 5
+  ammoChangedEvent: {fileID: 11400000, guid: f6a2293f664266a4d925e43660f43594, type: 2}
+  equipmentDescriptionBank: {fileID: 11400000, guid: 89f2293a64f542e4e96b2b82d4d2bd7d, type: 2}
+  equipmentPickedUpEvent: {fileID: 11400000, guid: e6e18ba6dceaeec478514074c74a904a, type: 2}
+  compassOwned: 1
+  diviningRodOwned: 0
+  nauticalChartOwned: 0
+  resourceMapOwned: 0
+  sextantOwned: 0

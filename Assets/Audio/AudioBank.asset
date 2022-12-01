@@ -1,0 +1,163 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 802408f5f46c1e544be078f7fedd8069, type: 3}
+  m_Name: AudioBank
+  m_EditorClassIdentifier: 
+  <ERPlayerMeleeSwing>k__BackingField:
+    Guid:
+      Data1: 418996891
+      Data2: 1313716454
+      Data3: 618970258
+      Data4: -1911928426
+    Path: event:/sfx/sword_Swing
+  <ERPlayerMeleeHit>k__BackingField:
+    Guid:
+      Data1: 203147807
+      Data2: 1140511462
+      Data3: 159791024
+      Data4: 1882519959
+    Path: event:/sfx/sword_hit
+  <ERPlayerFootsteps>k__BackingField:
+    Guid:
+      Data1: 1374059057
+      Data2: 1129523589
+      Data3: -2127760495
+      Data4: 1797949620
+    Path: event:/sfx/footsteps
+  <ERPlayerShoot>k__BackingField:
+    Guid:
+      Data1: 422461446
+      Data2: 1280133119
+      Data3: 1789431225
+      Data4: -1334413037
+    Path: event:/sfx/shooting_gun
+  <ERPlayerDash>k__BackingField:
+    Guid:
+      Data1: 1014633653
+      Data2: 1330962583
+      Data3: -1407812219
+      Data4: 1056946597
+    Path: event:/sfx/dash
+  <ERPlayerHurt>k__BackingField:
+    Guid:
+      Data1: -1598621709
+      Data2: 1332783859
+      Data3: -671396687
+      Data4: 932208662
+    Path: event:/sfx/hurt
+  <ERPlayerDie>k__BackingField:
+    Guid:
+      Data1: -1264902904
+      Data2: 1182576423
+      Data3: 1043054251
+      Data4: 64056942
+    Path: event:/sfx/player die
+  <ERPlayerBuy>k__BackingField:
+    Guid:
+      Data1: 271824492
+      Data2: 1135082326
+      Data3: -1602495317
+      Data4: 1865689101
+    Path: event:/sfx/buy
+  <ERSeaAmbience>k__BackingField:
+    Guid:
+      Data1: 1454562000
+      Data2: 1097573090
+      Data3: -1213726839
+      Data4: -1385759399
+    Path: event:/ambiences/sea_ambience
+  <ERIslandAmbience>k__BackingField:
+    Guid:
+      Data1: -308861851
+      Data2: 1195817416
+      Data3: 2047465896
+      Data4: 368887843
+    Path: event:/ambiences/island_ambience
+  <ERLevels>k__BackingField:
+  - Guid:
+      Data1: -2015885812
+      Data2: 1164981942
+      Data3: -1082399328
+      Data4: -2010616057
+    Path: event:/music/island music 1
+  - Guid:
+      Data1: -2015885812
+      Data2: 1164981942
+      Data3: -1082399328
+      Data4: -2010616057
+    Path: event:/music/island music 1
+  - Guid:
+      Data1: -1827295691
+      Data2: 1086171488
+      Data3: -691996518
+      Data4: 1819402043
+    Path: event:/music/Sailing_music (main theme)
+  - Guid:
+      Data1: -2015885812
+      Data2: 1164981942
+      Data3: -1082399328
+      Data4: -2010616057
+    Path: event:/music/island music 1
+  - Guid:
+      Data1: -1349293259
+      Data2: 1164243892
+      Data3: 837820607
+      Data4: -872851427
+    Path: event:/music/island music 2
+  - Guid:
+      Data1: -1827295691
+      Data2: 1086171488
+      Data3: -691996518
+      Data4: 1819402043
+    Path: event:/music/Sailing_music (main theme)
+  - Guid:
+      Data1: -2015885812
+      Data2: 1164981942
+      Data3: -1082399328
+      Data4: -2010616057
+    Path: event:/music/island music 1
+  - Guid:
+      Data1: -2015885812
+      Data2: 1164981942
+      Data3: -1082399328
+      Data4: -2010616057
+    Path: event:/music/island music 1
+  - Guid:
+      Data1: -2015885812
+      Data2: 1164981942
+      Data3: -1082399328
+      Data4: -2010616057
+    Path: event:/music/island music 1
+  - Guid:
+      Data1: -2015885812
+      Data2: 1164981942
+      Data3: -1082399328
+      Data4: -2010616057
+    Path: event:/music/island music 1
+  - Guid:
+      Data1: -1349293259
+      Data2: 1164243892
+      Data3: 837820607
+      Data4: -872851427
+    Path: event:/music/island music 2
+  - Guid:
+      Data1: -1349293259
+      Data2: 1164243892
+      Data3: 837820607
+      Data4: -872851427
+    Path: event:/music/island music 2
+  - Guid:
+      Data1: -1349293259
+      Data2: 1164243892
+      Data3: 837820607
+      Data4: -872851427
+    Path: event:/music/island music 2
