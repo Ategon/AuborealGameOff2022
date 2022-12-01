@@ -429,28 +429,28 @@ MonoBehaviour:
       Data2: 1184057648
       Data3: -975198044
       Data4: 1367493857
-    Path: event:/sfx/enemy/enemy attack
+    Path: event:/sfx/enemy/mutant/enemy attack
   dieSound:
     Guid:
       Data1: 1350001961
       Data2: 1232394392
       Data3: -1227755618
       Data4: -878054236
-    Path: event:/sfx/enemy/enemy die
+    Path: event:/sfx/enemy/mutant/enemy die
   footstepSound:
     Guid:
       Data1: 153853365
       Data2: 1187310413
       Data3: -1006119282
       Data4: -778910200
-    Path: event:/sfx/enemy/enemy footsteps
+    Path: event:/sfx/enemy/mutant/enemy footsteps
   hurtSound:
     Guid:
       Data1: -1630737116
       Data2: 1254208516
       Data3: 177985933
       Data4: 1497600415
-    Path: event:/sfx/enemy/enemy hurt
+    Path: event:/sfx/enemy/mutant/enemy hurt
   navMeshAgent: {fileID: 2613436627731946237}
   timeBetweenFootsteps: 0.4
   isWalking: 0
