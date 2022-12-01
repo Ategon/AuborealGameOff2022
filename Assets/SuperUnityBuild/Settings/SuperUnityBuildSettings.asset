@@ -52,9 +52,9 @@ MonoBehaviour:
     buildPath: $VERSION/$PLATFORM
     openFolderPostBuild: 1
   _productParameters:
-    buildCounter: 0
-    buildVersion: 
-    versionTemplate: 1.0.0.$BUILD
+    buildCounter: 1
+    buildVersion: 1.0.0.1
+    versionTemplate: 1.0.0.4
     autoGenerate: 1
     syncWithPlayerSettings: 0
   _releaseTypeList:
