@@ -12,6 +12,7 @@ public class BossHealth : EnemyHealth
     {
         currentHealth = Mathf.Min(maxHealth, currentHealth + changeAmount);
         bossHealthChangedEvent.Raise(this, null);
+        enemySound.HurtSound();
         if (currentHealth <= 0)
             Die();
     }
