@@ -10,6 +10,11 @@ public class EquipmentPickup : Interactable
     protected override bool Interact()
     {
         inventoryController.AcquireEquipment(equipmentType);
+        if (equipmentType == EquipmentType.Sextant)
+        {
+            EndBoat endboat = FindObjectOfType<EndBoat>();
+            endboat.hasSextant = true;
+        }
         return true;
     }
 }
