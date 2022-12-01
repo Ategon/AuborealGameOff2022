@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 1125793662}
   - component: {fileID: 1125793663}
   - component: {fileID: 575176003}
-  m_Layer: 6
+  m_Layer: 18
   m_Name: Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15098,7 +15098,7 @@ MonoBehaviour:
   attackDamage: 10
   attackKnockback: 4
   attackOffset: 0.3
-  debugHitboxes: 1
+  debugHitboxes: 0
   hitboxIndicatorPrefab: {fileID: 7842766238382575663, guid: 26745dd7c1fea5d4fb0446a8b9b89e35, type: 3}
   animator: {fileID: 3997124552067024247}
   cooldown: 0.2
@@ -15161,6 +15161,8 @@ MonoBehaviour:
   healthController: {fileID: 11400000, guid: c6f4155bb5a3e0a43ab85cfaaa35bd24, type: 2}
   gameManager: {fileID: 0}
   regenPeriod: 3
+  playerHurtEvent: {fileID: 11400000, guid: 1a3b6bd472cd7f944bf43b231fcb6f01, type: 2}
+  playerDieEvent: {fileID: 11400000, guid: 1bfe898b91be8bd4e98000db4b794bb3, type: 2}
 --- !u!114 &2074316220938895930
 MonoBehaviour:
   m_ObjectHideFlags: 0

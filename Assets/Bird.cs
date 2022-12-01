@@ -70,18 +70,18 @@ public class Bird : MonoBehaviour
     IEnumerator FlyMovement()
     {
         // go backwards for half a second, then wait in place, then fly away. use dotween
-        transform.DOLocalMove(new Vector3(transform.position.x + (0.2f * transform.localScale.x), transform.position.y + 0.2f, 0), 0.5f);
+        transform.DOLocalMove(new Vector3(transform.localPosition.x + (0.2f * transform.localScale.x), transform.localPosition.y + 0.2f, 0), 0.5f);
         shadowTransform.DOLocalMove(new Vector3(shadowTransform.localPosition.x, shadowTransform.localPosition.y - 0.2f, 0), 0.5f);
         shadowTransform.DOScale(new Vector3(1.2f * startScale.x, 1.2f * startScale.y, 1.2f * startScale.z), 0.5f);
         shadowRenderer.DOColor(new Color(0, 0, 0, 0.15f), 0.5f);
         yield return new WaitForSeconds(0.5f);
-        transform.DOLocalMove(new Vector3(transform.position.x, transform.position.y + 0.05f, 0), 0.1f);
+        transform.DOLocalMove(new Vector3(transform.localPosition.x, transform.localPosition.y + 0.05f, 0), 0.1f);
         shadowTransform.DOLocalMove(new Vector3(shadowTransform.localPosition.x, shadowTransform.localPosition.y - 0.05f, 0), 0.1f);
         shadowTransform.DOScale(new Vector3(1.25f * startScale.x, 1.25f * startScale.y, 1.25f * startScale.z), 0.1f);
         shadowRenderer.DOColor(new Color(0, 0, 0, 0.14f), 0.1f);
         yield return new WaitForSeconds(0.1f);
 
-        transform.DOLocalMove(new Vector3(transform.position.x - (1f * transform.localScale.x), transform.position.y + 3f, 0), 1.0f);
+        transform.DOLocalMove(new Vector3(transform.localPosition.x - (1f * transform.localScale.x), transform.localPosition.y + 3f, 0), 1.0f);
         shadowTransform.DOLocalMove(new Vector3(shadowTransform.localPosition.x, shadowTransform.localPosition.y - 3f, 0), 1.0f);
         shadowTransform.DOScale(new Vector3(2f * startScale.x, 2f * startScale.y, 2f * startScale.z), 1.0f);
         shadowRenderer.DOColor(new Color(0, 0, 0, 0f), 1.0f);
@@ -95,13 +95,13 @@ public class Bird : MonoBehaviour
 
     IEnumerator ReturnMovement()
     {
-        transform.DOLocalMove(new Vector3(transform.position.x + (0.8f * transform.localScale.x), transform.position.y - 3.15f, 0), 1.0f);
+        transform.DOLocalMove(new Vector3(transform.localPosition.x + (0.8f * transform.localScale.x), transform.localPosition.y - 3.15f, 0), 1.0f);
         shadowTransform.DOLocalMove(new Vector3(shadowTransform.localPosition.x, shadowTransform.localPosition.y + 3.15f, 0), 1.0f);
         shadowTransform.DOScale(new Vector3(1.1f * startScale.x, 1.1f * startScale.y, 1.1f * startScale.z), 1.0f);
         shadowRenderer.DOColor(new Color(0, 0, 0, 0.17f), 1.0f);
         birdRenderer.DOColor(new Color(1, 1, 1, 1f), 1.0f); 
         yield return new WaitForSeconds(1.0f);
-        transform.DOLocalMove(new Vector3(transform.position.x, transform.position.y - 0.1f, 0), 0.5f);
+        transform.DOLocalMove(new Vector3(transform.localPosition.x, transform.localPosition.y - 0.1f, 0), 0.5f);
         shadowTransform.DOLocalMove(new Vector3(shadowTransform.localPosition.x, shadowTransform.localPosition.y + 0.1f, 0), 0.5f);
         shadowTransform.DOScale(new Vector3(1f * startScale.x, 1f * startScale.y, 1f * startScale.z), 0.5f);
         shadowRenderer.DOColor(new Color(0, 0, 0, 0.2f), 0.5f);

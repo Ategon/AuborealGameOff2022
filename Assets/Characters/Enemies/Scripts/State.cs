@@ -270,7 +270,7 @@ public class meleeAttack : State
 
     public override void Enter()
     {
-        attackCooldown = stateValues.stateMathValues.attackCooldown;
+        attackCooldown = stateValues.stateMathValues.attackCooldown / 2;
         stateValues.agent.isStopped = true;
         base.Enter();
     }
