@@ -5,6 +5,7 @@ namespace UI.Pause
     public class PauseMenu : MonoBehaviour
     {
         [SerializeField] private GameObject _pauseContainer;
+        [SerializeField] private Dialogue dialogue;
 
         private Inputs _inputs;
         private bool _lastPauseState = false;
@@ -30,6 +31,8 @@ namespace UI.Pause
         {
             _lastPauseState = show;
             Time.timeScale = show ? 0f : 1f;
+            if (dialogue != null && dialogue.gameObject.activeInHierarchy)
+                Time.timeScale = 0f;
             _pauseContainer.SetActive(show);
         }
     }
