@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{babae11f-afc4-40a9-bf94-c09849264b9c}">
+		<property name="assetPath">
+			<value>tikki grunt 3.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.7980725623582767</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{56e68f36-e6d4-487a-a51e-b84e2c7dfacb}</destination>
+		</relationship>
+	</object>
+</objects>

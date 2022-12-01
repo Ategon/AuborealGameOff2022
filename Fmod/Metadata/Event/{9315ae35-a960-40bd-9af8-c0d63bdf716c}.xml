@@ -28,6 +28,9 @@
 		<relationship name="timeline">
 			<destination>{fe7909f8-cff3-4ff7-a96b-b245b8746314}</destination>
 		</relationship>
+		<relationship name="banks">
+			<destination>{0e394721-a70f-475e-bc34-093c3aa572a4}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixer" id="{c19beb38-51ea-44f0-bfdf-a73d8f26dbdf}">
 		<relationship name="masterBus">
@@ -50,7 +53,7 @@
 			<destination>{2d592a42-8868-4ccb-ac23-14ce40703c46}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{d33edb2c-d262-4f64-80e3-f1e148cf8f01}</destination>
+			<destination>{5147bbd7-c496-464f-bf5c-d7f7547d76d5}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{b8f5531b-838e-4147-8098-dd9fa38b0e71}" />
@@ -105,9 +108,18 @@
 	<object class="MixerBusEffectChain" id="{90af2c0e-6879-4d31-8bed-7bd502ff3fa7}">
 		<relationship name="effects">
 			<destination>{3e3f9c49-4357-40b9-8a27-8daf37d5896c}</destination>
+			<destination>{2b9fa09d-bead-49af-8af8-4f4818d294d2}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{2ae0d422-4915-4a3b-9fcf-b7b2be02659f}" />
 	<object class="MixerBusFader" id="{dc6cd37d-6b73-44b0-95ed-733e0af57455}" />
 	<object class="MixerBusFader" id="{3e3f9c49-4357-40b9-8a27-8daf37d5896c}" />
+	<object class="ThreeEQEffect" id="{2b9fa09d-bead-49af-8af8-4f4818d294d2}">
+		<property name="lowGain">
+			<value>-5</value>
+		</property>
+		<property name="midGain">
+			<value>-2.5</value>
+		</property>
+	</object>
 </objects>
