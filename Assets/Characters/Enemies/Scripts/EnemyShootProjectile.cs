@@ -7,6 +7,7 @@ public class EnemyShootProjectile : ShootProjectile
 {
     [SerializeField] private Animator animator;
     [SerializeField] private EnemyMovementAnimation enemyMovementAnimation;
+    [SerializeField] private EnemySound enemySound;
     private Vector2 target;
 
     public void StartShooting(Vector2 target)
@@ -19,6 +20,7 @@ public class EnemyShootProjectile : ShootProjectile
     public void CreateProjectile()
     {
         Fire(transform.position, target, enemyMovementAnimation.direction);
+        enemySound.AttackSound();
     }
 
 }

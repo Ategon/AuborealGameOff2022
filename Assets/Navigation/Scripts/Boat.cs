@@ -53,6 +53,7 @@ namespace Assets.Navigation
         }
         private void Dock()
         {
+            startPos = new Vector3(startPos.x, transform.position.y, startPos.z);
             isTraveling = false;
             rigidbody.velocity = Vector3.zero;
         }

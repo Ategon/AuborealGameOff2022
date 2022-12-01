@@ -407,13 +407,12 @@ MonoBehaviour:
   depletedPrefab: {fileID: 9206349533953085227, guid: 1bde503c1ba6f0948989761785301153, type: 3}
   inventoryController: {fileID: 11400000, guid: acf58a9829ecd3142b7d3b2126479049, type: 2}
   shopPopup: {fileID: 9206349535264987234}
+  playerBuyEvent: {fileID: 11400000, guid: dbbf98c573ad92340bbd0e20b73cc23b, type: 2}
   resourceType: 0
   cost: 3
   itemName: Melee Upgrade
-  meleeDamageAmount: 0
-  meleeSizeAmount: 0
-  meleeKnockbackAmount: 0
-  meleeAttack: {fileID: 0}
+  meleeDamageAmount: 4
+  upgradeController: {fileID: 11400000, guid: f019f850af188044080cb84e3d09a58c, type: 2}
 --- !u!1 &9206349533979072712
 GameObject:
   m_ObjectHideFlags: 0

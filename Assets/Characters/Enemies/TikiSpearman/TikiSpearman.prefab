@@ -222,6 +222,7 @@ GameObject:
   - component: {fileID: 2613436627731946232}
   - component: {fileID: 634610684984408443}
   - component: {fileID: 2755564339550185038}
+  - component: {fileID: 6593836351660075038}
   m_Layer: 10
   m_Name: TikiSpearman
   m_TagString: Untagged
@@ -330,6 +331,8 @@ MonoBehaviour:
   animator: {fileID: 7566900459874302982}
   agent: {fileID: 2613436627731946237}
   enemyMovementAnimation: {fileID: 634610684984408443}
+  enemyMeleeAttack: {fileID: 0}
+  enemySound: {fileID: 6593836351660075038}
   maxHealth: 50
   startingHealth: 50
   currentHealth: 0
@@ -398,3 +401,47 @@ MonoBehaviour:
   projectileKnockbackMagnitude: 2
   animator: {fileID: 7566900459874302982}
   enemyMovementAnimation: {fileID: 634610684984408443}
+  enemySound: {fileID: 6593836351660075038}
+--- !u!114 &6593836351660075038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2613436627731946224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855c1aa292688944db91b3eea01cf7c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSound:
+    Guid:
+      Data1: 1783140118
+      Data2: 1188148415
+      Data3: -1838627176
+      Data4: 1063867875
+    Path: event:/sfx/enemy/tikki/tikki spear
+  dieSound:
+    Guid:
+      Data1: -545204792
+      Data2: 1096430649
+      Data3: 1377996175
+      Data4: -363444356
+    Path: event:/sfx/enemy/tikki/tikki die
+  footstepSound:
+    Guid:
+      Data1: -1801900047
+      Data2: 1288814271
+      Data3: 1728204197
+      Data4: -788802078
+    Path: event:/sfx/enemy/tikki/enemy footsteps
+  hurtSound:
+    Guid:
+      Data1: -726078938
+      Data2: 1184410365
+      Data3: 702691975
+      Data4: -1269669998
+    Path: event:/sfx/enemy/tikki/tikki hurt
+  navMeshAgent: {fileID: 2613436627731946237}
+  timeBetweenFootsteps: 0.4
+  isWalking: 0

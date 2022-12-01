@@ -47,6 +47,27 @@ MonoBehaviour:
       Data3: -1407812219
       Data4: 1056946597
     Path: event:/sfx/dash
+  <ERPlayerHurt>k__BackingField:
+    Guid:
+      Data1: -1598621709
+      Data2: 1332783859
+      Data3: -671396687
+      Data4: 932208662
+    Path: event:/sfx/hurt
+  <ERPlayerDie>k__BackingField:
+    Guid:
+      Data1: -1264902904
+      Data2: 1182576423
+      Data3: 1043054251
+      Data4: 64056942
+    Path: event:/sfx/player die
+  <ERPlayerBuy>k__BackingField:
+    Guid:
+      Data1: 271824492
+      Data2: 1135082326
+      Data3: -1602495317
+      Data4: 1865689101
+    Path: event:/sfx/buy
   <ERSeaAmbience>k__BackingField:
     Guid:
       Data1: 1454562000

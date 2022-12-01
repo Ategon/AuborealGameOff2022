@@ -786,6 +786,7 @@ MonoBehaviour:
   healthController: {fileID: 11400000, guid: c6f4155bb5a3e0a43ab85cfaaa35bd24, type: 2}
   inventoryController: {fileID: 11400000, guid: acf58a9829ecd3142b7d3b2126479049, type: 2}
   playerLocationController: {fileID: 11400000, guid: 2d6c724e4992147419f3db8a166415b3, type: 2}
+  upgradeController: {fileID: 11400000, guid: f019f850af188044080cb84e3d09a58c, type: 2}
   exitObjects: []
 --- !u!1 &280913713
 GameObject:
