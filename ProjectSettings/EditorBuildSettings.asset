@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Islands/Island 6.unity
     guid: b555b7782ef5fc64f8dd4dcb7f713ff4
+  - enabled: 1
+    path: Assets/Scenes/LargeGrassLevel.unity
+    guid: b0d531327d505404798939b37f9416c5
   m_configObjects: {}

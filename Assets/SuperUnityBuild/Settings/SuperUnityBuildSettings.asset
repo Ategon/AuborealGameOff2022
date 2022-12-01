@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _basicSettings:
     baseBuildFolder: Builds
-    buildPath: $VERSION/$RELEASE_TYPE/$PLATFORM/$ARCHITECTURE
+    buildPath: $VERSION/$PLATFORM
     openFolderPostBuild: 1
   _productParameters:
     buildCounter: 0
@@ -67,7 +67,20 @@ MonoBehaviour:
       customDefines: 
       sceneList:
         enabledScenes:
-        - fileGUID: 88850428b557f524e85a37de4fbd2c9a
+        - fileGUID: 252dba5e4c0d55f44ba3bfa824ba0b0b
+        - fileGUID: 7b73a3894f410e74d9aeb1138f62b298
+        - fileGUID: dd247cf18e9d22e44861d7f7e30a3703
+        - fileGUID: 3e4267dd28642be47ba2397637737782
+        - fileGUID: 591a7daa08faf3c4aa247d2adc8ab2be
+        - fileGUID: c6972bcb54c8ad645a1ead8328ee6a31
+        - fileGUID: 9c6f775240f21ee4ea2dc383766e455e
+        - fileGUID: 61a7d423c32c45747bd68f9c318efdb6
+        - fileGUID: 14e64a0f29b6989489a45928c8c44a14
+        - fileGUID: d4c921895c62af44e9f15c9cf56a8222
+        - fileGUID: f0ad1acf30a47f246829985eaa9ea377
+        - fileGUID: a723ce73b16fb0a45ba76d870aa98572
+        - fileGUID: b555b7782ef5fc64f8dd4dcb7f713ff4
+        - fileGUID: b0d531327d505404798939b37f9416c5
   _platformList:
     platforms:
     - {fileID: 3917943538151164858}
