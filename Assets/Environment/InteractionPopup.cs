@@ -16,4 +16,10 @@ public class InteractionPopup : MonoBehaviour
         spriteRenderer.color = new Color(1, 1, 1, 0);
         textMeshPro.text = "";
     }
+
+    public void ShowEndBoat()
+    {
+        spriteRenderer.color = backgroundColor;
+        textMeshPro.text = "Recover your sextant from the mage to sail!";
+    }
 }

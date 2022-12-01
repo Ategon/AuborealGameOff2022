@@ -45,7 +45,6 @@ public class BossBombPattern : MonoBehaviour
             if (timeUntilAnimationEnd <= 0)
             {
                 animator.SetTrigger("FinishAttack");
-                Debug.Log("Finish Attack Trigger Activated");
             }
         }
     }
