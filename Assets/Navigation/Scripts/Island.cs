@@ -52,11 +52,13 @@ namespace Assets.Navigation
             this.boat = boat;
             CreateRouteTrails();
         }
+
         public void DockBoat()
         {
             playerLocationController.islandName = islandName;
             SceneManager.LoadSceneAsync(loadedSceneName);
         }
+        
         public int GetThirstCostFromDocked()
         {
             foreach (Route route in routes)
