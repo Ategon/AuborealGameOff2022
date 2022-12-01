@@ -161,7 +161,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{579507d6-8ef6-4032-a8eb-68446080cb63}">
 		<property name="volume">
-			<value>-10.5</value>
+			<value>-8</value>
 		</property>
 		<property name="name">
 			<value>ocean_bed</value>
