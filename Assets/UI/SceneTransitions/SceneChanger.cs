@@ -10,8 +10,12 @@ public class SceneChanger : MonoBehaviour
 
     [SerializeField] private Transform[] exitObjects;
 
+    bool started = false;
+
     public virtual void ChangeScene()
     {
+        if (started) return;
+        started = true;
         for (int i = 0; i < exitObjects.Length; i++)
         {
             exitObjects[i].DOLocalMove(Vector3.zero, 2f).SetEase(Ease.OutQuad);
