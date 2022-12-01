@@ -118,9 +118,6 @@
 		<property name="volume">
 			<value>-2.5</value>
 		</property>
-		<property name="looping">
-			<value>true</value>
-		</property>
 		<relationship name="modulators">
 			<destination>{549300f8-500d-4d5f-978a-4ccb4b7a4bb4}</destination>
 		</relationship>
@@ -165,10 +162,6 @@
 	<object class="MultiSound" id="{186e9c9d-1492-41aa-bf81-626220c67649}">
 		<property name="startOffset">
 			<value>15.5</value>
-		</property>
-		<property name="name" />
-		<property name="looping">
-			<value>true</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{30321054-0973-485f-b67b-8e35314761e0}</destination>
