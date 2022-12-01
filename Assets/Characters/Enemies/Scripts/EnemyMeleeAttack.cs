@@ -11,6 +11,7 @@ public class EnemyMeleeAttack : MeleeAttack
     [SerializeField] private Animator animator;
     [SerializeField] private NavMeshAgent navMeshAgent;
     [SerializeField] private EnemyMovementAnimation enemyMovementAnimation;
+    [SerializeField] private EnemySound enemySound;
     [Header("Attack Momentum")]
     public float attackVelocity;
     public bool isAttacking;
@@ -36,6 +37,10 @@ public class EnemyMeleeAttack : MeleeAttack
     public void DealAttackDamage()
     {
         Attack(hitboxCenter.position + new Vector3(attackDirection.x, attackDirection.y, 0));
+        if (enemySound)
+        {
+            enemySound.AttackSound();
+        }
     }
 
     public void FinishAttackAnimation()

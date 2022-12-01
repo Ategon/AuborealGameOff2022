@@ -776,7 +776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee4b9cd43d517c4bb66c034ee5791c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadedSceneName: StartingLevel
+  loadedSceneName: NewStartingLevel
   exitObjects:
   - {fileID: 339721228}
   - {fileID: 1733381897}
