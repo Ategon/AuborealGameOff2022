@@ -464,7 +464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee4b9cd43d517c4bb66c034ee5791c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadedSceneName: StartingLevel
+  loadedSceneName: NewStartingLevel
   thirstController: {fileID: 11400000, guid: bf10bf0bed56e3946b6c3e6278b44038, type: 2}
   healthController: {fileID: 11400000, guid: c6f4155bb5a3e0a43ab85cfaaa35bd24, type: 2}
   inventoryController: {fileID: 11400000, guid: acf58a9829ecd3142b7d3b2126479049, type: 2}

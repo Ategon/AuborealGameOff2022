@@ -222,6 +222,7 @@ GameObject:
   - component: {fileID: 2613436627731946232}
   - component: {fileID: 2392465478386273100}
   - component: {fileID: 1371748913}
+  - component: {fileID: 4893377774224161521}
   m_Layer: 10
   m_Name: Minotaur
   m_TagString: Enemy
@@ -331,6 +332,7 @@ MonoBehaviour:
   agent: {fileID: 2613436627731946237}
   enemyMovementAnimation: {fileID: 1371748913}
   enemyMeleeAttack: {fileID: 2392465478386273100}
+  enemySound: {fileID: 4893377774224161521}
   maxHealth: 50
   startingHealth: 50
   currentHealth: 0
@@ -388,6 +390,7 @@ MonoBehaviour:
   animator: {fileID: 7472231394567845644}
   navMeshAgent: {fileID: 2613436627731946237}
   enemyMovementAnimation: {fileID: 1371748913}
+  enemySound: {fileID: 4893377774224161521}
   attackVelocity: 0.3
   isAttacking: 0
   attackDirection: {x: 0, y: 0}
@@ -407,3 +410,46 @@ MonoBehaviour:
   agent: {fileID: 2613436627731946237}
   animator: {fileID: 7472231394567845644}
   direction: 0
+--- !u!114 &4893377774224161521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2613436627731946224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855c1aa292688944db91b3eea01cf7c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSound:
+    Guid:
+      Data1: -1146980346
+      Data2: 1184057648
+      Data3: -975198044
+      Data4: 1367493857
+    Path: event:/sfx/enemy/enemy attack
+  dieSound:
+    Guid:
+      Data1: 1350001961
+      Data2: 1232394392
+      Data3: -1227755618
+      Data4: -878054236
+    Path: event:/sfx/enemy/enemy die
+  footstepSound:
+    Guid:
+      Data1: 153853365
+      Data2: 1187310413
+      Data3: -1006119282
+      Data4: -778910200
+    Path: event:/sfx/enemy/enemy footsteps
+  hurtSound:
+    Guid:
+      Data1: -1630737116
+      Data2: 1254208516
+      Data3: 177985933
+      Data4: 1497600415
+    Path: event:/sfx/enemy/enemy hurt
+  navMeshAgent: {fileID: 2613436627731946237}
+  timeBetweenFootsteps: 0.4
+  isWalking: 0
