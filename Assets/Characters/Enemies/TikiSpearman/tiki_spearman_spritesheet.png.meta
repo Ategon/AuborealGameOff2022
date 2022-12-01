@@ -1,0 +1,1323 @@
+fileFormatVersion: 2
+guid: 66aaae4b9b9e4ea4fa0bbb5aef2da271
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1045
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55a2325bd64e1f2479e178ed0c336d05
+      internalID: -1815344097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 1045
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f34be5bc8c4022c4dafd084a010fb803
+      internalID: -275386374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1045
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ee3a84a113af324d91347429933597b
+      internalID: -1609572660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 990
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ac67b505b980b2439a9fed65bc66e5a
+      internalID: 166701111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 990
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3805815cb549e474bb475825d571b547
+      internalID: 1065737558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 990
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11680a6a56dceaa42ae04d8d3ca85f30
+      internalID: -398710543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 990
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c23c3dc14319c349bdec4e05498a7de
+      internalID: 354061930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 935
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e334740ab09d9d2478793f7305e05ead
+      internalID: 1390193318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 935
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bdb41716a9ac3140b53d044045545dc
+      internalID: -234210519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 935
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45ab025242248ac488d15d99e428eac9
+      internalID: -2052971002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 880
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6908ea7701886746af1bbe65b24437e
+      internalID: 803117934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 825
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c68c7a60ffd385439f8b143401fe5df
+      internalID: -997653387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 825
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de527094fb46d64ba1c9c117dfbf64a
+      internalID: -956840226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 825
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa4f9a0753c6d574a85df8a77e35024e
+      internalID: -1913087414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 770
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15fcf3ce2e88d8649bba958997aeeb7a
+      internalID: -67229765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 770
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b488c8e455ed1004dac468a180a5fe96
+      internalID: -1995596933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 770
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2d78916967afce4780dba91db004301
+      internalID: 1742744390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 715
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1a8d2e2f364ead48853314b784d1d3d
+      internalID: 8801418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 715
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f43c5d99b3ca134d80d3131c9aab006
+      internalID: -1641812871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 715
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6c390cda3d231e4abcc7a7dc550fa34
+      internalID: 1852567314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 715
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d7b0462aa110864ba164748fd0ade1f
+      internalID: -1465895214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 660
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 234b58db7e0cbb04c9e841efc95010ea
+      internalID: 1874487949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 660
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4131d0e729157a2428c0db6acac21c4b
+      internalID: -206454080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 660
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92120bc21d385ce45817ada120890959
+      internalID: -1533880641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 605
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eb923eab56181243a3cd59fbcf3ac71
+      internalID: 740931325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 550
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd35faa30ed602f419cba0a0fb5d1120
+      internalID: -736486570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 550
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9b741ffc3314c842af8f2e0c59eece5
+      internalID: -1417612586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 550
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 565c9ce99f14b1b448299475a2ab9cf4
+      internalID: 807751398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 495
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da7670f4885fe5c4a849ef5efc5f6694
+      internalID: -1296591788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 495
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18a7f7e490bc1f34aac46aa9b0c35e8a
+      internalID: 1263223821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 495
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a2b3464da8408e45a4fa655dfa45125
+      internalID: 600945692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 440
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49e08492e54015344b0fb8c1bfc2a23d
+      internalID: 1465171605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 440
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf74e49281ba1004b88e55f234eba857
+      internalID: 556041587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 440
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df42186eb4b8ef64abf9af1936af36c2
+      internalID: -1978025101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 385
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f3c4fd77eba88b46bf8e6d88c37d283
+      internalID: 1754551153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 385
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e04f303d51185b84b9e729c8024ea3e3
+      internalID: -1850960756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 385
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4039a4eb6a2f52c48b28e1ea64cb5c32
+      internalID: 370670828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 330
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 965ae0c7af00bb2499dd30d5704aa9ac
+      internalID: 528835381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 275
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 506f7d7b176062d4c848e20ead704cc9
+      internalID: 542527638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 275
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac0c94456b57eb247b96137f52bc4120
+      internalID: 1058959634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 275
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c4f1e16aeac76a4f8c361682964534b
+      internalID: 860600254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 220
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5077e458bb7bf8d4fbc315985ab05496
+      internalID: 2008456972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 220
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdf7ed60840fdf34783b9d162dd47f00
+      internalID: 1206721578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 220
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a89776f189cb74d99a3b5e28e34e08
+      internalID: 1348433078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 165
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22acf14072b14e440b36de1ee5bd1785
+      internalID: -716041749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_45
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 165
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0eb776e2379b4b46a6bdb39c9f8b39b
+      internalID: 297841708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_46
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 165
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 585223d2c1a3dba479c52d7468295d52
+      internalID: -1710001072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_47
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 110
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7b68b3436833d4da94a9fc7a5aa354
+      internalID: 784066528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_48
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 110
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56f7f84acb4ce7d4190ed753b6101989
+      internalID: 1193607459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_49
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 110
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 654b3f17002d8d14aba5432eed9fda23
+      internalID: -1192707182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 55
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9572e24141a484b4e8734a650ea955e1
+      internalID: 1584690135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_51
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b177f291186355c4db671a2278fe4636
+      internalID: -702998472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_52
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 0
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b3379ca58ee7654ba7aa73e574aeb85
+      internalID: -1321492633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiki_spearman_spritesheet_53
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f72a10274efa474c938815760dcde1c
+      internalID: -1036433338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      tiki_spearman_spritesheet_35: -1850960756
+      tiki_spearman_spritesheet_13: -1913087414
+      tiki_spearman_spritesheet_40: 860600254
+      tiki_spearman_spritesheet_0: -1815344097
+      tiki_spearman_spritesheet_12: -956840226
+      tiki_spearman_spritesheet_16: 1742744390
+      tiki_spearman_spritesheet_39: 1058959634
+      tiki_spearman_spritesheet_1: -275386374
+      tiki_spearman_spritesheet_25: -736486570
+      tiki_spearman_spritesheet_52: -1321492633
+      tiki_spearman_spritesheet_2: -1609572660
+      tiki_spearman_spritesheet_48: 1193607459
+      tiki_spearman_spritesheet_6: 354061930
+      tiki_spearman_spritesheet_5: -398710543
+      tiki_spearman_spritesheet_46: -1710001072
+      tiki_spearman_spritesheet_53: -1036433338
+      tiki_spearman_spritesheet_14: -67229765
+      tiki_spearman_spritesheet_3: 166701111
+      tiki_spearman_spritesheet_19: 1852567314
+      tiki_spearman_spritesheet_37: 528835381
+      tiki_spearman_spritesheet_28: -1296591788
+      tiki_spearman_spritesheet_51: -702998472
+      tiki_spearman_spritesheet_41: 2008456972
+      tiki_spearman_spritesheet_44: -716041749
+      tiki_spearman_spritesheet_42: 1206721578
+      tiki_spearman_spritesheet_49: -1192707182
+      tiki_spearman_spritesheet_50: 1584690135
+      tiki_spearman_spritesheet_9: -2052971002
+      tiki_spearman_spritesheet_45: 297841708
+      tiki_spearman_spritesheet_47: 784066528
+      tiki_spearman_spritesheet_18: -1641812871
+      tiki_spearman_spritesheet_17: 8801418
+      tiki_spearman_spritesheet_43: 1348433078
+      tiki_spearman_spritesheet_31: 1465171605
+      tiki_spearman_spritesheet_32: 556041587
+      tiki_spearman_spritesheet_22: -206454080
+      tiki_spearman_spritesheet_20: -1465895214
+      tiki_spearman_spritesheet_26: -1417612586
+      tiki_spearman_spritesheet_33: -1978025101
+      tiki_spearman_spritesheet_36: 370670828
+      tiki_spearman_spritesheet_10: 803117934
+      tiki_spearman_spritesheet_21: 1874487949
+      tiki_spearman_spritesheet_27: 807751398
+      tiki_spearman_spritesheet_4: 1065737558
+      tiki_spearman_spritesheet_8: -234210519
+      tiki_spearman_spritesheet_38: 542527638
+      tiki_spearman_spritesheet_23: -1533880641
+      tiki_spearman_spritesheet_24: 740931325
+      tiki_spearman_spritesheet_34: 1754551153
+      tiki_spearman_spritesheet_15: -1995596933
+      tiki_spearman_spritesheet_29: 1263223821
+      tiki_spearman_spritesheet_11: -997653387
+      tiki_spearman_spritesheet_30: 600945692
+      tiki_spearman_spritesheet_7: 1390193318
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

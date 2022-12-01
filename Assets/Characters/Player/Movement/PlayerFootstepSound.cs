@@ -38,14 +38,14 @@ public class PlayerFootstepSound : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Grass")
+        if (collision.gameObject.layer == 14)
         {
             isOnGrass = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Grass")
+        if (collision.gameObject.layer == 14)
         {
             isOnGrass = false;
         }

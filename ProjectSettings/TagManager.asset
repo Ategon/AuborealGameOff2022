@@ -6,6 +6,8 @@ TagManager:
   tags:
   - MeleeEnemyCheckpoint
   - RangedEnemyCheckpoint
+  - Grass
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -25,7 +27,7 @@ TagManager:
   - Pickup
   - 
   - 
-  - 
+  - Player Hitbox
   - 
   - 
   - 

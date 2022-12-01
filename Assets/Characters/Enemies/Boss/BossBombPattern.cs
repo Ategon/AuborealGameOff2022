@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class BossBombPattern : MonoBehaviour
 {
+    [Header("Animation")]
+    [SerializeField] private EnemyMovementAnimation enemyMovementAnimation;
+    [SerializeField] private Animator animator;
+    [SerializeField] private float attackAnimationDuration;
+    private float timeUntilAnimationEnd;
     [Header("Bombs")]
     [SerializeField] private Transform playerHitbox;
     [SerializeField] private float attackCooldown;
@@ -34,11 +39,23 @@ public class BossBombPattern : MonoBehaviour
                 timeSinceLastAttack += Time.deltaTime;
             }
         }
+        if (timeUntilAnimationEnd > 0)
+        {
+            timeUntilAnimationEnd -= Time.deltaTime;
+            if (timeUntilAnimationEnd <= 0)
+            {
+                animator.SetTrigger("FinishAttack");
+                Debug.Log("Finish Attack Trigger Activated");
+            }
+        }
     }
 
     private void Attack()
     {
         float random = Random.Range(0, 2);
+        enemyMovementAnimation.FaceDirection(playerHitbox.position - transform.position);
+        animator.SetTrigger("Attack");
+        timeUntilAnimationEnd = attackAnimationDuration;
         if (random == 0)
         {
             CircleAttack();

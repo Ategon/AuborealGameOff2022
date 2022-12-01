@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossBombPattern: {fileID: 5903270438904038655}
+  bossHealthUI: {fileID: 0}
+  numAggroedEnemyChangeEvent: {fileID: 11400000, guid: e6a1df7ab8b1db44ab5401fbddad2369, type: 2}
 --- !u!58 &8051593969148702524
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -74,6 +76,9 @@ GameObject:
   - component: {fileID: -1631759738814142981}
   - component: {fileID: 5903270438904038655}
   - component: {fileID: 3991566973754849571}
+  - component: {fileID: 325091461}
+  - component: {fileID: 325091462}
+  - component: {fileID: 303718913361639132}
   m_Layer: 10
   m_Name: Boss
   m_TagString: Untagged
@@ -111,7 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bombIndicatorPrefab: {fileID: 2899028822037470909, guid: 73369ab8c369ad64f84e07a4df443ef9, type: 3}
-  bombDamage: 3
+  bombDamage: 4
   bombBlastRadius: 0.3
   explosionDelay: 1.5
 --- !u!114 &5903270438904038655
@@ -126,16 +131,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3f1dc0a321ee914daec00dcbf628ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyMovementAnimation: {fileID: 303718913361639132}
+  animator: {fileID: 2612101199606464093}
+  attackAnimationDuration: 0.3
   playerHitbox: {fileID: 0}
   attackCooldown: 3
   spawnBomb: {fileID: -1631759738814142981}
   distanceBetweeenBombs: 0.5
   isAggroed: 0
-  radiusDifference: 0.9
+  radiusDifference: 1.1
   minRadius: 0.5
   maxRadius: 3
   rayAngleDifference: 60
-  minDistance: 0.3
+  minDistance: 0.5
   maxDistance: 3
 --- !u!70 &3991566973754849571
 CapsuleCollider2D:
@@ -153,6 +161,60 @@ CapsuleCollider2D:
   m_Offset: {x: 0.031097932, y: -0.16396978}
   m_Size: {x: 0.7095358, y: 0.4720658}
   m_Direction: 1
+--- !u!114 &325091461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611386525365237930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2136fc804e1e5846905966a2ac15749, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numAggroedEnemyChangeEvent: {fileID: 11400000, guid: e6a1df7ab8b1db44ab5401fbddad2369, type: 2}
+  animator: {fileID: 0}
+  agent: {fileID: 0}
+  enemyMovementAnimation: {fileID: 0}
+  enemyMeleeAttack: {fileID: 0}
+  maxHealth: 50
+  startingHealth: 50
+  currentHealth: 0
+  equipmentDropPrefab: {fileID: 6383609612808223630, guid: 9cd3d80b142c2284f9c8abbf7a1d0f29, type: 3}
+  bossHealthChangedEvent: {fileID: 11400000, guid: 19e65cde1e6e0b847bf2de8aaf1874b4, type: 2}
+--- !u!114 &325091462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611386525365237930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d73b194744047f4994872698e295172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: 0}
+  attackingLayers:
+    serializedVersion: 2
+    m_Bits: 2112
+  health: {fileID: 325091461}
+--- !u!114 &303718913361639132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611386525365237930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3ff0ed1d1fe44447ba2ec4d9975b6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}
+  animator: {fileID: 2612101199606464093}
+  direction: 0
 --- !u!1 &3442441846685446458
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,6 +225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1989337566353649336}
   - component: {fileID: 8348403779827422464}
+  - component: {fileID: 2612101199606464093}
   m_Layer: 0
   m_Name: Visuals
   m_TagString: Untagged
@@ -226,7 +289,7 @@ SpriteRenderer:
   m_SortingLayerID: 1123485675
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 47789e53baf213643ab6883e4e1af3c6, type: 3}
+  m_Sprite: {fileID: -185688605, guid: a1c4ae9324dc9844da9b72dd982fe75f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -237,3 +300,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2612101199606464093
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3442441846685446458}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1632ca98baf734642afefff942ddd65e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

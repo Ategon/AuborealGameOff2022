@@ -31,8 +31,10 @@ namespace Assets.Enemies
         {
             NumEnemyChangeEventParameters enemyChangeEventParameters = (NumEnemyChangeEventParameters)arg2;
             numEnemies = Mathf.Max(0, enemyChangeEventParameters.changeValue + numEnemies);
-            audioController.SetFightParameter(numEnemies > 0);
-            Debug.Log(numEnemies);
+            if (audioController)
+            {
+                audioController.SetFightParameter(numEnemies > 0);
+            }
         }
     }
 }
