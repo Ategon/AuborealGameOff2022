@@ -17,6 +17,6 @@ public class Bob : MonoBehaviour
     private void FixedUpdate()
     {
         
-        transform.position = new Vector3(transform.position.x, startPos.y + Mathf.Sin(Time.time * bobSpeed) * bobAmount, transform.position.z);
+        transform.localPosition = new Vector3(transform.localPosition.x, startPos.y + Mathf.Sin(Time.time * bobSpeed) * bobAmount, transform.localPosition.z);
     }
 }

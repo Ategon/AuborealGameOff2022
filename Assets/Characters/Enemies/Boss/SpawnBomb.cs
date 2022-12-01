@@ -15,5 +15,6 @@ public class SpawnBomb : MonoBehaviour
         bombIndicator.explosionDelay = explosionDelay;
         bombIndicator.bombBlastRadius = bombBlastRadius;
         bombIndicator.bombDamage = bombDamage;
+
     }
 }
