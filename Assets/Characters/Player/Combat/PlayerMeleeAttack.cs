@@ -1,4 +1,6 @@
 using Assets.Audio.Events;
+using Assets.EventSystem;
+using Assets.Player.Upgrades;
 using Characters.Player.Movement;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -20,6 +22,8 @@ public class PlayerMeleeAttack : MeleeAttack
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private Cursor cursor;
     [SerializeField] private ParticleSystem swordParticles;
+    [SerializeField] private MeleeUpgradeEvent meleeUpgradeEvent;
+    [SerializeField] private UpgradeController upgradeController;
     [Header("Attack Momentum")]
     public float attackVelocity;
     [HideInInspector] public bool isAttacking;
@@ -32,6 +36,7 @@ public class PlayerMeleeAttack : MeleeAttack
     {
         inputs = new Inputs();
         camera = Camera.main;
+        UpdateDamage();
     }
 
     private void Start()
@@ -45,11 +50,13 @@ public class PlayerMeleeAttack : MeleeAttack
         attack = inputs.Player.Attack;
         attack.Enable();
         attack.performed += OnAttackButtonPressed;
+        meleeUpgradeEvent.AddListener(OnMeleeUpgrade);
     }
     private void OnDisable()
     {
         mousePosition.Disable();
         attack.Disable();
+        meleeUpgradeEvent.RemoveListener(OnMeleeUpgrade);
     }
     void Update()
     {
@@ -93,6 +100,16 @@ public class PlayerMeleeAttack : MeleeAttack
     public void FinishAttackAnimation()
     {
         isAttacking = false;
+    }
+
+    private void OnMeleeUpgrade(object sender, EventParameters args)
+    {
+        UpdateDamage();
+    }
+
+    private void UpdateDamage()
+    {
+        attackDamage = upgradeController.meleeDamage;
     }
 
 }

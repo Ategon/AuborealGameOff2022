@@ -60,7 +60,6 @@ namespace Assets.Navigation
         {
             if (entered) return;
             entered = true;
-            
             playerLocationController.islandName = islandName;
             StartCoroutine(swapScene());
         }

@@ -7,6 +7,7 @@ using UnityEngine;
 using System.Collections;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
+using Assets.Player.Upgrades;
 
 public class NewGame : SceneChanger
 {
@@ -14,6 +15,7 @@ public class NewGame : SceneChanger
     [SerializeField] private HealthController healthController;
     [SerializeField] private InventoryController inventoryController;
     [SerializeField] private PlayerLocationController playerLocationController;
+    [SerializeField] private UpgradeController upgradeController;
     [SerializeField] private Transform[] exitObjects;
 
     bool started = false;
@@ -36,6 +38,7 @@ public class NewGame : SceneChanger
         healthController.NewGame();
         inventoryController.NewGame();
         playerLocationController.NewGame();
+        upgradeController.NewGame();
         base.ChangeScene();
     }
 }
