@@ -48,7 +48,7 @@
 			<value>-5.9000001</value>
 		</property>
 		<property name="release">
-			<value>4.5999999</value>
+			<value>820</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{c5fdd0da-547c-49be-a5ed-b7608cf1aab5}</destination>
@@ -108,7 +108,7 @@
 			<value>boost</value>
 		</property>
 		<property name="amount">
-			<value>32</value>
+			<value>28</value>
 		</property>
 		<property name="attackTime">
 			<value>57</value>
