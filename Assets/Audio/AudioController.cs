@@ -19,6 +19,9 @@ namespace Assets.Audio
         [SerializeField] private PlayerFootstepEvent playerFootstepEvent;
         [SerializeField] private PlayerDashEvent playerDashEvent;
         [SerializeField] private PlayerShootEvent playerShootEvent;
+        [SerializeField] private PlayerHurtEvent playerHurtEvent;
+        [SerializeField] private PlayerDieEvent playerDieEvent;
+        [SerializeField] private PlayerBuyEvent playerBuyEvent;
 
 
         private EventInstance _persistentER;
@@ -64,6 +67,9 @@ namespace Assets.Audio
             playerDashEvent.AddListener(OnPlayerDashEvent);
             playerFootstepEvent.AddListener(OnPlayerFootstepEvent);
             playerShootEvent.AddListener(OnPlayerShootEvent);
+            playerHurtEvent.AddListener(OnPlayerHurtEvent);
+            playerDieEvent.AddListener(OnPlayerDieEvent);
+            playerBuyEvent.AddListener(OnPlayerBuyEvent);
         }
 
         private void OnDisable()
@@ -75,6 +81,9 @@ namespace Assets.Audio
             playerDashEvent.RemoveListener(OnPlayerDashEvent);
             playerFootstepEvent.RemoveListener(OnPlayerFootstepEvent);
             playerShootEvent.RemoveListener(OnPlayerShootEvent);
+            playerHurtEvent.RemoveListener(OnPlayerHurtEvent);
+            playerDieEvent.RemoveListener(OnPlayerDieEvent);
+            playerBuyEvent.RemoveListener(OnPlayerBuyEvent);
         }
 
         private bool IsPlaying(FMOD.Studio.EventInstance instance)
@@ -148,6 +157,21 @@ namespace Assets.Audio
         private void OnPlayerDashEvent(object sender, EventParameters parameters)
         {
             PlayOneShotSound(audioBank.ERPlayerDash);
+        }
+
+        private void OnPlayerHurtEvent(object sender, EventParameters parameters)
+        {
+            PlayOneShotSound(audioBank.ERPlayerHurt);
+        }
+
+        private void OnPlayerDieEvent(object sender, EventParameters parameters)
+        {
+            PlayOneShotSound(audioBank.ERPlayerDie);
+        }
+
+        private void OnPlayerBuyEvent(object sender, EventParameters parameters)
+        {
+            PlayOneShotSound(audioBank.ERPlayerBuy);
         }
 
         #endregion
