@@ -411,10 +411,8 @@ MonoBehaviour:
   resourceType: 0
   cost: 3
   itemName: Melee Upgrade
-  meleeDamageAmount: 0
-  meleeSizeAmount: 0
-  meleeKnockbackAmount: 0
-  meleeAttack: {fileID: 0}
+  meleeDamageAmount: 4
+  upgradeController: {fileID: 11400000, guid: f019f850af188044080cb84e3d09a58c, type: 2}
 --- !u!1 &9206349533979072712
 GameObject:
   m_ObjectHideFlags: 0

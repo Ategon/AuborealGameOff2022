@@ -17,6 +17,7 @@ MonoBehaviour:
   treasureCount: 0
   treasureChangedEvent: {fileID: 11400000, guid: 01f8528580d955a468d79a94d2cf6829, type: 2}
   ammoCount: 50
+  startingAmmo: 5
   ammoChangedEvent: {fileID: 11400000, guid: f6a2293f664266a4d925e43660f43594, type: 2}
   equipmentDescriptionBank: {fileID: 11400000, guid: 89f2293a64f542e4e96b2b82d4d2bd7d, type: 2}
   equipmentPickedUpEvent: {fileID: 11400000, guid: e6e18ba6dceaeec478514074c74a904a, type: 2}

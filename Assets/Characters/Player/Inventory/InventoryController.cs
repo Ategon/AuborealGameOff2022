@@ -15,6 +15,7 @@ namespace Assets.Player.Inventory
         [SerializeField] private TreasureChangedEvent treasureChangedEvent;
         [Header("Ammo")]
         public int ammoCount;
+        [SerializeField] private int startingAmmo;
         [SerializeField] private AmmoChangedEvent ammoChangedEvent;
         [Header("Equipment")]
         [SerializeField] private EquipmentDescriptionBank equipmentDescriptionBank;
@@ -62,6 +63,12 @@ namespace Assets.Player.Inventory
         {
             treasureCount = 0;
             woodCount = 0;
+            ammoCount = startingAmmo;
+            compassOwned = false;
+            diviningRodOwned = false;
+            nauticalChartOwned = false;
+            resourceMapOwned = false;
+            sextantOwned = false;
         }
 
         public void AcquireEquipment(EquipmentType type)

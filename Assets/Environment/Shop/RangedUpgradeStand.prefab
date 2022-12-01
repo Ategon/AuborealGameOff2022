@@ -411,9 +411,8 @@ MonoBehaviour:
   resourceType: 0
   cost: 2
   itemName: Ranged Attack Upgrade
-  PlayerShoot: {fileID: 0}
-  projectileDamage: 0
-  projectileSpeed: 0
+  upgradeController: {fileID: 11400000, guid: f019f850af188044080cb84e3d09a58c, type: 2}
+  projectileDamage: 2
 --- !u!1 &9206349533979072712
 GameObject:
   m_ObjectHideFlags: 0
