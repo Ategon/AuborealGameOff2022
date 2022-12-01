@@ -13,7 +13,7 @@ namespace Assets.Enemies
         [SerializeField] private NavMeshAgent agent;
         [SerializeField] private EnemyMovementAnimation enemyMovementAnimation;
         [SerializeField] private EnemyMeleeAttack enemyMeleeAttack;
-        [SerializeField] private EnemySound enemySound;
+        [SerializeField] protected EnemySound enemySound;
         public int maxHealth;
         [SerializeField] private int startingHealth;
         [HideInInspector] public int currentHealth;

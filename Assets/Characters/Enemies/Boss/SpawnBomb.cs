@@ -7,7 +7,7 @@ public class SpawnBomb : MonoBehaviour
     [SerializeField] private GameObject bombIndicatorPrefab;
     [SerializeField] private int bombDamage;
     [SerializeField] private float bombBlastRadius;
-    [SerializeField] private float explosionDelay;
+    [SerializeField] public float explosionDelay;
 
     public void CreateBomb(Vector2 location)
     {
