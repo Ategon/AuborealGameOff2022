@@ -4,6 +4,7 @@ using Assets.Player.Health;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using DG.Tweening;
 
 public class PlayerHealth : Health
 {
@@ -15,10 +16,12 @@ public class PlayerHealth : Health
     private Volume v;
     private Vignette vg;
 
-    private float redTime = 1f;
+    private float redTime = 0.7f;
     private float redTimer;
 
     private float vgBaseIntensity;
+
+    private Tween lastTween;
 
     private void Awake()
     {
@@ -38,13 +41,13 @@ public class PlayerHealth : Health
         {
             redTimer -= Time.deltaTime;
             // change intensity based on sin
-            if (vg) vg.intensity.value = vgBaseIntensity + Mathf.Sin(Time.time * 20) / 10;
+            if (vg) vg.intensity.value = vgBaseIntensity + Mathf.Sin(Time.time * 10) / 20;
             if (redTimer <= 0)
             {
                 if (vg)
                 {
                     vg.intensity.value = vgBaseIntensity;
-                    vg.color.value = Color.black;
+                    DOTween.To(() => vg.color.value, x => vg.color.value = x, Color.black, 0.5f);
                 }
             }
         }
@@ -70,6 +73,7 @@ public class PlayerHealth : Health
         {
             if(vg) vg.color.value = Color.red;
             redTimer = redTime;
+            if (lastTween != null) lastTween.Kill();
         }
     }
 }
