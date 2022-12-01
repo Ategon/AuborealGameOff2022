@@ -706,10 +706,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodStand (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 9206349533979072710, guid: a3efab4057bc23245964f9c0a672a10f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.03
-      objectReference: {fileID: 0}
     - target: {fileID: 9206349533979072711, guid: a3efab4057bc23245964f9c0a672a10f, type: 3}
       propertyPath: m_Size.x
       value: 0.63
@@ -718,10 +714,6 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.39
       objectReference: {fileID: 0}
-    - target: {fileID: 9206349533979072711, guid: a3efab4057bc23245964f9c0a672a10f, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 594171296, guid: f58041c7e2addcb4db809a5702b7d575, type: 3}
     - target: {fileID: 9206349533979072711, guid: a3efab4057bc23245964f9c0a672a10f, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -1803,10 +1795,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AmmoStand
       objectReference: {fileID: 0}
-    - target: {fileID: 9206349533979072710, guid: 5f4a82d7c55efbb4e9feeee678ce1365, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9206349533979072711, guid: 5f4a82d7c55efbb4e9feeee678ce1365, type: 3}
       propertyPath: m_Size.x
       value: 0.63
@@ -1815,10 +1803,6 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.39
       objectReference: {fileID: 0}
-    - target: {fileID: 9206349533979072711, guid: 5f4a82d7c55efbb4e9feeee678ce1365, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 594171296, guid: f58041c7e2addcb4db809a5702b7d575, type: 3}
     - target: {fileID: 9206349533979072711, guid: 5f4a82d7c55efbb4e9feeee678ce1365, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -4728,10 +4712,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaterRestoreStand (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 9206349533979072710, guid: 838d5deb8ad494e40bb8a1479c3a8693, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.07
-      objectReference: {fileID: 0}
     - target: {fileID: 9206349533979072711, guid: 838d5deb8ad494e40bb8a1479c3a8693, type: 3}
       propertyPath: m_Size.x
       value: 0.63
@@ -4740,10 +4720,6 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.39
       objectReference: {fileID: 0}
-    - target: {fileID: 9206349533979072711, guid: 838d5deb8ad494e40bb8a1479c3a8693, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 594171296, guid: f58041c7e2addcb4db809a5702b7d575, type: 3}
     - target: {fileID: 9206349533979072711, guid: 838d5deb8ad494e40bb8a1479c3a8693, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -92467,7 +92443,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 325375149263394426, guid: a471ef7a6a3af0140880a2eac692ff6f, type: 3}
       propertyPath: orthographic size
-      value: 1.8
+      value: 1.21
       objectReference: {fileID: 0}
     - target: {fileID: 5216097775898976086, guid: a471ef7a6a3af0140880a2eac692ff6f, type: 3}
       propertyPath: m_Follow
