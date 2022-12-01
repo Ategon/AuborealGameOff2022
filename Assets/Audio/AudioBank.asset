@@ -96,6 +96,36 @@ MonoBehaviour:
       Data4: -2010616057
     Path: event:/music/island music 1
   - Guid:
+      Data1: -1827295691
+      Data2: 1086171488
+      Data3: -691996518
+      Data4: 1819402043
+    Path: event:/music/Sailing_music (main theme)
+  - Guid:
+      Data1: -2015885812
+      Data2: 1164981942
+      Data3: -1082399328
+      Data4: -2010616057
+    Path: event:/music/island music 1
+  - Guid:
+      Data1: -1349293259
+      Data2: 1164243892
+      Data3: 837820607
+      Data4: -872851427
+    Path: event:/music/island music 2
+  - Guid:
+      Data1: -1827295691
+      Data2: 1086171488
+      Data3: -691996518
+      Data4: 1819402043
+    Path: event:/music/Sailing_music (main theme)
+  - Guid:
+      Data1: -2015885812
+      Data2: 1164981942
+      Data3: -1082399328
+      Data4: -2010616057
+    Path: event:/music/island music 1
+  - Guid:
       Data1: -2015885812
       Data2: 1164981942
       Data3: -1082399328
@@ -113,3 +143,21 @@ MonoBehaviour:
       Data3: -1082399328
       Data4: -2010616057
     Path: event:/music/island music 1
+  - Guid:
+      Data1: -1349293259
+      Data2: 1164243892
+      Data3: 837820607
+      Data4: -872851427
+    Path: event:/music/island music 2
+  - Guid:
+      Data1: -1349293259
+      Data2: 1164243892
+      Data3: 837820607
+      Data4: -872851427
+    Path: event:/music/island music 2
+  - Guid:
+      Data1: -1349293259
+      Data2: 1164243892
+      Data3: 837820607
+      Data4: -872851427
+    Path: event:/music/island music 2
