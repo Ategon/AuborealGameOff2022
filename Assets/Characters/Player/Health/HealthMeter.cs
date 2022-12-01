@@ -76,12 +76,12 @@ namespace Assets.Player.Health
 
             if (start > end)
             {
-                if (lastTween != null) lastTween.Pause();
-                if (lastSecondaryTween != null) lastSecondaryTween.Pause();
-                if (lastTertiaryTween != null) lastTertiaryTween.Pause();
-                if (lastQuaternaryTween != null) lastQuaternaryTween.Pause();
-                if (lastQuintenaryTween != null) lastQuintenaryTween.Pause();
-                if (lastSextenaryTween != null) lastSextenaryTween.Pause();
+                if (lastTween != null) lastTween.Kill();
+                if (lastSecondaryTween != null) lastSecondaryTween.Kill();
+                if (lastTertiaryTween != null) lastTertiaryTween.Kill();
+                if (lastQuaternaryTween != null) lastQuaternaryTween.Kill();
+                if (lastQuintenaryTween != null) lastQuintenaryTween.Kill();
+                if (lastSextenaryTween != null) lastSextenaryTween.Kill();
 
                 healthDamageFill.fillAmount = start;
                 healthHealedFill.fillAmount = end;
@@ -97,11 +97,11 @@ namespace Assets.Player.Health
                 lastTertiaryTween = DOTween.To(() => waveDamageRenderer.color, x => waveDamageRenderer.color = x, targetColor, 1).SetDelay(0.2f).SetEase(Ease.InOutQuad, 0.1f);
                 lastSecondaryTween = waveDamagePos.DOLocalMoveX(lowWavePos + (waveDiff * end), 1).SetDelay(0.2f).SetEase(Ease.InOutQuad, 0.1f);
             }
-            else if (end < start)
+            else if (end > start)
             {
-                if (lastQuaternaryTween != null) lastQuaternaryTween.Pause();
-                if (lastQuintenaryTween != null) lastQuintenaryTween.Pause();
-                if (lastSextenaryTween != null) lastSextenaryTween.Pause();
+                if (lastQuaternaryTween != null) lastQuaternaryTween.Kill();
+                if (lastQuintenaryTween != null) lastQuintenaryTween.Kill();
+                if (lastSextenaryTween != null) lastSextenaryTween.Kill();
                 
                 healthHealedFill.fillAmount = end;
                 healthFill.fillAmount = start;
@@ -116,12 +116,13 @@ namespace Assets.Player.Health
             }
             else
             {
-                if (lastTween != null) lastTween.Pause();
-                if (lastSecondaryTween != null) lastSecondaryTween.Pause();
-                if (lastTertiaryTween != null) lastTertiaryTween.Pause();
-                if (lastQuaternaryTween != null) lastQuaternaryTween.Pause();
-                if (lastQuintenaryTween != null) lastQuintenaryTween.Pause();
-                if (lastSextenaryTween != null) lastSextenaryTween.Pause();
+                /*
+                if (lastTween != null) lastTween.Kill();
+                if (lastSecondaryTween != null) lastSecondaryTween.Kill();
+                if (lastTertiaryTween != null) lastTertiaryTween.Kill();
+                if (lastQuaternaryTween != null) lastQuaternaryTween.Kill();
+                if (lastQuintenaryTween != null) lastQuintenaryTween.Kill();
+                if (lastSextenaryTween != null) lastSextenaryTween.Kill();
 
                 waveRenderer.color = Color.Lerp(lowWaveColor, highWaveColor, start);
                 waveDamageRenderer.color = Color.Lerp(lowDamageColor, highDamageColor, start);
@@ -131,6 +132,7 @@ namespace Assets.Player.Health
                 healthFill.fillAmount = start;
                 wavePos.localPosition = new Vector3(lowWavePos + (waveDiff * start), wavePos.localPosition.y, wavePos.localPosition.z);
                 waveDamagePos.localPosition = new Vector3(lowWavePos + (waveDiff * start), waveDamagePos.localPosition.y, waveDamagePos.localPosition.z);
+            */
             }
         }
         
