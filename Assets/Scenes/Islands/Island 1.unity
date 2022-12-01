@@ -578,6 +578,65 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5988232412419631008, guid: dea748a5c32687e439305f1bb8630702, type: 3}
   m_PrefabInstance: {fileID: 1941398278}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &247144103
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2213371611490297673, guid: 0783cb6be23a557468cc1b125ad10308, type: 3}
+      propertyPath: m_RootOrder
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 2213371611490297673, guid: 0783cb6be23a557468cc1b125ad10308, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -65.71775
+      objectReference: {fileID: 0}
+    - target: {fileID: 2213371611490297673, guid: 0783cb6be23a557468cc1b125ad10308, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.3007708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2213371611490297673, guid: 0783cb6be23a557468cc1b125ad10308, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2213371611490297673, guid: 0783cb6be23a557468cc1b125ad10308, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2213371611490297673, guid: 0783cb6be23a557468cc1b125ad10308, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2213371611490297673, guid: 0783cb6be23a557468cc1b125ad10308, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2213371611490297673, guid: 0783cb6be23a557468cc1b125ad10308, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2213371611490297673, guid: 0783cb6be23a557468cc1b125ad10308, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2213371611490297673, guid: 0783cb6be23a557468cc1b125ad10308, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2213371611490297673, guid: 0783cb6be23a557468cc1b125ad10308, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2213371611490297675, guid: 0783cb6be23a557468cc1b125ad10308, type: 3}
+      propertyPath: m_Name
+      value: Spring
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0783cb6be23a557468cc1b125ad10308, type: 3}
 --- !u!1 &308620019
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,10 +765,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodStand (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 9206349533979072710, guid: a3efab4057bc23245964f9c0a672a10f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.03
-      objectReference: {fileID: 0}
     - target: {fileID: 9206349533979072711, guid: a3efab4057bc23245964f9c0a672a10f, type: 3}
       propertyPath: m_Size.x
       value: 0.63
@@ -718,10 +773,6 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.39
       objectReference: {fileID: 0}
-    - target: {fileID: 9206349533979072711, guid: a3efab4057bc23245964f9c0a672a10f, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 594171296, guid: f58041c7e2addcb4db809a5702b7d575, type: 3}
     - target: {fileID: 9206349533979072711, guid: a3efab4057bc23245964f9c0a672a10f, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -1803,10 +1854,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AmmoStand
       objectReference: {fileID: 0}
-    - target: {fileID: 9206349533979072710, guid: 5f4a82d7c55efbb4e9feeee678ce1365, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9206349533979072711, guid: 5f4a82d7c55efbb4e9feeee678ce1365, type: 3}
       propertyPath: m_Size.x
       value: 0.63
@@ -1815,10 +1862,6 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.39
       objectReference: {fileID: 0}
-    - target: {fileID: 9206349533979072711, guid: 5f4a82d7c55efbb4e9feeee678ce1365, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 594171296, guid: f58041c7e2addcb4db809a5702b7d575, type: 3}
     - target: {fileID: 9206349533979072711, guid: 5f4a82d7c55efbb4e9feeee678ce1365, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -4728,10 +4771,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaterRestoreStand (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 9206349533979072710, guid: 838d5deb8ad494e40bb8a1479c3a8693, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.07
-      objectReference: {fileID: 0}
     - target: {fileID: 9206349533979072711, guid: 838d5deb8ad494e40bb8a1479c3a8693, type: 3}
       propertyPath: m_Size.x
       value: 0.63
@@ -4740,10 +4779,6 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.39
       objectReference: {fileID: 0}
-    - target: {fileID: 9206349533979072711, guid: 838d5deb8ad494e40bb8a1479c3a8693, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 594171296, guid: f58041c7e2addcb4db809a5702b7d575, type: 3}
     - target: {fileID: 9206349533979072711, guid: 838d5deb8ad494e40bb8a1479c3a8693, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1

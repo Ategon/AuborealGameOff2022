@@ -9,6 +9,8 @@ public class BossBombPattern : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private float attackAnimationDuration;
     private float timeUntilAnimationEnd;
+    [Header("Sound")]
+    [SerializeField] private EnemySound enemySound;
     [Header("Bombs")]
     [SerializeField] private Transform playerHitbox;
     [SerializeField] private float attackCooldown;
@@ -24,7 +26,6 @@ public class BossBombPattern : MonoBehaviour
     [SerializeField] private float rayAngleDifference;
     [SerializeField] private float minDistance;
     [SerializeField] private float maxDistance;
-
     void Update()
     {
         if (isAggroed)
@@ -45,13 +46,15 @@ public class BossBombPattern : MonoBehaviour
             if (timeUntilAnimationEnd <= 0)
             {
                 animator.SetTrigger("FinishAttack");
-                Debug.Log("Finish Attack Trigger Activated");
             }
         }
+
+
     }
 
     private void Attack()
     {
+        Invoke("AttackSound", spawnBomb.explosionDelay);
         float random = Random.Range(0, 2);
         enemyMovementAnimation.FaceDirection(playerHitbox.position - transform.position);
         animator.SetTrigger("Attack");
@@ -64,6 +67,10 @@ public class BossBombPattern : MonoBehaviour
         {
             RayAttack();
         }
+    }
+    private void AttackSound()
+    {
+        enemySound.AttackSound();
     }
     private void CircleAttack()
     {

@@ -36,6 +36,11 @@ public abstract class Interactable : MonoBehaviour
             var bindingIndex = interact.GetBindingIndex();
             var displayString = interact.GetBindingDisplayString(bindingIndex, out string deviceLayoutName, out string controlPath);
             interactionPopup.Show(verb, displayString);
+            if (this is EndBoat endboat)
+            {
+                if (!endboat.hasSextant)
+                    interactionPopup.ShowEndBoat();
+            }
         }
     }
     public virtual void PlayerExitRange()

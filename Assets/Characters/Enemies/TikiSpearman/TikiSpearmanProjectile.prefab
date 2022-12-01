@@ -134,7 +134,7 @@ MonoBehaviour:
   rigidbody: {fileID: 8747798639918260010}
   targetLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 262144
   downSprite: {fileID: 21300000, guid: 27f34c7b3b706684aa63d3583d55ee8b, type: 3}
   leftSprite: {fileID: 21300000, guid: 22a41cc0f6be041449819453f2dc8bd9, type: 3}
   upSprite: {fileID: 21300000, guid: 309d2045fb863964da999db07a773d7c, type: 3}

@@ -79,6 +79,7 @@ GameObject:
   - component: {fileID: 325091461}
   - component: {fileID: 325091462}
   - component: {fileID: 303718913361639132}
+  - component: {fileID: 6863056901187952077}
   m_Layer: 10
   m_Name: Boss
   m_TagString: Untagged
@@ -134,6 +135,7 @@ MonoBehaviour:
   enemyMovementAnimation: {fileID: 303718913361639132}
   animator: {fileID: 2612101199606464093}
   attackAnimationDuration: 0.3
+  enemySound: {fileID: 6863056901187952077}
   playerHitbox: {fileID: 0}
   attackCooldown: 3
   spawnBomb: {fileID: -1631759738814142981}
@@ -178,8 +180,9 @@ MonoBehaviour:
   agent: {fileID: 0}
   enemyMovementAnimation: {fileID: 0}
   enemyMeleeAttack: {fileID: 0}
-  maxHealth: 50
-  startingHealth: 50
+  enemySound: {fileID: 6863056901187952077}
+  maxHealth: 500
+  startingHealth: 500
   currentHealth: 0
   equipmentDropPrefab: {fileID: 6383609612808223630, guid: 9cd3d80b142c2284f9c8abbf7a1d0f29, type: 3}
   bossHealthChangedEvent: {fileID: 11400000, guid: 19e65cde1e6e0b847bf2de8aaf1874b4, type: 2}
@@ -215,6 +218,49 @@ MonoBehaviour:
   agent: {fileID: 0}
   animator: {fileID: 2612101199606464093}
   direction: 0
+--- !u!114 &6863056901187952077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611386525365237930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855c1aa292688944db91b3eea01cf7c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSound:
+    Guid:
+      Data1: 497982189
+      Data2: 1177906790
+      Data3: 1701760907
+      Data4: -192186147
+    Path: event:/sfx/enemy/water boss/water boss attack
+  dieSound:
+    Guid:
+      Data1: -1585556827
+      Data2: 1102734958
+      Data3: -2118498674
+      Data4: -54412765
+    Path: event:/sfx/enemy/water boss/water boss die
+  footstepSound:
+    Guid:
+      Data1: -643830336
+      Data2: 1332188879
+      Data3: -484321605
+      Data4: -561861000
+    Path: event:/sfx/enemy/water boss/water boss footsteps
+  hurtSound:
+    Guid:
+      Data1: 1836190710
+      Data2: 1201671392
+      Data3: 1526176407
+      Data4: 1420373425
+    Path: event:/sfx/enemy/water boss/water boss damage
+  navMeshAgent: {fileID: 0}
+  timeBetweenFootsteps: 0.5
+  isWalking: 0
 --- !u!1 &3442441846685446458
 GameObject:
   m_ObjectHideFlags: 0
