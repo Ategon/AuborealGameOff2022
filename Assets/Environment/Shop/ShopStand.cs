@@ -1,4 +1,5 @@
 
+using Assets.Audio.Events;
 using Assets.Player.Inventory;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ public abstract class ShopStand : Interactable
     [Header("Shop References")]
     [SerializeField] protected InventoryController inventoryController;
     [SerializeField] private ShopStandPopup shopPopup;
+    [SerializeField] private PlayerBuyEvent playerBuyEvent;
     [Header("Item Cost and Description")]
     public ResourceType resourceType;
     public int cost;
@@ -20,6 +22,7 @@ public abstract class ShopStand : Interactable
                 if (inventoryController.ChangeTreasure(-cost)) 
                 { 
                     PurchaseItem();
+                    playerBuyEvent.Raise(this, null);
                     return true;
                 }
                 return false;
@@ -27,6 +30,7 @@ public abstract class ShopStand : Interactable
                 if (inventoryController.ChangeWood(-cost)) 
                 { 
                     PurchaseItem();
+                    playerBuyEvent.Raise(this, null);
                     return true;
                 }
                 return false;

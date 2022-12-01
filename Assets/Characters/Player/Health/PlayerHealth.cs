@@ -5,12 +5,16 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using DG.Tweening;
+using Assets.Audio;
+using Assets.Audio.Events;
 
 public class PlayerHealth : Health
 {
     [SerializeField] private HealthController healthController;
     [SerializeField] private GameManager gameManager;
     [SerializeField] private float regenPeriod;
+    [SerializeField] private PlayerHurtEvent playerHurtEvent;
+    [SerializeField] private PlayerDieEvent playerDieEvent;
     private float timeToNextHeal;
 
     private Volume v;
@@ -60,6 +64,7 @@ public class PlayerHealth : Health
 
         if (healthController.currentHealth <= 0)
         {
+            playerDieEvent.Raise(this, null);
             GetComponentInChildren<PlayerSilhouette>().stopCoroutine = true;
             this.gameObject.SetActive(false);
             gameManager.Lose();
@@ -71,6 +76,7 @@ public class PlayerHealth : Health
 
         if (changeAmount < 0)
         {
+            playerHurtEvent.Raise(this, null);
             if(vg) vg.color.value = Color.red;
             redTimer = redTime;
             if (lastTween != null) lastTween.Kill();
