@@ -57,14 +57,7 @@ public class Cursor : MonoBehaviour
     void Update()
     {
         Vector2 aim;
-        if (pm == null)
-        {
-            aim = Mouse.current.position.ReadValue();
-        }
-        else
-        {
-            aim = pm.Aim;
-        }
+        aim = Mouse.current.position.ReadValue();
 
         /*
         if (!pm.gameObject.activeInHierarchy)
