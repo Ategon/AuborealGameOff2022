@@ -60,10 +60,7 @@ namespace Assets.Navigation
         {
             if (entered) return;
             entered = true;
-            for (int i = 0; i < exitObjects.Length; i++)
-            {
-                exitObjects[i].DOLocalMove(Vector3.zero, 2f).SetEase(Ease.OutQuad);
-            }
+            
             playerLocationController.islandName = islandName;
             StartCoroutine(swapScene());
         }
@@ -71,6 +68,11 @@ namespace Assets.Navigation
         IEnumerator swapScene()
         {
             {
+                yield return new WaitForSeconds(0.5f);
+                for (int i = 0; i < exitObjects.Length; i++)
+                {
+                    exitObjects[i].DOLocalMove(Vector3.zero, 2f).SetEase(Ease.OutQuad);
+                }
                 yield return new WaitForSeconds(2f);
                 SceneManager.LoadScene(loadedSceneName);
             }
