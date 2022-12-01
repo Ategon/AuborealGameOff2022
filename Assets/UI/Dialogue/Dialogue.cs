@@ -13,6 +13,8 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private float textSpeed;
     [SerializeField] private InputActionReference mouseButton;
 
+    [SerializeField] private Cursor cursor;
+
     private float animationTime = 0.8f;
     private int index;
     private Animator anim;
@@ -42,6 +44,7 @@ public class Dialogue : MonoBehaviour
 
     private void StartDialogue()
     {
+        if(cursor) cursor.SetSprite(1);
         Time.timeScale = 0f;
         index = 0;
         StartCoroutine(TypeLine());
@@ -63,6 +66,7 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
+            if (cursor) cursor.SetSprite(0);
             Time.timeScale = 1f;
             textComponent.text = string.Empty;
             anim.Play("DialogueBoxSlideOut");
